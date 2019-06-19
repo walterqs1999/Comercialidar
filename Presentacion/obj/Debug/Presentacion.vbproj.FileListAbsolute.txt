@@ -1,0 +1,16 @@
+D:\Proyectos visual studio\apliComercialIdar\Presentacion\bin\Debug\Presentacion.exe.config
+D:\Proyectos visual studio\apliComercialIdar\Presentacion\bin\Debug\Presentacion.exe
+D:\Proyectos visual studio\apliComercialIdar\Presentacion\bin\Debug\Presentacion.pdb
+D:\Proyectos visual studio\apliComercialIdar\Presentacion\bin\Debug\Presentacion.xml
+D:\Proyectos visual studio\apliComercialIdar\Presentacion\obj\Debug\Presentacion.vbprojResolveAssemblyReference.cache
+D:\Proyectos visual studio\apliComercialIdar\Presentacion\obj\Debug\Presentacion.frmPresentacion.resources
+D:\Proyectos visual studio\apliComercialIdar\Presentacion\obj\Debug\Presentacion.Resources.resources
+D:\Proyectos visual studio\apliComercialIdar\Presentacion\obj\Debug\Presentacion.vbproj.GenerateResource.Cache
+D:\Proyectos visual studio\apliComercialIdar\Presentacion\obj\Debug\Presentacion.exe
+D:\Proyectos visual studio\apliComercialIdar\Presentacion\obj\Debug\Presentacion.xml
+D:\Proyectos visual studio\apliComercialIdar\Presentacion\obj\Debug\Presentacion.pdb
+D:\Proyectos visual studio\apliComercialIdar\Presentacion\obj\Debug\Presentacion.frmAcceso.resources
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\Presentacion.exe.config
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.xml
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.pdb
