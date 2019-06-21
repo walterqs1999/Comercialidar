@@ -14,3 +14,17 @@ C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\Presentacion.e
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.xml
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\Presentacion.exe
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\Presentacion.xml
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.vbprojResolveAssemblyReference.cache
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmAcceso.resources
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmPresentacion.resources
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.Resources.resources
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.vbproj.GenerateResource.Cache
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\datos.dll
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\Logica.dll
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\datos.pdb
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\datos.xml
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\Logica.pdb
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\Logica.xml

@@ -1,0 +1,12 @@
+C:\Users\QUISPE\Source\Repos\Comercialidar\Logica\bin\Debug\Logica.dll
+C:\Users\QUISPE\Source\Repos\Comercialidar\Logica\bin\Debug\Logica.pdb
+C:\Users\QUISPE\Source\Repos\Comercialidar\Logica\bin\Debug\Logica.xml
+C:\Users\QUISPE\Source\Repos\Comercialidar\Logica\bin\Debug\datos.dll
+C:\Users\QUISPE\Source\Repos\Comercialidar\Logica\bin\Debug\datos.pdb
+C:\Users\QUISPE\Source\Repos\Comercialidar\Logica\bin\Debug\datos.xml
+C:\Users\QUISPE\Source\Repos\Comercialidar\Logica\obj\Debug\Logica.vbprojResolveAssemblyReference.cache
+C:\Users\QUISPE\Source\Repos\Comercialidar\Logica\obj\Debug\Logica.Resources.resources
+C:\Users\QUISPE\Source\Repos\Comercialidar\Logica\obj\Debug\Logica.vbproj.GenerateResource.Cache
+C:\Users\QUISPE\Source\Repos\Comercialidar\Logica\obj\Debug\Logica.dll
+C:\Users\QUISPE\Source\Repos\Comercialidar\Logica\obj\Debug\Logica.xml
+C:\Users\QUISPE\Source\Repos\Comercialidar\Logica\obj\Debug\Logica.pdb

@@ -81,11 +81,29 @@
     <Compile Include="frmAcceso.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmMenuAdmin.Designer.vb">
+      <DependentUpon>frmMenuAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuUsuario.Designer.vb">
+      <DependentUpon>frmMenuUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPresentacion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPresentacion.Designer.vb">
       <DependentUpon>frmPresentacion.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecuperar.Designer.vb">
+      <DependentUpon>frmRecuperar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRecuperar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -111,6 +129,9 @@
     <EmbeddedResource Include="frmPresentacion.resx">
       <DependentUpon>frmPresentacion.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRecuperar.resx">
+      <DependentUpon>frmRecuperar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -130,6 +151,16 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\datos\Datos.vbproj">
+      <Project>{612deac4-a738-4c61-b9e0-2a6dc9e58c76}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logica\Logica.vbproj">
+      <Project>{e48a593c-5159-4b1f-b735-966200288277}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

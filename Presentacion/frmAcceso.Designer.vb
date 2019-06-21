@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmAcceso
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmAcceso
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAcceso))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -31,6 +31,7 @@ Partial Class frmAcceso
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtClave = New System.Windows.Forms.TextBox()
         Me.txtUsuario = New System.Windows.Forms.TextBox()
+        Me.lkbRecuperar = New System.Windows.Forms.LinkLabel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -111,6 +112,16 @@ Partial Class frmAcceso
         Me.txtUsuario.Size = New System.Drawing.Size(100, 20)
         Me.txtUsuario.TabIndex = 30
         '
+        'lkbRecuperar
+        '
+        Me.lkbRecuperar.AutoSize = True
+        Me.lkbRecuperar.Location = New System.Drawing.Point(361, 134)
+        Me.lkbRecuperar.Name = "lkbRecuperar"
+        Me.lkbRecuperar.Size = New System.Drawing.Size(143, 13)
+        Me.lkbRecuperar.TabIndex = 38
+        Me.lkbRecuperar.TabStop = True
+        Me.lkbRecuperar.Text = "¿Se te olvido tu contraseña?"
+        '
         'frmAcceso
         '
         Me.AcceptButton = Me.btnAceptar
@@ -118,6 +129,7 @@ Partial Class frmAcceso
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(525, 156)
         Me.ControlBox = False
+        Me.Controls.Add(Me.lkbRecuperar)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.cbxMostrarCon)
         Me.Controls.Add(Me.btnCancelar)
@@ -146,4 +158,5 @@ Partial Class frmAcceso
     Friend WithEvents Label1 As Label
     Friend WithEvents txtClave As TextBox
     Friend WithEvents txtUsuario As TextBox
+    Friend WithEvents lkbRecuperar As LinkLabel
 End Class
