@@ -79,4 +79,35 @@ Public Class lUsuario
         End Try
         Return resul
     End Function
+
+    Public Function modificar_usuario() As Boolean
+        Try
+            con.Conectar()
+            Dim comando = New SqlCommand("proc_ModificarProducto")
+            comando.CommandType = CommandType.StoredProcedure
+            comando.Connection = con.strConex
+            comando.Parameters.AddWithValue("@codigo", USU_DNI)
+            comando.Parameters.AddWithValue("@nombre", USU_NOM)
+            comando.Parameters.AddWithValue("@direccion", USU_DIR)
+            comando.Parameters.AddWithValue("@telefono", USU_TEL)
+            comando.Parameters.AddWithValue("@correo", USU_CORREO)
+            comando.Parameters.AddWithValue("@usuario", USU_USU)
+            comando.Parameters.AddWithValue("@clave", USU_PAS)
+            comando.Parameters.AddWithValue("@tipo", USU_TIPO)
+            comando.Parameters.AddWithValue("@estado", USU_ESTA)
+
+
+            If comando.ExecuteNonQuery Then
+                Return True
+            Else
+                Return False
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            con.Desconectar()
+        End Try
+    End Function
 End Class

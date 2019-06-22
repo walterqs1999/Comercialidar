@@ -97,6 +97,7 @@ Partial Class frmPresentacion
         Me.Controls.Add(Me.ProgressBar1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmPresentacion"
+        Me.Opacity = 0.9R
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = ".:. BIENVENIDOS .:."
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

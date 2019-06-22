@@ -28,3 +28,6 @@ C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\datos.pdb
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\datos.xml
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\Logica.pdb
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\Logica.xml
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmRecuperar.resources
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmMenuAdmin.resources
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmMenuUsuario.resources

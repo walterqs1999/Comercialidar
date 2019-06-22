@@ -80,10 +80,11 @@ Public Class frmAcceso
                 If passs.Equals(clave) = True Then
                     Me.Visible = False
                     If usu.consultarTusu(txtUsuario.Text) = "Administrador" Then
+                        MsgBox("Bienvenido al menu de Aministrador")
                         frmMenuAdmin.ShowDialog()
                     Else
+                        MsgBox("Bienvenido al menu de Usuario")
                         frmMenuUsuario.ShowDialog()
-                        MsgBox("No es Administrador")
                     End If
                 Else
                     MsgBox("Clave Incorrecta")
@@ -104,5 +105,11 @@ Public Class frmAcceso
             MsgBox("Muchos intentos, Acceso Denegado al Sistema")
             End
         End If
+    End Sub
+
+    Private Sub lkbRecuperar_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lkbRecuperar.LinkClicked
+        Dim frmrecuperar As New frmRecuperar
+        Me.Hide()
+        frmrecuperar.ShowDialog()
     End Sub
 End Class
