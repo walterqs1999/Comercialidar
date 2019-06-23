@@ -146,7 +146,7 @@ Partial Class frmBaseRegistro
         Me.Controls.Add(Me.btnGrabar)
         Me.Controls.Add(Me.btnNuevo)
         Me.Controls.Add(Me.grbDatos)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmBaseRegistro"
         Me.Text = "frmMantenimientoRegistro"
         Me.grbDatos.ResumeLayout(False)

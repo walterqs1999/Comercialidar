@@ -112,11 +112,10 @@ Public Class frmLogin
                 If passs.Equals(clave) = True Then
                     Me.Visible = False
                     If usu.consultarTusu(txtUsuario.Text) = "Administrador" Then
-                        MsgBox("Bienvenido al menu de Aministrador")
-                        frmMenuAdmin.ShowDialog()
+                        frmWelcome.ShowDialog()
+                        frmMenuAdministrador.ShowDialog()
                     Else
-                        MsgBox("Bienvenido al menu de Usuario")
-                        frmMenuUsuario.ShowDialog()
+                        frmWelcome.ShowDialog()
                     End If
                 Else
                     MsgBox("Clave Incorrecta")

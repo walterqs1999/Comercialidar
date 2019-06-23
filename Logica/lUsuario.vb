@@ -4,6 +4,7 @@ Imports System.Data.SqlClient
 
 Imports datos
 
+
 Public Class lUsuario
 
     Public conexx As SqlConnection
@@ -23,15 +24,19 @@ Public Class lUsuario
     Public USU_TIPO As String
     Public USU_ESTA As String
 
+
     Public Function consultarTusu(ByVal nomUsu As String) As String
         Dim resul As String = ""
         Try
             con.Conectar()
-            enunc = New SqlCommand("SELECT USU_TIPO FROM USUARIO WHERE USU_USU='" & nomUsu & "'", con.strConex)
+            enunc = New SqlCommand("SELECT USU_TIPO, USU_NOM FROM USUARIO WHERE USU_USU='" & nomUsu & "'", con.strConex)
             resp = enunc.ExecuteReader
 
             If resp.Read Then
                 resul = resp.Item("USU_TIPO")
+
+                nombreusuario = resp.Item("USU_NOM")
+                tipousuario = resp.Item("USU_TIPO")
             End If
             resp.Close()
         Catch ex As Exception

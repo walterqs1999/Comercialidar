@@ -28,10 +28,9 @@ C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\datos.xml
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\Logica.pdb
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\Logica.xml
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmRecuperar.resources
-C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmMenuAdmin.resources
-C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmMenuUsuario.resources
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmBaseRegistro.resources
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmLogin.resources
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmMenuAdministrador.resources
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmWelcome.resources
