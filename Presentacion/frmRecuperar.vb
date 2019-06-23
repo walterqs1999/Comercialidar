@@ -11,7 +11,7 @@ Public Class frmRecuperar
         'CONFIGURACIÓN DEL STMP
         _SMTP.Credentials = New System.Net.NetworkCredential("comercialidar@gmail.com", "comercialidar123456789")
         _SMTP.Host = "smtp.gmail.com"
-        _SMTP.Port = 465
+        _SMTP.Port = 25
         _SMTP.EnableSsl = True
 
         ' CONFIGURACION DEL MENSAJE
