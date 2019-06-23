@@ -24,6 +24,7 @@ Partial Class frmLogin
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ShapeContainer2 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
@@ -41,8 +42,8 @@ Partial Class frmLogin
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.btnMostrar = New System.Windows.Forms.PictureBox()
         Me.btnOcultar = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Advertencia1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,7 +51,6 @@ Partial Class frmLogin
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMostrar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnOcultar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -62,6 +62,16 @@ Partial Class frmLogin
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(250, 330)
         Me.Panel1.TabIndex = 0
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(250, 330)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'ShapeContainer2
         '
@@ -251,16 +261,6 @@ Partial Class frmLogin
         Me.btnOcultar.TabStop = False
         Me.btnOcultar.Visible = False
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(250, 330)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -290,6 +290,7 @@ Partial Class frmLogin
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmLogin"
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Advertencia1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -297,7 +298,6 @@ Partial Class frmLogin
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnMostrar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnOcultar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

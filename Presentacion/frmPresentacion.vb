@@ -1,6 +1,6 @@
 ﻿Public Class frmPresentacion
     Dim porciento
-    Public frmacesso As New frmAcceso()
+    Public frmLogin As New frmLogin()
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
     End Sub
@@ -14,7 +14,7 @@
 
 
         If porciento = 100 Then
-            frmacesso.Show()
+            frmLogin.Show()
             Me.Hide()
             Timer1.Stop()
         End If

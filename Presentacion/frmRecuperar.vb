@@ -32,8 +32,8 @@ Public Class frmRecuperar
             '_SMTP.SendAsync(_Message, _Message.To)
             MsgBox("Se ha Enviado el Email", MsgBoxStyle.Information, "EMail Enviado")
             Me.Hide()
-            Dim frmaccesso As New frmAcceso
-            frmaccesso.ShowDialog()
+            Dim frmLogin As New frmLogin()
+            frmLogin.ShowDialog()
         Catch ex As Exception
             MsgBox("no se envio")
         End Try
@@ -64,8 +64,4 @@ Public Class frmRecuperar
         generarClave = sb.ToString()
 
     End Function
-
-    Private Sub frmRecuperar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

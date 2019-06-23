@@ -18,7 +18,6 @@ C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\Presentacion.e
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\Presentacion.pdb
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\Presentacion.xml
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.vbprojResolveAssemblyReference.cache
-C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmAcceso.resources
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmPresentacion.resources
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.Resources.resources
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.vbproj.GenerateResource.Cache
@@ -35,3 +34,4 @@ C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.f
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmLogin.resources
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmMenuAdministrador.resources

@@ -77,12 +77,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAcceso.Designer.vb">
-      <DependentUpon>frmAcceso.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmAcceso.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmBaseRegistro.Designer.vb">
       <DependentUpon>frmBaseRegistro.vb</DependentUpon>
     </Compile>
@@ -95,16 +89,10 @@
     <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMenuAdmin.Designer.vb">
-      <DependentUpon>frmMenuAdmin.vb</DependentUpon>
+    <Compile Include="frmMenuAdministrador.Designer.vb">
+      <DependentUpon>frmMenuAdministrador.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmMenuAdmin.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMenuUsuario.Designer.vb">
-      <DependentUpon>frmMenuUsuario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmMenuUsuario.vb">
+    <Compile Include="frmMenuAdministrador.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPresentacion.vb">
@@ -137,20 +125,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmAcceso.resx">
-      <DependentUpon>frmAcceso.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmBaseRegistro.resx">
       <DependentUpon>frmBaseRegistro.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMenuAdmin.resx">
-      <DependentUpon>frmMenuAdmin.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMenuUsuario.resx">
-      <DependentUpon>frmMenuUsuario.vb</DependentUpon>
+    <EmbeddedResource Include="frmMenuAdministrador.resx">
+      <DependentUpon>frmMenuAdministrador.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPresentacion.resx">
       <DependentUpon>frmPresentacion.vb</DependentUpon>
