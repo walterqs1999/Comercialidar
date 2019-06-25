@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmBaseRegistro
+Partial Class frmBaseEdicion
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,8 +22,7 @@ Partial Class frmBaseRegistro
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBaseRegistro))
-        Me.btnSalir = New System.Windows.Forms.Button()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBaseEdicion))
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
@@ -35,76 +34,59 @@ Partial Class frmBaseRegistro
         Me.grbDatos.SuspendLayout()
         Me.SuspendLayout()
         '
-        'btnSalir
-        '
-        Me.btnSalir.Image = CType(resources.GetObject("btnSalir.Image"), System.Drawing.Image)
-        Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(492, 235)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(89, 38)
-        Me.btnSalir.TabIndex = 54
-        Me.btnSalir.Text = "&Salir"
-        Me.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnSalir.UseVisualStyleBackColor = True
-        '
         'btnEliminar
         '
         Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"), System.Drawing.Image)
         Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEliminar.Location = New System.Drawing.Point(397, 235)
+        Me.btnEliminar.Location = New System.Drawing.Point(121, 230)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(89, 38)
+        Me.btnEliminar.Size = New System.Drawing.Size(150, 36)
         Me.btnEliminar.TabIndex = 53
         Me.btnEliminar.Text = "&Eliminar"
-        Me.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'btnModificar
         '
         Me.btnModificar.Image = CType(resources.GetObject("btnModificar.Image"), System.Drawing.Image)
         Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnModificar.Location = New System.Drawing.Point(302, 235)
+        Me.btnModificar.Location = New System.Drawing.Point(121, 230)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(89, 38)
+        Me.btnModificar.Size = New System.Drawing.Size(150, 36)
         Me.btnModificar.TabIndex = 52
         Me.btnModificar.Text = "&Modificar"
-        Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnModificar.UseVisualStyleBackColor = True
         '
         'btnCancelar
         '
         Me.btnCancelar.Image = CType(resources.GetObject("btnCancelar.Image"), System.Drawing.Image)
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(207, 235)
+        Me.btnCancelar.Location = New System.Drawing.Point(328, 230)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(89, 38)
+        Me.btnCancelar.Size = New System.Drawing.Size(150, 36)
         Me.btnCancelar.TabIndex = 51
         Me.btnCancelar.Text = "&Cancelar"
-        Me.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
         'btnGrabar
         '
         Me.btnGrabar.Image = CType(resources.GetObject("btnGrabar.Image"), System.Drawing.Image)
         Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGrabar.Location = New System.Drawing.Point(112, 235)
+        Me.btnGrabar.Location = New System.Drawing.Point(121, 230)
         Me.btnGrabar.Name = "btnGrabar"
-        Me.btnGrabar.Size = New System.Drawing.Size(89, 38)
+        Me.btnGrabar.Size = New System.Drawing.Size(150, 36)
         Me.btnGrabar.TabIndex = 50
         Me.btnGrabar.Text = "&Grabar"
-        Me.btnGrabar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnGrabar.UseVisualStyleBackColor = True
         '
         'btnNuevo
         '
         Me.btnNuevo.Image = CType(resources.GetObject("btnNuevo.Image"), System.Drawing.Image)
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNuevo.Location = New System.Drawing.Point(17, 235)
+        Me.btnNuevo.Location = New System.Drawing.Point(121, 230)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(89, 38)
+        Me.btnNuevo.Size = New System.Drawing.Size(150, 36)
         Me.btnNuevo.TabIndex = 49
         Me.btnNuevo.Text = "&Nuevo"
-        Me.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnNuevo.UseVisualStyleBackColor = True
         '
         'grbDatos
@@ -138,24 +120,22 @@ Partial Class frmBaseRegistro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(595, 292)
-        Me.Controls.Add(Me.btnSalir)
-        Me.Controls.Add(Me.btnEliminar)
-        Me.Controls.Add(Me.btnModificar)
-        Me.Controls.Add(Me.btnCancelar)
+        Me.ClientSize = New System.Drawing.Size(592, 292)
         Me.Controls.Add(Me.btnGrabar)
+        Me.Controls.Add(Me.btnModificar)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnNuevo)
         Me.Controls.Add(Me.grbDatos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmBaseRegistro"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmMantenimientoRegistro"
         Me.grbDatos.ResumeLayout(False)
         Me.grbDatos.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Public WithEvents btnSalir As Button
     Public WithEvents btnEliminar As Button
     Public WithEvents btnModificar As Button
     Public WithEvents btnCancelar As Button

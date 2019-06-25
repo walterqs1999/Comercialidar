@@ -22,8 +22,7 @@ Public Class frmWelcome
 
         If Me.Opacity = 0 Then
             Timer2.Stop()
-            Me.Close()
-            frmAccesoAdministrador.ShowDialog()
+            Me.Hide()
         End If
     End Sub
 

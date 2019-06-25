@@ -1,8 +1,10 @@
-﻿Imports System
-Imports System.Data
+﻿''Imports System
+'Imports System.Data
 Imports System.Data.SqlClient
 
-Public Class frmBaseRegistro
+Public Class frmBaseEdicion
+
+    Public valorNuevo As Integer
 
     'Declaracion de variables para el manejo de Tablas
     Public oConexion As SqlConnection
@@ -32,15 +34,6 @@ Public Class frmBaseRegistro
         Next
     End Sub
 
-    Public Sub EstadoBotones(ByVal estado As Boolean)
-        btnNuevo.Enabled = estado
-        btnGrabar.Enabled = Not estado
-        btnCancelar.Enabled = Not estado
-        btnModificar.Enabled = estado
-        btnEliminar.Enabled = estado
-        btnSalir.Enabled = estado
-    End Sub
-
     Public Sub EstadoTextos(ByVal estado As Boolean)
         For Each caja As Control In Me.grbDatos.Controls
             If TypeOf caja Is TextBox Then
@@ -55,7 +48,6 @@ Public Class frmBaseRegistro
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         operaciones = "N"
         LimpiarTextoGrupo()
-        EstadoBotones(False)
         EstadoTextos(True)
         txtId.Focus()
     End Sub
@@ -63,7 +55,6 @@ Public Class frmBaseRegistro
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         rpta = MessageBox.Show("¿Desea Cancelar la Operación?", "Registro Clientes", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If rpta = vbYes Then
-            EstadoBotones(True)
             EstadoTextos(False)
             LimpiarTextoGrupo()
         End If
@@ -71,19 +62,41 @@ Public Class frmBaseRegistro
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
         operaciones = "M"
-        EstadoBotones(False)
         EstadoTextos(True)
         txtId.Enabled = False
     End Sub
 
-    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs)
         rpta = MessageBox.Show("¿Desea Salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If rpta = vbYes Then
             Me.Close()
         End If
     End Sub
 
-    Private Sub grbDatos_Enter(sender As Object, e As EventArgs) Handles grbDatos.Enter
+    Private Sub frmBaseRegistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        If valorNuevo = 1 Then
+            btnNuevo.Visible = True
+            btnGrabar.Visible = False
+            btnModificar.Visible = False
+            btnEliminar.Visible = False
+        ElseIf valorNuevo = 2 Then
+            btnGrabar.Visible = True
+            btnNuevo.Visible = False
+            btnModificar.Visible = False
+            btnEliminar.Visible = False
+        ElseIf valorNuevo = 3 Then
+            btnModificar.Visible = True
+            btnNuevo.Visible = False
+            btnGrabar.Visible = False
+            btnEliminar.Visible = False
+            txtId.Enabled = False
+        Else
+            btnEliminar.Visible = True
+            btnNuevo.Visible = False
+            btnGrabar.Visible = False
+            btnModificar.Visible = False
+            txtId.Enabled = False
+        End If
     End Sub
 End Class

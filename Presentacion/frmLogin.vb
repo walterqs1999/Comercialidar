@@ -116,6 +116,7 @@ Public Class frmLogin
                         frmMenuAdministrador.ShowDialog()
                     Else
                         frmWelcome.ShowDialog()
+                        frmMenuUsuario.ShowDialog()
                     End If
                 Else
                     MsgBox("Clave Incorrecta")
@@ -136,9 +137,5 @@ Public Class frmLogin
             MsgBox("Muchos intentos, Acceso Denegado al Sistema")
             End
         End If
-    End Sub
-
-    Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 End Class

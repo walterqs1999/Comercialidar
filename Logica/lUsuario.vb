@@ -1,5 +1,5 @@
-﻿Imports System
-Imports System.Data
+﻿'Imports System
+'Imports System.Data
 Imports System.Data.SqlClient
 
 Imports datos
@@ -10,7 +10,7 @@ Public Class lUsuario
     Public conexx As SqlConnection
     Public enunc As SqlCommand
     Public resp As SqlDataReader
-    Public odap As SqlDataAdapter = New SqlDataAdapter()
+    Public odap As SqlDataAdapter
 
     Dim con As New datos.dConexion
 
@@ -114,5 +114,15 @@ Public Class lUsuario
         Finally
             con.Desconectar()
         End Try
+    End Function
+
+    Public Function listar_Usuario() As DataSet
+        Dim objDat As New DataSet
+        con.Conectar()
+        Dim comando As New SqlDataAdapter("SELECT USU_DNI AS DNI, USU_NOM AS NOMBRE, USU_DIR AS DIRECCION, USU_TEL AS TELEFONO, USU_EMAIL AS EMAIL, USU_TIPO AS TIPO FROM USUARIO ORDER BY NOMBRE", con.strConex)
+        'Dim comando As New SqlDataAdapter("select * from Usuarios", Con.strConex)
+        comando.Fill(objDat, "Usuario")
+        con.Desconectar()
+        Return objDat
     End Function
 End Class

@@ -77,10 +77,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmBaseRegistro.Designer.vb">
-      <DependentUpon>frmBaseRegistro.vb</DependentUpon>
+    <Compile Include="FormBaseEdicion\frmUsuarioEdicion.Designer.vb">
+      <DependentUpon>frmUsuarioEdicion.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmBaseRegistro.vb">
+    <Compile Include="FormBaseEdicion\frmUsuarioEdicion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTodoRegistro\frmUsuario.Designer.vb">
+      <DependentUpon>frmUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTodoRegistro\frmUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseEdicion.Designer.vb">
+      <DependentUpon>frmBaseEdicion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaseEdicion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.Designer.vb">
@@ -95,6 +107,12 @@
     <Compile Include="frmMenuAdministrador.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmMenuUsuario.Designer.vb">
+      <DependentUpon>frmMenuUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPresentacion.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +124,12 @@
       <DependentUpon>frmRecuperar.vb</DependentUpon>
     </Compile>
     <Compile Include="frmRecuperar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTodoRegistro.Designer.vb">
+      <DependentUpon>frmTodoRegistro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTodoRegistro.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmWelcome.Designer.vb">
@@ -131,8 +155,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmBaseRegistro.resx">
-      <DependentUpon>frmBaseRegistro.vb</DependentUpon>
+    <EmbeddedResource Include="FormBaseEdicion\frmUsuarioEdicion.resx">
+      <DependentUpon>frmUsuarioEdicion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTodoRegistro\frmUsuario.resx">
+      <DependentUpon>frmUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseEdicion.resx">
+      <DependentUpon>frmBaseEdicion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
@@ -140,11 +170,17 @@
     <EmbeddedResource Include="frmMenuAdministrador.resx">
       <DependentUpon>frmMenuAdministrador.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuUsuario.resx">
+      <DependentUpon>frmMenuUsuario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPresentacion.resx">
       <DependentUpon>frmPresentacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRecuperar.resx">
       <DependentUpon>frmRecuperar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTodoRegistro.resx">
+      <DependentUpon>frmTodoRegistro.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmWelcome.resx">
       <DependentUpon>frmWelcome.vb</DependentUpon>
@@ -183,6 +219,7 @@
     <Content Include="bin\imagenes\icon cerrar2.png" />
     <Content Include="bin\imagenes\icon minimizar.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
