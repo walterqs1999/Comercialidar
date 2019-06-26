@@ -34,11 +34,6 @@ Partial Class frmUsuario
         Me.btnRNuevo.FlatAppearance.BorderSize = 0
         Me.btnRNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
         '
-        'btnRGrabar
-        '
-        Me.btnRGrabar.FlatAppearance.BorderSize = 0
-        Me.btnRGrabar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        '
         'btnRModificar
         '
         Me.btnRModificar.FlatAppearance.BorderSize = 0
@@ -63,6 +58,7 @@ Partial Class frmUsuario
         Me.dgvUsuarios.Location = New System.Drawing.Point(199, 77)
         Me.dgvUsuarios.Name = "dgvUsuarios"
         Me.dgvUsuarios.ReadOnly = True
+        Me.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvUsuarios.Size = New System.Drawing.Size(646, 480)
         Me.dgvUsuarios.TabIndex = 18
         '
@@ -75,7 +71,6 @@ Partial Class frmUsuario
         Me.Name = "frmUsuario"
         Me.Controls.SetChildIndex(Me.Label1, 0)
         Me.Controls.SetChildIndex(Me.btnRNuevo, 0)
-        Me.Controls.SetChildIndex(Me.btnRGrabar, 0)
         Me.Controls.SetChildIndex(Me.btnRModificar, 0)
         Me.Controls.SetChildIndex(Me.btnREliminar, 0)
         Me.Controls.SetChildIndex(Me.btnRSalir, 0)

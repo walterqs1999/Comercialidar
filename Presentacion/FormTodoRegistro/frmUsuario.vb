@@ -2,6 +2,8 @@
 Imports Logica
 Imports System.Data.SqlClient
 
+Imports Presentacion.frmUsuarioEdicion
+
 Public Class frmUsuario
 
     Dim logica As New Logica.lUsuario
@@ -10,26 +12,37 @@ Public Class frmUsuario
     Private odataAdapter As SqlDataAdapter
     Private odataset As DataSet
 
-    Public Sub cargar_datagrid()
-        dgvUsuarios.DataSource = logica.listar_Usuario.Tables("Usuario")
-    End Sub
-    Private Sub btnRNuevo_Click(sender As Object, e As EventArgs) Handles btnRNuevo.Click
-        frmBaseEdicion.ShowDialog()
-    End Sub
 
-    Private Sub btnRGrabar_Click(sender As Object, e As EventArgs) Handles btnRGrabar.Click
-        frmBaseEdicion.ShowDialog()
+    Private Sub btnRNuevo_Click(sender As Object, e As EventArgs) Handles btnRNuevo.Click
+        frmUsuarioEdicion.ShowDialog()
     End Sub
 
     Private Sub btnRModificar_Click(sender As Object, e As EventArgs) Handles btnRModificar.Click
-        frmBaseEdicion.ShowDialog()
+
+        If dgvUsuarios.CurrentRow Is Nothing Then
+            MsgBox("seleccione una fila")
+        Else
+            frmUsuarioEdicion.grbConfidencial.Visible = False
+            Dim fila As Integer
+            fila = dgvUsuarios.CurrentCell.RowIndex
+            frmUsuarioEdicion.txtId.Text = dgvUsuarios.Item(0, fila).Value
+            frmUsuarioEdicion.txtNombre.Text = dgvUsuarios.Item(1, fila).Value
+            frmUsuarioEdicion.txtDireccion.Text = dgvUsuarios.Item(2, fila).Value
+            frmUsuarioEdicion.txtTelefono.Text = dgvUsuarios.Item(3, fila).Value
+            frmUsuarioEdicion.txtEmail.Text = dgvUsuarios.Item(4, fila).Value
+            frmUsuarioEdicion.cboTipo.Text = dgvUsuarios.Item(5, fila).Value
+            frmUsuarioEdicion.txtUsuario.Text = usuariousuario
+            frmUsuarioEdicion.txtClave.Text = claveusuario
+            frmUsuarioEdicion.txtId.Enabled = False
+            frmUsuarioEdicion.ShowDialog()
+        End If
     End Sub
 
     Private Sub btnREliminar_Click(sender As Object, e As EventArgs) Handles btnREliminar.Click
-        frmBaseEdicion.ShowDialog()
+        frmUsuarioEdicion.ShowDialog()
     End Sub
 
     Private Sub frmUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cargar_datagrid()
+        dgvUsuarios.DataSource = logica.listar_Usuario.Tables("Usuario")
     End Sub
 End Class

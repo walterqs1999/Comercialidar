@@ -36,5 +36,5 @@ C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.f
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmMenuUsuario.resources
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmTodoRegistro.resources
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmUsuario.resources
-C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmBaseEdicion.resources
+C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmTodoEdicion.resources
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmUsuarioEdicion.resources

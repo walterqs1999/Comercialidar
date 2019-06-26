@@ -26,7 +26,6 @@ Partial Class frmTodoRegistro
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnRNuevo = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.PictureBox()
-        Me.btnRGrabar = New System.Windows.Forms.Button()
         Me.btnRModificar = New System.Windows.Forms.Button()
         Me.btnREliminar = New System.Windows.Forms.Button()
         Me.btnRSalir = New System.Windows.Forms.Button()
@@ -69,22 +68,6 @@ Partial Class frmTodoRegistro
         Me.btnCerrar.TabIndex = 13
         Me.btnCerrar.TabStop = False
         '
-        'btnRGrabar
-        '
-        Me.btnRGrabar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.btnRGrabar.FlatAppearance.BorderSize = 0
-        Me.btnRGrabar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.btnRGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRGrabar.ForeColor = System.Drawing.Color.White
-        Me.btnRGrabar.Image = CType(resources.GetObject("btnRGrabar.Image"), System.Drawing.Image)
-        Me.btnRGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRGrabar.Location = New System.Drawing.Point(931, 175)
-        Me.btnRGrabar.Name = "btnRGrabar"
-        Me.btnRGrabar.Size = New System.Drawing.Size(155, 49)
-        Me.btnRGrabar.TabIndex = 14
-        Me.btnRGrabar.Text = "GRABAR"
-        Me.btnRGrabar.UseVisualStyleBackColor = False
-        '
         'btnRModificar
         '
         Me.btnRModificar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
@@ -94,7 +77,7 @@ Partial Class frmTodoRegistro
         Me.btnRModificar.ForeColor = System.Drawing.Color.White
         Me.btnRModificar.Image = CType(resources.GetObject("btnRModificar.Image"), System.Drawing.Image)
         Me.btnRModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRModificar.Location = New System.Drawing.Point(931, 273)
+        Me.btnRModificar.Location = New System.Drawing.Point(931, 206)
         Me.btnRModificar.Name = "btnRModificar"
         Me.btnRModificar.Size = New System.Drawing.Size(155, 49)
         Me.btnRModificar.TabIndex = 15
@@ -110,7 +93,7 @@ Partial Class frmTodoRegistro
         Me.btnREliminar.ForeColor = System.Drawing.Color.White
         Me.btnREliminar.Image = CType(resources.GetObject("btnREliminar.Image"), System.Drawing.Image)
         Me.btnREliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnREliminar.Location = New System.Drawing.Point(931, 372)
+        Me.btnREliminar.Location = New System.Drawing.Point(931, 337)
         Me.btnREliminar.Name = "btnREliminar"
         Me.btnREliminar.Size = New System.Drawing.Size(155, 49)
         Me.btnREliminar.TabIndex = 16
@@ -141,7 +124,6 @@ Partial Class frmTodoRegistro
         Me.Controls.Add(Me.btnRSalir)
         Me.Controls.Add(Me.btnREliminar)
         Me.Controls.Add(Me.btnRModificar)
-        Me.Controls.Add(Me.btnRGrabar)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.btnRNuevo)
         Me.Controls.Add(Me.Label1)
@@ -158,7 +140,6 @@ Partial Class frmTodoRegistro
     Friend WithEvents btnCerrar As PictureBox
     Public WithEvents Label1 As Label
     Public WithEvents btnRNuevo As Button
-    Public WithEvents btnRGrabar As Button
     Public WithEvents btnRModificar As Button
     Public WithEvents btnREliminar As Button
     Public WithEvents btnRSalir As Button

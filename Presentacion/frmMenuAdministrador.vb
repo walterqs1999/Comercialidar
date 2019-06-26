@@ -60,12 +60,12 @@ Public Class frmMenuAdministrador
         fh.Show()
     End Sub
 
-    Private Sub btnProducto_Click(sender As Object, e As EventArgs) Handles btnProducto.Click
-        AbrirFomEnPanel(New frmUsuario)
-    End Sub
-
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         lblHora.Text = DateTime.Now.ToString("hh:mm:ss")
         lblFecha.Text = DateTime.Now.ToLongDateString()
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        AbrirFomEnPanel(New frmUsuario)
     End Sub
 End Class

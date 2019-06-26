@@ -77,22 +77,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormBaseEdicion\frmUsuarioEdicion.Designer.vb">
+    <Compile Include="FormTodoEdicion\frmUsuarioEdicion.Designer.vb">
       <DependentUpon>frmUsuarioEdicion.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormBaseEdicion\frmUsuarioEdicion.vb">
+    <Compile Include="FormTodoEdicion\frmUsuarioEdicion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTodoRegistro\frmUsuario.Designer.vb">
       <DependentUpon>frmUsuario.vb</DependentUpon>
     </Compile>
     <Compile Include="FormTodoRegistro\frmUsuario.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBaseEdicion.Designer.vb">
-      <DependentUpon>frmBaseEdicion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmBaseEdicion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.Designer.vb">
@@ -126,6 +120,12 @@
     <Compile Include="frmRecuperar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmTodoEdicion.Designer.vb">
+      <DependentUpon>frmTodoEdicion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTodoEdicion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmTodoRegistro.Designer.vb">
       <DependentUpon>frmTodoRegistro.vb</DependentUpon>
     </Compile>
@@ -155,14 +155,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FormBaseEdicion\frmUsuarioEdicion.resx">
+    <EmbeddedResource Include="FormTodoEdicion\frmUsuarioEdicion.resx">
       <DependentUpon>frmUsuarioEdicion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTodoRegistro\frmUsuario.resx">
       <DependentUpon>frmUsuario.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmBaseEdicion.resx">
-      <DependentUpon>frmBaseEdicion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
@@ -178,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRecuperar.resx">
       <DependentUpon>frmRecuperar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTodoEdicion.resx">
+      <DependentUpon>frmTodoEdicion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTodoRegistro.resx">
       <DependentUpon>frmTodoRegistro.vb</DependentUpon>

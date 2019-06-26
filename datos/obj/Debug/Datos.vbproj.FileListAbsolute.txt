@@ -1,7 +1,6 @@
 C:\Users\QUISPE\Source\Repos\Comercialidar\datos\bin\Debug\datos.dll
 C:\Users\QUISPE\Source\Repos\Comercialidar\datos\bin\Debug\datos.pdb
 C:\Users\QUISPE\Source\Repos\Comercialidar\datos\bin\Debug\datos.xml
-C:\Users\QUISPE\Source\Repos\Comercialidar\datos\obj\Debug\Datos.vbprojResolveAssemblyReference.cache
 C:\Users\QUISPE\Source\Repos\Comercialidar\datos\obj\Debug\datos.Resources.resources
 C:\Users\QUISPE\Source\Repos\Comercialidar\datos\obj\Debug\Datos.vbproj.GenerateResource.Cache
 C:\Users\QUISPE\Source\Repos\Comercialidar\datos\obj\Debug\datos.dll
