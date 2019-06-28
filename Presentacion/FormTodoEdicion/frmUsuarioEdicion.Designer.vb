@@ -41,7 +41,7 @@ Partial Class frmUsuarioEdicion
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(410, 335)
+        Me.btnCancelar.Location = New System.Drawing.Point(307, 335)
         '
         'grbDatos
         '
@@ -76,19 +76,15 @@ Partial Class frmUsuarioEdicion
         '
         'btnGrabarb
         '
-        Me.btnGrabarb.Location = New System.Drawing.Point(177, 319)
-        '
-        'btnEliminarb
-        '
-        Me.btnEliminarb.Location = New System.Drawing.Point(21, 361)
+        Me.btnGrabarb.Location = New System.Drawing.Point(139, 335)
         '
         'btnModificarb
         '
-        Me.btnModificarb.Location = New System.Drawing.Point(21, 319)
+        Me.btnModificarb.Location = New System.Drawing.Point(139, 335)
         '
         'btnNuevob
         '
-        Me.btnNuevob.Location = New System.Drawing.Point(177, 361)
+        Me.btnNuevob.Location = New System.Drawing.Point(222, 377)
         '
         'btnGenerar
         '
@@ -233,6 +229,8 @@ Partial Class frmUsuarioEdicion
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.ClientSize = New System.Drawing.Size(594, 424)
         Me.Name = "frmUsuarioEdicion"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = ".:. EDICION EN LA TABLA USUARIO .:."
         Me.grbDatos.ResumeLayout(False)
         Me.grbDatos.PerformLayout()
         Me.grbConfidencial.ResumeLayout(False)

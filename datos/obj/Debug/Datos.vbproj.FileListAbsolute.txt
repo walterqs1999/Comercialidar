@@ -6,3 +6,4 @@ C:\Users\QUISPE\Source\Repos\Comercialidar\datos\obj\Debug\Datos.vbproj.Generate
 C:\Users\QUISPE\Source\Repos\Comercialidar\datos\obj\Debug\datos.dll
 C:\Users\QUISPE\Source\Repos\Comercialidar\datos\obj\Debug\datos.xml
 C:\Users\QUISPE\Source\Repos\Comercialidar\datos\obj\Debug\datos.pdb
+C:\Users\QUISPE\Source\Repos\Comercialidar\datos\obj\Debug\Datos.vbprojResolveAssemblyReference.cache

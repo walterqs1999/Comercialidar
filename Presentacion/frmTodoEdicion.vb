@@ -59,19 +59,10 @@ Public Class frmTodoEdicion
             btnNuevob.Visible = True
             btnGrabarb.Visible = True
             btnModificarb.Visible = False
-            btnEliminarb.Visible = False
             valor = 0
         End If
         If valor = 2 Then
             btnModificarb.Visible = True
-            btnNuevob.Visible = False
-            btnGrabarb.Visible = False
-            btnEliminarb.Visible = False
-            valor = 0
-        End If
-        If valor = 3 Then
-            btnEliminarb.Visible = True
-            btnModificarb.Visible = False
             btnNuevob.Visible = False
             btnGrabarb.Visible = False
             valor = 0

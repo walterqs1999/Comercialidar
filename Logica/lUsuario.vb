@@ -159,4 +159,19 @@ Public Class lUsuario
             con.Desconectar()
         End Try
     End Function
+
+    Public Function eliminar_usuario() As Boolean
+        con.Conectar()
+        Dim comando As New SqlCommand("proc_EliminarUsuario")
+        comando.CommandType = CommandType.StoredProcedure
+        comando.Connection = con.strConex
+        comando.Parameters.AddWithValue("@codigo", USU_DNI)
+        Try
+            comando.ExecuteNonQuery()
+            Return True
+            con.Desconectar()
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
 End Class

@@ -27,7 +27,6 @@ Partial Class frmTodoEdicion
         Me.grbDatos = New System.Windows.Forms.GroupBox()
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnEliminarb = New System.Windows.Forms.Button()
         Me.btnModificarb = New System.Windows.Forms.Button()
         Me.btnGrabarb = New System.Windows.Forms.Button()
         Me.btnNuevob = New System.Windows.Forms.Button()
@@ -72,17 +71,6 @@ Partial Class frmTodoEdicion
         Me.Label1.TabIndex = 39
         Me.Label1.Text = "Label1"
         '
-        'btnEliminarb
-        '
-        Me.btnEliminarb.Image = CType(resources.GetObject("btnEliminarb.Image"), System.Drawing.Image)
-        Me.btnEliminarb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEliminarb.Location = New System.Drawing.Point(150, 242)
-        Me.btnEliminarb.Name = "btnEliminarb"
-        Me.btnEliminarb.Size = New System.Drawing.Size(150, 36)
-        Me.btnEliminarb.TabIndex = 68
-        Me.btnEliminarb.Text = "&Eliminar"
-        Me.btnEliminarb.UseVisualStyleBackColor = True
-        '
         'btnModificarb
         '
         Me.btnModificarb.Image = CType(resources.GetObject("btnModificarb.Image"), System.Drawing.Image)
@@ -121,7 +109,6 @@ Partial Class frmTodoEdicion
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(594, 335)
-        Me.Controls.Add(Me.btnEliminarb)
         Me.Controls.Add(Me.btnModificarb)
         Me.Controls.Add(Me.btnGrabarb)
         Me.Controls.Add(Me.btnNuevob)
@@ -139,7 +126,6 @@ Partial Class frmTodoEdicion
     Public WithEvents txtId As TextBox
     Public WithEvents Label1 As Label
     Public WithEvents btnGrabarb As Button
-    Public WithEvents btnEliminarb As Button
     Public WithEvents btnModificarb As Button
     Public WithEvents btnNuevob As Button
 End Class

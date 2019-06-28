@@ -55,11 +55,11 @@ Partial Class frmUsuario
         Me.dgvUsuarios.AllowUserToDeleteRows = False
         Me.dgvUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvUsuarios.Location = New System.Drawing.Point(199, 77)
+        Me.dgvUsuarios.Location = New System.Drawing.Point(113, 77)
         Me.dgvUsuarios.Name = "dgvUsuarios"
         Me.dgvUsuarios.ReadOnly = True
         Me.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvUsuarios.Size = New System.Drawing.Size(646, 480)
+        Me.dgvUsuarios.Size = New System.Drawing.Size(736, 480)
         Me.dgvUsuarios.TabIndex = 18
         '
         'frmUsuario
