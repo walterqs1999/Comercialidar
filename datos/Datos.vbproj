@@ -63,6 +63,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dCliente.vb" />
     <Compile Include="dConexion.vb" />
     <Compile Include="dUsuario.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

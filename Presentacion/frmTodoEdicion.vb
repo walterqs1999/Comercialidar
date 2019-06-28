@@ -84,5 +84,6 @@ Public Class frmTodoEdicion
 
     Private Sub btnNuevob_Click_1(sender As Object, e As EventArgs) Handles btnNuevob.Click
         LimpiarTextoGrupo()
+        EstadoTextos(True)
     End Sub
 End Class

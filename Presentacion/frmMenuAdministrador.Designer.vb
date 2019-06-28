@@ -344,9 +344,10 @@ Partial Class frmMenuAdministrador
         'lblAdministrador
         '
         Me.lblAdministrador.AutoSize = True
+        Me.lblAdministrador.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAdministrador.Location = New System.Drawing.Point(141, 42)
         Me.lblAdministrador.Name = "lblAdministrador"
-        Me.lblAdministrador.Size = New System.Drawing.Size(39, 13)
+        Me.lblAdministrador.Size = New System.Drawing.Size(49, 16)
         Me.lblAdministrador.TabIndex = 4
         Me.lblAdministrador.Text = "Label1"
         '
@@ -354,9 +355,10 @@ Partial Class frmMenuAdministrador
         '
         Me.lblNombre.AutoSize = True
         Me.lblNombre.BackColor = System.Drawing.Color.White
+        Me.lblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNombre.Location = New System.Drawing.Point(141, 10)
         Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(39, 13)
+        Me.lblNombre.Size = New System.Drawing.Size(72, 24)
         Me.lblNombre.TabIndex = 3
         Me.lblNombre.Text = "Label1"
         '

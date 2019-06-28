@@ -74,6 +74,12 @@ Partial Class frmUsuarioEdicion
         'txtId
         '
         '
+        'Label1
+        '
+        Me.Label1.Location = New System.Drawing.Point(369, 22)
+        Me.Label1.Size = New System.Drawing.Size(78, 13)
+        Me.Label1.Text = "DNI USUARIO"
+        '
         'btnGrabarb
         '
         Me.btnGrabarb.Location = New System.Drawing.Point(139, 335)

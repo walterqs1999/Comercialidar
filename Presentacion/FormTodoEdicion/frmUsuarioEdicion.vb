@@ -198,8 +198,4 @@ Public Class frmUsuarioEdicion
             MsgBox("No se Modifico el Usuario")
         End If
     End Sub
-
-    Private Sub frmUsuarioEdicion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

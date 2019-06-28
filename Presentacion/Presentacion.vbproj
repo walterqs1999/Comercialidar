@@ -77,10 +77,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormTodoEdicion\frmClienteEdicion.Designer.vb">
+      <DependentUpon>frmClienteEdicion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTodoEdicion\frmClienteEdicion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormTodoEdicion\frmUsuarioEdicion.Designer.vb">
       <DependentUpon>frmUsuarioEdicion.vb</DependentUpon>
     </Compile>
     <Compile Include="FormTodoEdicion\frmUsuarioEdicion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTodoRegistro\frmCliente.Designer.vb">
+      <DependentUpon>frmCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTodoRegistro\frmCliente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTodoRegistro\frmUsuario.Designer.vb">
@@ -155,8 +167,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormTodoEdicion\frmClienteEdicion.resx">
+      <DependentUpon>frmClienteEdicion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTodoEdicion\frmUsuarioEdicion.resx">
       <DependentUpon>frmUsuarioEdicion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTodoRegistro\frmCliente.resx">
+      <DependentUpon>frmCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTodoRegistro\frmUsuario.resx">
       <DependentUpon>frmUsuario.vb</DependentUpon>
