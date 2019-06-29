@@ -83,6 +83,12 @@
     <Compile Include="FormTodoEdicion\frmClienteEdicion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormTodoEdicion\frmCompras.Designer.vb">
+      <DependentUpon>frmCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTodoEdicion\frmCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormTodoEdicion\frmProveedorEdicion.Designer.vb">
       <DependentUpon>frmProveedorEdicion.vb</DependentUpon>
     </Compile>
