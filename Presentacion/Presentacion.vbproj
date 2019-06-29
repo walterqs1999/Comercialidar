@@ -77,6 +77,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormOfHerencias\frmTodoDocumentos.Designer.vb">
+      <DependentUpon>frmTodoDocumentos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormOfHerencias\frmTodoDocumentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormTodoEdicion\frmClienteEdicion.Designer.vb">
       <DependentUpon>frmClienteEdicion.vb</DependentUpon>
     </Compile>
@@ -150,16 +156,16 @@
     <Compile Include="frmRecuperar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTodoEdicion.Designer.vb">
+    <Compile Include="FormOfHerencias\frmTodoEdicion.Designer.vb">
       <DependentUpon>frmTodoEdicion.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmTodoEdicion.vb">
+    <Compile Include="FormOfHerencias\frmTodoEdicion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTodoRegistro.Designer.vb">
+    <Compile Include="FormOfHerencias\frmTodoRegistro.Designer.vb">
       <DependentUpon>frmTodoRegistro.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmTodoRegistro.vb">
+    <Compile Include="FormOfHerencias\frmTodoRegistro.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmWelcome.Designer.vb">
@@ -185,6 +191,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormOfHerencias\frmTodoDocumentos.resx">
+      <DependentUpon>frmTodoDocumentos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTodoEdicion\frmClienteEdicion.resx">
       <DependentUpon>frmClienteEdicion.vb</DependentUpon>
     </EmbeddedResource>
@@ -221,10 +230,10 @@
     <EmbeddedResource Include="frmRecuperar.resx">
       <DependentUpon>frmRecuperar.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTodoEdicion.resx">
+    <EmbeddedResource Include="FormOfHerencias\frmTodoEdicion.resx">
       <DependentUpon>frmTodoEdicion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTodoRegistro.resx">
+    <EmbeddedResource Include="FormOfHerencias\frmTodoRegistro.resx">
       <DependentUpon>frmTodoRegistro.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmWelcome.resx">
