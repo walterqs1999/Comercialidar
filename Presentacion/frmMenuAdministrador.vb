@@ -72,4 +72,8 @@ Public Class frmMenuAdministrador
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         AbrirFomEnPanel(New frmCliente)
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        AbrirFomEnPanel(New frmProveedor)
+    End Sub
 End Class

@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="dCliente.vb" />
     <Compile Include="dConexion.vb" />
+    <Compile Include="dProveedor.vb" />
     <Compile Include="dUsuario.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
