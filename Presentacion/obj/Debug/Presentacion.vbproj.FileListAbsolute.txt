@@ -42,3 +42,7 @@ C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.f
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmClienteEdicion.resources
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmProveedor.resources
 C:\Users\QUISPE\Source\Repos\Comercialidar\Presentacion\obj\Debug\Presentacion.frmProveedorEdicion.resources
+D:\Proyectos visual studio\Comercialidar\Presentacion\bin\Debug\Presentacion.exe.config
+D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.exe
+D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.xml
+D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.pdb

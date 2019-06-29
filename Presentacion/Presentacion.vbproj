@@ -188,6 +188,9 @@
     <EmbeddedResource Include="FormTodoEdicion\frmClienteEdicion.resx">
       <DependentUpon>frmClienteEdicion.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTodoEdicion\frmCompras.resx">
+      <DependentUpon>frmCompras.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTodoEdicion\frmProveedorEdicion.resx">
       <DependentUpon>frmProveedorEdicion.vb</DependentUpon>
     </EmbeddedResource>
