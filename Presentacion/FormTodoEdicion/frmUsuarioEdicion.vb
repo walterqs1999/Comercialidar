@@ -1,8 +1,10 @@
-﻿Imports System
+﻿Option Strict On
+
+Imports System
 Imports System.Data
 Imports System.Data.SqlClient
 
-Imports System.Runtime.InteropServices
+'Imports System.Runtime.InteropServices
 Imports System.Text
 Imports System.Security.Cryptography
 
@@ -16,6 +18,8 @@ Public Class frmUsuarioEdicion
 
     Dim Rpta As Integer
 
+    Dim generado As String
+
     'Public Sub cargar_datagrid()
     'dgvUsuarios.DataSource = logica.listar_Usuario.Tables("Usuario")
     'End Sub
@@ -24,6 +28,7 @@ Public Class frmUsuarioEdicion
         Dim enc As New UTF8Encoding
         Dim data() As Byte = enc.GetBytes(cadena)
         Dim result() As Byte
+
         Dim sha As New SHA1CryptoServiceProvider
 
         result = sha.ComputeHash(data)
@@ -41,7 +46,9 @@ Public Class frmUsuarioEdicion
 
             sb.Append(result(i).ToString("x"))
         Next
-        'Devolvemos la cadena con el hash :)
+
+
+        'Devolvemos la cadena con el hash en mayúsculas para que quede más chuli :)
         generarClave = sb.ToString()
 
     End Function
@@ -51,7 +58,7 @@ Public Class frmUsuarioEdicion
         nom = txtNombre.Text
         dni = txtId.Text
         pass = "123456"
-
+        generado = generarClave(pass)
         nom = Mid(nom, 1, 4)
         dni = Mid(dni, 1, 4)
         usu = nom & dni
@@ -99,7 +106,7 @@ Public Class frmUsuarioEdicion
         usuLogi.USU_TEL = txtTelefono.Text
         usuLogi.USU_CORREO = txtEmail.Text
         usuLogi.USU_USU = txtUsuario.Text
-        usuLogi.USU_PAS = generarClave(txtClave.Text)
+        usuLogi.USU_PAS = generado
         usuLogi.USU_TIPO = cboTipo.Text
         usuLogi.USU_ESTA = "A"
         Dim can As Integer

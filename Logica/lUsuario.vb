@@ -1,5 +1,5 @@
-﻿'Imports System
-'Imports System.Data
+﻿Imports System
+Imports System.Data
 Imports System.Data.SqlClient
 
 Imports datos
