@@ -46,12 +46,13 @@ Partial Class frmTodoDocumentos
         Me.txtNumeroF = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnAgregar = New System.Windows.Forms.Button()
-        Me.dgvDatos = New System.Windows.Forms.DataGridView()
         Me.txtMostrar = New System.Windows.Forms.TextBox()
         Me.btnCerrar = New System.Windows.Forms.PictureBox()
+        Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.btnVistaPrevia = New System.Windows.Forms.Button()
         Me.grbDetalle.SuspendLayout()
         Me.grbDatos.SuspendLayout()
-        CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -200,6 +201,8 @@ Partial Class frmTodoDocumentos
         '
         'grbDatos
         '
+        Me.grbDatos.Controls.Add(Me.dtpFecha)
+        Me.grbDatos.Controls.Add(Me.Label10)
         Me.grbDatos.Controls.Add(Me.lbDNI)
         Me.grbDatos.Controls.Add(Me.txtRUCDNI)
         Me.grbDatos.Controls.Add(Me.lbRUC)
@@ -289,14 +292,6 @@ Partial Class frmTodoDocumentos
         Me.btnAgregar.Text = "&Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
-        'dgvDatos
-        '
-        Me.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDatos.Location = New System.Drawing.Point(46, 326)
-        Me.dgvDatos.Name = "dgvDatos"
-        Me.dgvDatos.Size = New System.Drawing.Size(562, 211)
-        Me.dgvDatos.TabIndex = 99
-        '
         'txtMostrar
         '
         Me.txtMostrar.Location = New System.Drawing.Point(690, 57)
@@ -315,14 +310,44 @@ Partial Class frmTodoDocumentos
         Me.btnCerrar.TabIndex = 101
         Me.btnCerrar.TabStop = False
         '
+        'dtpFecha
+        '
+        Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFecha.Location = New System.Drawing.Point(441, 51)
+        Me.dtpFecha.Name = "dtpFecha"
+        Me.dtpFecha.Size = New System.Drawing.Size(114, 22)
+        Me.dtpFecha.TabIndex = 94
+        Me.dtpFecha.Value = New Date(2018, 11, 30, 12, 1, 32, 0)
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Cambria", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.Label10.Location = New System.Drawing.Point(334, 55)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(103, 14)
+        Me.Label10.TabIndex = 93
+        Me.Label10.Text = "Fecha de Emisión:"
+        '
+        'btnVistaPrevia
+        '
+        Me.btnVistaPrevia.Font = New System.Drawing.Font("Cambria", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVistaPrevia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnVistaPrevia.Location = New System.Drawing.Point(813, 568)
+        Me.btnVistaPrevia.Name = "btnVistaPrevia"
+        Me.btnVistaPrevia.Size = New System.Drawing.Size(97, 24)
+        Me.btnVistaPrevia.TabIndex = 102
+        Me.btnVistaPrevia.Text = "Vista Previa"
+        Me.btnVistaPrevia.UseVisualStyleBackColor = True
+        '
         'frmTodoDocumentos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1091, 644)
+        Me.Controls.Add(Me.btnVistaPrevia)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.txtMostrar)
-        Me.Controls.Add(Me.dgvDatos)
         Me.Controls.Add(Me.txtTotal)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.txtIgv)
@@ -344,7 +369,6 @@ Partial Class frmTodoDocumentos
         Me.grbDetalle.PerformLayout()
         Me.grbDatos.ResumeLayout(False)
         Me.grbDatos.PerformLayout()
-        CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -374,7 +398,9 @@ Partial Class frmTodoDocumentos
     Public WithEvents txtNumeroF As TextBox
     Public WithEvents Label1 As Label
     Public WithEvents btnAgregar As Button
-    Friend WithEvents dgvDatos As DataGridView
     Friend WithEvents txtMostrar As TextBox
     Friend WithEvents btnCerrar As PictureBox
+    Friend WithEvents dtpFecha As DateTimePicker
+    Friend WithEvents Label10 As Label
+    Public WithEvents btnVistaPrevia As Button
 End Class

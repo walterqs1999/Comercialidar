@@ -7,3 +7,11 @@ C:\Users\QUISPE\Source\Repos\Comercialidar\datos\obj\Debug\datos.dll
 C:\Users\QUISPE\Source\Repos\Comercialidar\datos\obj\Debug\datos.xml
 C:\Users\QUISPE\Source\Repos\Comercialidar\datos\obj\Debug\datos.pdb
 C:\Users\QUISPE\Source\Repos\Comercialidar\datos\obj\Debug\Datos.vbprojResolveAssemblyReference.cache
+D:\Proyectos visual studio\Comercialidar\datos\bin\Debug\datos.dll
+D:\Proyectos visual studio\Comercialidar\datos\bin\Debug\datos.pdb
+D:\Proyectos visual studio\Comercialidar\datos\bin\Debug\datos.xml
+D:\Proyectos visual studio\Comercialidar\datos\obj\Debug\datos.Resources.resources
+D:\Proyectos visual studio\Comercialidar\datos\obj\Debug\Datos.vbproj.GenerateResource.Cache
+D:\Proyectos visual studio\Comercialidar\datos\obj\Debug\datos.dll
+D:\Proyectos visual studio\Comercialidar\datos\obj\Debug\datos.xml
+D:\Proyectos visual studio\Comercialidar\datos\obj\Debug\datos.pdb

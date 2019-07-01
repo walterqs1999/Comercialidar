@@ -10,3 +10,15 @@ C:\Users\QUISPE\Source\Repos\Comercialidar\Logica\obj\Debug\Logica.vbproj.Genera
 C:\Users\QUISPE\Source\Repos\Comercialidar\Logica\obj\Debug\Logica.dll
 C:\Users\QUISPE\Source\Repos\Comercialidar\Logica\obj\Debug\Logica.xml
 C:\Users\QUISPE\Source\Repos\Comercialidar\Logica\obj\Debug\Logica.pdb
+D:\Proyectos visual studio\Comercialidar\Logica\bin\Debug\Logica.dll
+D:\Proyectos visual studio\Comercialidar\Logica\bin\Debug\Logica.pdb
+D:\Proyectos visual studio\Comercialidar\Logica\bin\Debug\Logica.xml
+D:\Proyectos visual studio\Comercialidar\Logica\bin\Debug\datos.dll
+D:\Proyectos visual studio\Comercialidar\Logica\bin\Debug\datos.pdb
+D:\Proyectos visual studio\Comercialidar\Logica\bin\Debug\datos.xml
+D:\Proyectos visual studio\Comercialidar\Logica\obj\Debug\Logica.vbprojResolveAssemblyReference.cache
+D:\Proyectos visual studio\Comercialidar\Logica\obj\Debug\Logica.Resources.resources
+D:\Proyectos visual studio\Comercialidar\Logica\obj\Debug\Logica.vbproj.GenerateResource.Cache
+D:\Proyectos visual studio\Comercialidar\Logica\obj\Debug\Logica.dll
+D:\Proyectos visual studio\Comercialidar\Logica\obj\Debug\Logica.xml
+D:\Proyectos visual studio\Comercialidar\Logica\obj\Debug\Logica.pdb

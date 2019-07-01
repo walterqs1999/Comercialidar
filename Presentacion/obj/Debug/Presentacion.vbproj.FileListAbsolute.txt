@@ -59,7 +59,6 @@ D:\Proyectos visual studio\Comercialidar\Presentacion\bin\Debug\Logica.xml
 D:\Proyectos visual studio\Comercialidar\Presentacion\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.vbprojResolveAssemblyReference.cache
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmClienteEdicion.resources
-D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmCompras.resources
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmProveedorEdicion.resources
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmUsuarioEdicion.resources
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmCliente.resources
@@ -76,3 +75,4 @@ D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frm
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.Resources.resources
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.vbproj.GenerateResource.Cache
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmTodoDocumentos.resources
+D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmComprasEdicion.resources

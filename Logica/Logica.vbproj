@@ -64,8 +64,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="lCliente.vb" />
+    <Compile Include="lCompras.vb" />
     <Compile Include="lProveedor.vb" />
     <Compile Include="lUsuario.vb" />
+    <Compile Include="ModulesOfFrom\mdlCompras.vb" />
     <Compile Include="ModulesOfFrom\mdlGeneralUsuario.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

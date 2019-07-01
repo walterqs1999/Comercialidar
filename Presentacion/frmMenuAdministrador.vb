@@ -78,6 +78,6 @@ Public Class frmMenuAdministrador
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        AbrirFomEnPanel(New frmTodoDocumentos)
+        AbrirFomEnPanel(New frmComprasEdicion)
     End Sub
 End Class
