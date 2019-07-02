@@ -5,5 +5,5 @@
     Public nomProducto As String
     Public pcuProducto As Decimal
     Public pvuProducto As Decimal
-    Public numdocumento As Integer
+    Public docuid As Integer
 End Module

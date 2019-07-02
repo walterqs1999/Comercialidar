@@ -35,23 +35,21 @@ Public Class lCompras
     Public DETCO_CANTIDAD As Integer
     Public DETCO_TOTALPRO As Decimal
 
-    Public num As Integer
+    Public Sub Contar()
 
-
-    'Public Function Contar()
-    '    Dim can As Integer
-    '    Dim comando = New SqlCommand("SELECT * FROM CABECERA_COMPRA")
-    '    odap = New SqlDataAdapter(comando)
-    '    oDataSet = New DataSet
-    '    con.Conectar()
-    '    odap.Fill(oDataSet)
-    '    can = oDataSet.Tables(0).Rows.Count
-    '    If can < 1 Then
-    '        Return num = 1
-    '    Else
-    '        Return num = can + 1
-    '    End If
-    'End Function
+        con.Conectar()
+        Dim can As Integer
+        Dim comando = New SqlCommand("SELECT * FROM CABECERA_COMPRA")
+        odap = New SqlDataAdapter(comando)
+        oDataSet = New DataSet
+        odap.Fill(oDataSet)
+        can = oDataSet.Tables(0).Rows.Count
+        If can < 1 Then
+            docuid = 1
+        Else
+            docuid = can + 1
+        End If
+    End Sub
 
     Public Function registrar_cabeceraC() As Boolean
         Try
@@ -62,7 +60,7 @@ Public Class lCompras
             comando.Connection = con.strConex
             comando.Parameters.AddWithValue("@numdoc", CABCO_NUMDOC)
             comando.Parameters.AddWithValue("@tipodoc", CABCO_TIPODOC)
-            comando.Parameters.AddWithValue("@proruc", PROV_RUC)
+            comando.Parameters.AddWithValue("@provruc", PROV_RUC)
             comando.Parameters.AddWithValue("@usudni", USU_DNI)
             comando.Parameters.AddWithValue("@total", CABCO_TOTAL)
             comando.Parameters.AddWithValue("@subtotal", CABCO_SUBT)
@@ -88,8 +86,12 @@ Public Class lCompras
             con.Conectar()
 
             Dim comando = New SqlCommand("proc_InsertarDetalleCompra")
+
             comando.CommandType = CommandType.StoredProcedure
             comando.Connection = con.strConex
+
+            comando.Parameters.Clear()
+
             comando.Parameters.AddWithValue("@idcabecera", CABCO_ID)
             comando.Parameters.AddWithValue("@tipodoc", DETCO_TIPODOC)
             comando.Parameters.AddWithValue("@codprod", PRO_COD)
@@ -97,8 +99,6 @@ Public Class lCompras
             comando.Parameters.AddWithValue("@pvu", DETCO_PVU)
             comando.Parameters.AddWithValue("@cantidad", DETCO_CANTIDAD)
             comando.Parameters.AddWithValue("@total", DETCO_TOTALPRO)
-
-            comando.Parameters.Clear()
 
             If comando.ExecuteNonQuery Then
                 Return True

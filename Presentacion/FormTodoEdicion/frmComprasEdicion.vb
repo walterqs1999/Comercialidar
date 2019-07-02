@@ -15,7 +15,7 @@ Public Class frmComprasEdicion
 
     Private Sub btnComprar_Click(sender As Object, e As EventArgs) Handles btnComprar.Click
 
-        Dim completo As Integer = 0
+        Dim conta As Integer = 0
 
         rpta = MessageBox.Show("Deseas guardar..?", "Registro Factura", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
 
@@ -28,6 +28,10 @@ Public Class frmComprasEdicion
             comLogi.CABCO_SUBT = txtSubT.Text
             comLogi.CABCO_IGV = txtIgv.Text
             comLogi.CABCO_FECHA = dtpFecha.Value
+
+            If comLogi.registrar_cabeceraC Then
+                conta = 1
+            End If
 
             Dim Fila As DataGridViewRow = New DataGridViewRow
             'Dim Fila1 = dgvDatos.RowCount
@@ -46,21 +50,25 @@ Public Class frmComprasEdicion
                     'comLogi.PRO_COD = Convert.ToInt64(dgvDatos.Rows(Fila1).Cells(2).Value.ToString())
                     comLogi.DETCO_PCU = Convert.ToDecimal(Fila.Cells("pcu").Value.ToString())
                     'comLogi.DETCO_PCU = Convert.ToDecimal(dgvDatos.Rows(Fila1).Cells(3).Value.ToString())
-                    comLogi.DETCO_PCU = Convert.ToDecimal(Fila.Cells("pvu").Value.ToString())
+                    comLogi.DETCO_PVU = Convert.ToDecimal(Fila.Cells("pvu").Value.ToString())
                     'comLogi.DETCO_PCU = Convert.ToDecimal(dgvDatos.Rows(Fila1).Cells(4).Value.ToString())
                     comLogi.DETCO_CANTIDAD = Convert.ToInt64(Fila.Cells("cantidad").Value.ToString())
                     'comLogi.DETCO_CANTIDAD = Convert.ToInt64(dgvDatos.Rows(Fila1).Cells(5).Value.ToString())
                     comLogi.DETCO_TOTALPRO = Convert.ToDecimal(Fila.Cells("total").Value.ToString())
                     'comLogi.DETCO_TOTALPRO = Convert.ToDecimal(dgvDatos.Rows(Fila1).Cells(6).Value.ToString())
+
+                    If comLogi.registrar_detalleC Then
+                        conta = conta + 1
+                    End If
                     ' Next
                 Next
             Catch ex As Exception
                 MsgBox(ex.Message)
-
-            Finally
-                oConexion.Close()
-                MsgBox("Compra registrada")
             End Try
+        End If
+
+        If conta = 4 Then
+            MsgBox("compra registrada")
         End If
     End Sub
     Private Sub txtRUCDNI_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRUCDNI.KeyPress
@@ -99,7 +107,7 @@ Public Class frmComprasEdicion
         total = txtUnitarioC.Text * txtCantidad.Text
         'mdlStock = mdlStock + txtCantidad.Text
 
-        dgvDatos.Rows.Add(9, cboTipo.Text, txtCodigo.Text, txtDescripcion.Text, txtUnitarioC.Text, txtUnitarioV.Text, txtCantidad.Text, total)
+        dgvDatos.Rows.Add(17, cboTipo.Text, txtCodigo.Text, txtDescripcion.Text, txtUnitarioC.Text, txtUnitarioV.Text, txtCantidad.Text, total)
 
         con = con + total
         subt = con / 1.18
@@ -125,12 +133,10 @@ Public Class frmComprasEdicion
     End Sub
 
     Private Sub frmComprasEdicion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        txtNumeroF.Text = 4
-
+        txtNumeroF.Text = docuid
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
-        txtNumeroF.Text = 4
+        txtNumeroF.Text = docuid
     End Sub
 End Class
