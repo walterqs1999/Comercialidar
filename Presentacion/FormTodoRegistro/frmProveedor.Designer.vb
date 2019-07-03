@@ -54,6 +54,7 @@ Partial Class frmProveedor
         Me.dgvProveedor.AllowUserToDeleteRows = False
         Me.dgvProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvProveedor.Location = New System.Drawing.Point(104, 103)
+        Me.dgvProveedor.MultiSelect = False
         Me.dgvProveedor.Name = "dgvProveedor"
         Me.dgvProveedor.ReadOnly = True
         Me.dgvProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect

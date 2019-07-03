@@ -38,6 +38,8 @@ Partial Class frmTodoDocumentos
         Me.Label15 = New System.Windows.Forms.Label()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.grbDatos = New System.Windows.Forms.GroupBox()
+        Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.lbDNI = New System.Windows.Forms.Label()
         Me.txtRUCDNI = New System.Windows.Forms.TextBox()
         Me.lbRUC = New System.Windows.Forms.Label()
@@ -48,8 +50,6 @@ Partial Class frmTodoDocumentos
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.txtMostrar = New System.Windows.Forms.TextBox()
         Me.btnCerrar = New System.Windows.Forms.PictureBox()
-        Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.btnVistaPrevia = New System.Windows.Forms.Button()
         Me.grbDetalle.SuspendLayout()
         Me.grbDatos.SuspendLayout()
@@ -218,6 +218,25 @@ Partial Class frmTodoDocumentos
         Me.grbDatos.TabStop = False
         Me.grbDatos.Text = "Datos del Cliente"
         '
+        'dtpFecha
+        '
+        Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFecha.Location = New System.Drawing.Point(441, 51)
+        Me.dtpFecha.Name = "dtpFecha"
+        Me.dtpFecha.Size = New System.Drawing.Size(114, 22)
+        Me.dtpFecha.TabIndex = 94
+        Me.dtpFecha.Value = New Date(2018, 11, 30, 12, 1, 32, 0)
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Cambria", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.Label10.Location = New System.Drawing.Point(334, 55)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(103, 14)
+        Me.Label10.TabIndex = 93
+        Me.Label10.Text = "Fecha de Emisión:"
+        '
         'lbDNI
         '
         Me.lbDNI.AutoSize = True
@@ -257,6 +276,7 @@ Partial Class frmTodoDocumentos
         '
         'cboTipo
         '
+        Me.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboTipo.FormattingEnabled = True
         Me.cboTipo.Items.AddRange(New Object() {"BOLETA", "FACTURA"})
         Me.cboTipo.Location = New System.Drawing.Point(136, 20)
@@ -309,25 +329,6 @@ Partial Class frmTodoDocumentos
         Me.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.btnCerrar.TabIndex = 101
         Me.btnCerrar.TabStop = False
-        '
-        'dtpFecha
-        '
-        Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(441, 51)
-        Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(114, 22)
-        Me.dtpFecha.TabIndex = 94
-        Me.dtpFecha.Value = New Date(2018, 11, 30, 12, 1, 32, 0)
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Cambria", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
-        Me.Label10.Location = New System.Drawing.Point(334, 55)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(103, 14)
-        Me.Label10.TabIndex = 93
-        Me.Label10.Text = "Fecha de Emisión:"
         '
         'btnVistaPrevia
         '

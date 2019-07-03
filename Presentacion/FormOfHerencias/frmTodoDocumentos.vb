@@ -116,6 +116,7 @@ Public Class frmTodoDocumentos
         EstadoBotones(True)
         EstadoTextos(False)
         LimpiarTextoGrupo()
+        dtpFecha.Value = DateTime.Now
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click

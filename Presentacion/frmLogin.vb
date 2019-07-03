@@ -126,7 +126,7 @@ Public Class frmLogin
                     txtContraseña.SelectAll()
                 End If
             Else
-                MsgBox("El Usuario:" + txtUsuario.Text * " no se encuentra registrado")
+                MsgBox("El Usuario:" + txtUsuario.Text + " no se encuentra registrado")
                 Advertencia1.Visible = True
                 txtUsuario.SelectAll()
             End If

@@ -35,21 +35,47 @@ Public Class lCompras
     Public DETCO_CANTIDAD As Integer
     Public DETCO_TOTALPRO As Decimal
 
-    Public Sub Contar()
-
+    Public Function numerodocumento(ByVal tipo As String) As Boolean
         con.Conectar()
-        Dim can As Integer
-        Dim comando = New SqlCommand("SELECT * FROM CABECERA_COMPRA")
-        odap = New SqlDataAdapter(comando)
-        oDataSet = New DataSet
-        odap.Fill(oDataSet)
-        can = oDataSet.Tables(0).Rows.Count
-        If can < 1 Then
-            docuid = 1
-        Else
-            docuid = can + 1
-        End If
-    End Sub
+        Dim resul As Boolean = False
+        Try
+            enunc = New SqlCommand("SELECT COUNT(CABCO_NUMDOC) AS NUMERO FROM CABECERA_COMPRA WHERE CABCO_TIPODOC = '" & tipo & "'", con.strConex)
+            resp = enunc.ExecuteReader
+            If resp.Read Then
+                numdocu = resp.Item("NUMERO")
+                If numdocu < 1 Then
+                    numdocu = 1
+                Else
+                    numdocu = numdocu + 1
+                End If
+                resul = True
+            End If
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        Finally
+            con.Desconectar()
+        End Try
+        Return resul
+    End Function
+
+    Public Function iddocumento() As Boolean
+        con.Conectar()
+        Dim resul As Boolean = False
+        Try
+            enunc = New SqlCommand("SELECT MAX(CABCO_ID) AS ID FROM CABECERA_COMPRA", con.strConex)
+            resp = enunc.ExecuteReader
+            If resp.Read Then
+                iddocu = resp.Item("ID")
+                iddocu = iddocu + 1
+                resul = True
+            End If
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        Finally
+            con.Desconectar()
+        End Try
+        Return resul
+    End Function
 
     Public Function registrar_cabeceraC() As Boolean
         Try
@@ -140,15 +166,15 @@ Public Class lCompras
         con.Conectar()
         Dim resul As Boolean = False
         Try
-            enunc = New SqlCommand("SELECT PRO_NOM, PRO_PCU, PRO_PVU FROM PRODUCTO WHERE PRO_COD='" & codProducto & "'", con.strConex)
+            enunc = New SqlCommand("SELECT PRO_NOM, PRO_PCU, PRO_PVU, PRO_STOCK FROM PRODUCTO WHERE PRO_COD='" & codProducto & "'", con.strConex)
             resp = enunc.ExecuteReader
 
             If resp.Read Then
                 resul = True
-
                 nomProducto = resp.Item("PRO_NOM")
                 pcuProducto = resp.Item("PRO_PCU")
                 pvuProducto = resp.Item("PRO_PVU")
+                stockProducto = resp.Item("PRO_STOCK")
             End If
             resp.Close()
         Catch ex As Exception

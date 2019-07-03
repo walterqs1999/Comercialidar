@@ -57,9 +57,7 @@ Public Class frmComprasEdicion
                     comLogi.DETCO_TOTALPRO = Convert.ToDecimal(Fila.Cells("total").Value.ToString())
                     'comLogi.DETCO_TOTALPRO = Convert.ToDecimal(dgvDatos.Rows(Fila1).Cells(6).Value.ToString())
 
-                    If comLogi.registrar_detalleC Then
-                        conta = conta + 1
-                    End If
+                    comLogi.registrar_detalleC()
                     ' Next
                 Next
             Catch ex As Exception
@@ -67,7 +65,7 @@ Public Class frmComprasEdicion
             End Try
         End If
 
-        If conta = 4 Then
+        If conta = 1 Then
             MsgBox("compra registrada")
         End If
     End Sub
@@ -92,6 +90,7 @@ Public Class frmComprasEdicion
                     txtDescripcion.Text = nomProducto
                     txtUnitarioC.Text = pcuProducto
                     txtUnitarioV.Text = pvuProducto
+                    txtStock.Text = stockProducto
                 Else
                     MsgBox("Producto no existe")
                 End If
@@ -103,11 +102,17 @@ Public Class frmComprasEdicion
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         Dim total, igv, subt As Decimal
         Dim con As Double
+        Dim id As Integer
+
         con = Val(txtTotal.Text)
         total = txtUnitarioC.Text * txtCantidad.Text
         'mdlStock = mdlStock + txtCantidad.Text
 
-        dgvDatos.Rows.Add(17, cboTipo.Text, txtCodigo.Text, txtDescripcion.Text, txtUnitarioC.Text, txtUnitarioV.Text, txtCantidad.Text, total)
+        If comLogi.iddocumento Then
+            id = iddocu
+        End If
+
+        dgvDatos.Rows.Add(id, cboTipo.Text, txtCodigo.Text, txtDescripcion.Text, txtUnitarioC.Text, txtUnitarioV.Text, txtCantidad.Text, total)
 
         con = con + total
         subt = con / 1.18
@@ -133,10 +138,37 @@ Public Class frmComprasEdicion
     End Sub
 
     Private Sub frmComprasEdicion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtNumeroF.Text = docuid
+        cboTipo.SelectedIndex = 1
+
+        If comLogi.numerodocumento(cboTipo.Text) Then
+            txtNumeroF.Text = numdocu
+        End If
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
-        txtNumeroF.Text = docuid
+        If comLogi.numerodocumento(cboTipo.Text) Then
+            txtNumeroF.Text = numdocu
+        End If
+        cboTipo.SelectedIndex = 1
+        dgvDatos.Rows.Clear()
+    End Sub
+
+    Private Sub cboTipo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboTipo.SelectedIndexChanged
+        If comLogi.numerodocumento(cboTipo.Text) Then
+            txtNumeroF.Text = numdocu
+        End If
+    End Sub
+
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        dgvDatos.Rows.Clear()
+    End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        dgvDatos.Rows.Remove(dgvDatos.CurrentRow)
+        Dim Total As Single
+        For Each row As DataGridViewRow In Me.dgvDatos.Rows
+            Total += Val(row.Cells(7).Value)
+        Next
+        txtTotal.Text = Total.ToString
     End Sub
 End Class
