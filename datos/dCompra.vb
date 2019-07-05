@@ -12,6 +12,7 @@
 
     'DETALLE
     Public _CABCO_ID As Integer
+    Public _DETCO_NUMDOC As Integer
     Public _DETCO_TIPODOC As String
     Public _PRO_COD As Integer
     Public _DETCO_PCU As Decimal
@@ -155,6 +156,15 @@
         End Get
         Set(value As String)
             _DETCO_TIPODOC = value
+        End Set
+    End Property
+
+    Public Property DETCO_NUMDOC As Integer
+        Get
+            Return _DETCO_NUMDOC
+        End Get
+        Set(value As Integer)
+            _DETCO_NUMDOC = value
         End Set
     End Property
 End Class

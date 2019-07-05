@@ -112,22 +112,25 @@ Public Class frmLogin
                 If passs.Equals(clave) = True Then
                     Me.Visible = False
                     Dim frmmenuadministrador As New frmMenuAdministrador
+                    Dim frmmenuusario As New frmMenuUsuario
                     If usu.consultarTusu(txtUsuario.Text) = "Administrador" Then
                         frmWelcome.ShowDialog()
                         frmmenuadministrador.ShowDialog()
                     Else
                         frmWelcome.ShowDialog()
-                        frmmenuadministrador.ShowDialog()
+                        frmmenuusario.ShowDialog()
                     End If
                 Else
                     MsgBox("Clave Incorrecta")
                     cont = cont + 1
                     Advertencia2.Visible = True
+                    txtContraseña.Focus()
                     txtContraseña.SelectAll()
                 End If
             Else
                 MsgBox("El Usuario:" + txtUsuario.Text + " no se encuentra registrado")
                 Advertencia1.Visible = True
+                txtUsuario.Focus()
                 txtUsuario.SelectAll()
             End If
         Catch ex As Exception

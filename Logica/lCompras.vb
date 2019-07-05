@@ -28,6 +28,7 @@ Public Class lCompras
 
     'DETALLE
     Public CABCO_ID As Integer
+    Public DETCO_NUMDOC As Integer
     Public DETCO_TIPODOC As String
     Public PRO_COD As Integer
     Public DETCO_PCU As Decimal
@@ -119,6 +120,7 @@ Public Class lCompras
             comando.Parameters.Clear()
 
             comando.Parameters.AddWithValue("@idcabecera", CABCO_ID)
+            comando.Parameters.AddWithValue("@numedoc", DETCO_NUMDOC)
             comando.Parameters.AddWithValue("@tipodoc", DETCO_TIPODOC)
             comando.Parameters.AddWithValue("@codprod", PRO_COD)
             comando.Parameters.AddWithValue("@pcu", DETCO_PCU)

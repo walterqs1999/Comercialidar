@@ -3,15 +3,16 @@
 Public Class dUsuario
     'Dim con As New Datos.Conexion
 
-    Private _USU_DNI As String
-    Private _USU_NOM As String
-    Private _USU_DIR As String
-    Private _USU_TEL As String
-    Private _USU_EMAIL As String
-    Private _USU_USU As String
-    Private _USU_CLAVE As String
-    Private _USU_TIPO As String
-    Private _USU_ESTA As String
+    Public _USU_DNI As String
+    Public _USU_NOM As String
+    Public _USU_DIR As String
+    Public _USU_TEL As String
+    Public _USU_EMAIL As String
+    Public _USU_USU As String
+    Public _USU_CLAVE As String
+    Public _USU_TIPO As String
+    Public _USU_ESTA As String
+    Public _USU_IMAGEN As String
 
     Public Property USU_DNI As Integer
         Get
@@ -91,6 +92,15 @@ Public Class dUsuario
         End Get
         Set(ByVal value As String)
             _USU_ESTA = value
+        End Set
+    End Property
+
+    Public Property USU_IMAGEN As String
+        Get
+            Return _USU_IMAGEN
+        End Get
+        Set(value As String)
+            _USU_IMAGEN = value
         End Set
     End Property
 End Class

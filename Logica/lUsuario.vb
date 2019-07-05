@@ -1,6 +1,7 @@
 ﻿Imports System
 Imports System.Data
 Imports System.Data.SqlClient
+Imports System.IO
 
 Imports datos
 
@@ -23,6 +24,7 @@ Public Class lUsuario
     Public USU_PAS As String
     Public USU_TIPO As String
     Public USU_ESTA As String
+    'Public USU_IMAGEN As String
 
 
     Public Function consultarTusu(ByVal nomUsu As String) As String
@@ -102,6 +104,8 @@ Public Class lUsuario
     Public Function registrar_usuario() As Boolean
         Try
             con.Conectar()
+            'Dim data As Byte() = System.IO.File.ReadAllBytes(USU_IMAGEN)
+
             Dim comando = New SqlCommand("proc_InsertarUsuario")
             comando.CommandType = CommandType.StoredProcedure
             comando.Connection = con.strConex
@@ -114,7 +118,7 @@ Public Class lUsuario
             comando.Parameters.AddWithValue("@clave", USU_PAS)
             comando.Parameters.AddWithValue("@tipo", USU_TIPO)
             comando.Parameters.AddWithValue("@estado", USU_ESTA)
-
+            'comando.Parameters.AddWithValue("@imagen", data)
 
             If comando.ExecuteNonQuery Then
                 Return True

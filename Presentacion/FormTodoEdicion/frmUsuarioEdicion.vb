@@ -8,6 +8,7 @@ Imports System.Data.SqlClient
 Imports System.Text
 Imports System.Security.Cryptography
 
+
 Imports Logica
 Imports datos
 Public Class frmUsuarioEdicion

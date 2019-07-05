@@ -48,9 +48,11 @@ Partial Class frmTodoDocumentos
         Me.txtNumeroF = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnAgregar = New System.Windows.Forms.Button()
-        Me.txtMostrar = New System.Windows.Forms.TextBox()
+        Me.txtDetalle = New System.Windows.Forms.TextBox()
         Me.btnCerrar = New System.Windows.Forms.PictureBox()
         Me.btnVistaPrevia = New System.Windows.Forms.Button()
+        Me.pdt = New System.Drawing.Printing.PrintDocument()
+        Me.ppd = New System.Windows.Forms.PrintPreviewDialog()
         Me.grbDetalle.SuspendLayout()
         Me.grbDatos.SuspendLayout()
         CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -312,13 +314,14 @@ Partial Class frmTodoDocumentos
         Me.btnAgregar.Text = "&Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
-        'txtMostrar
+        'txtDetalle
         '
-        Me.txtMostrar.Location = New System.Drawing.Point(690, 57)
-        Me.txtMostrar.Multiline = True
-        Me.txtMostrar.Name = "txtMostrar"
-        Me.txtMostrar.Size = New System.Drawing.Size(333, 480)
-        Me.txtMostrar.TabIndex = 100
+        Me.txtDetalle.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDetalle.Location = New System.Drawing.Point(690, 57)
+        Me.txtDetalle.Multiline = True
+        Me.txtDetalle.Name = "txtDetalle"
+        Me.txtDetalle.Size = New System.Drawing.Size(333, 480)
+        Me.txtDetalle.TabIndex = 100
         '
         'btnCerrar
         '
@@ -341,6 +344,19 @@ Partial Class frmTodoDocumentos
         Me.btnVistaPrevia.Text = "Vista Previa"
         Me.btnVistaPrevia.UseVisualStyleBackColor = True
         '
+        'pdt
+        '
+        '
+        'ppd
+        '
+        Me.ppd.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.ppd.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.ppd.ClientSize = New System.Drawing.Size(400, 300)
+        Me.ppd.Enabled = True
+        Me.ppd.Icon = CType(resources.GetObject("ppd.Icon"), System.Drawing.Icon)
+        Me.ppd.Name = "ppd"
+        Me.ppd.Visible = False
+        '
         'frmTodoDocumentos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -348,7 +364,7 @@ Partial Class frmTodoDocumentos
         Me.ClientSize = New System.Drawing.Size(1091, 644)
         Me.Controls.Add(Me.btnVistaPrevia)
         Me.Controls.Add(Me.btnCerrar)
-        Me.Controls.Add(Me.txtMostrar)
+        Me.Controls.Add(Me.txtDetalle)
         Me.Controls.Add(Me.txtTotal)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.txtIgv)
@@ -399,9 +415,11 @@ Partial Class frmTodoDocumentos
     Public WithEvents txtNumeroF As TextBox
     Public WithEvents Label1 As Label
     Public WithEvents btnAgregar As Button
-    Friend WithEvents txtMostrar As TextBox
+    Friend WithEvents txtDetalle As TextBox
     Friend WithEvents btnCerrar As PictureBox
     Friend WithEvents dtpFecha As DateTimePicker
     Friend WithEvents Label10 As Label
     Public WithEvents btnVistaPrevia As Button
+    Friend WithEvents pdt As Printing.PrintDocument
+    Friend WithEvents ppd As PrintPreviewDialog
 End Class

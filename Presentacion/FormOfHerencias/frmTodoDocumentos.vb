@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Drawing.Brush
 
 Public Class frmTodoDocumentos
 
@@ -125,7 +126,8 @@ Public Class frmTodoDocumentos
         EstadoTextos(True)
         Tipo()
         txtNumeroF.Enabled = False
-        txtMostrar.Enabled = False
+        txtDetalle.Enabled = False
+        txtDetalle.Clear()
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
@@ -134,6 +136,7 @@ Public Class frmTodoDocumentos
             EstadoBotones(True)
             EstadoTextos(False)
             LimpiarTextoGrupo()
+            txtDetalle.Clear()
         End If
     End Sub
 
@@ -152,4 +155,18 @@ Public Class frmTodoDocumentos
         EstadoTextos(False)
         EstadoBotones(True)
     End Sub
+
+    Private Sub btnVistaPrevia_Click(sender As Object, e As EventArgs) Handles btnVistaPrevia.Click
+
+    End Sub
+
+    'Private Sub pdt_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles pdt.PrintPage
+    '    Dim x, y As Integer
+
+    '    x = e.MarginBounds.Left
+    '    y = e.MarginBounds.Top
+    '    Dim Brush As New SolidBrush(txtDetalle.ForeColor)
+
+    '    e.Graphics.DrawString(txtDetalle.Font, Color.FromArgb(90, 0, 50, 255), Brush, x, y)
+    'End Sub
 End Class

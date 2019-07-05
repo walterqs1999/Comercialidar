@@ -33,6 +33,12 @@ Public Class frmComprasEdicion
                 conta = 1
             End If
 
+            txtDetalle.Text = "COMERCIAL IDAR" + vbNewLine
+            txtDetalle.Text += cboTipo.Text + " N°" + txtNumeroF.Text + "                " + dtpFecha.Text + vbNewLine
+            txtDetalle.Text += "Usuario: " + txtNombres.Text + vbNewLine
+            txtDetalle.Text += "RUC/DNI: " + txtRUCDNI.Text + vbNewLine
+            txtDetalle.Text += "______________________________" + vbNewLine
+
             Dim Fila As DataGridViewRow = New DataGridViewRow
             'Dim Fila1 = dgvDatos.RowCount
             Try
@@ -44,6 +50,7 @@ Public Class frmComprasEdicion
 
                     comLogi.CABCO_ID = Convert.ToInt64(Fila.Cells("id").Value.ToString())
                     'comLogi.CABCO_ID = Convert.ToInt64(dgvDatos.Rows(Fila1).Cells(0).Value.ToString())
+                    comLogi.DETCO_NUMDOC = Convert.ToInt64(Fila.Cells("numedoc").Value.ToString())
                     comLogi.DETCO_TIPODOC = Convert.ToString(Fila.Cells("tipo").Value.ToString())
                     'comLogi.DETCO_TIPODOC = Convert.ToString(dgvDatos.Rows(Fila1).Cells(1).Value.ToString())
                     comLogi.PRO_COD = Convert.ToInt64(Fila.Cells("codigo").Value.ToString())
@@ -58,12 +65,19 @@ Public Class frmComprasEdicion
                     'comLogi.DETCO_TOTALPRO = Convert.ToDecimal(dgvDatos.Rows(Fila1).Cells(6).Value.ToString())
 
                     comLogi.registrar_detalleC()
+
+                    txtDetalle.Text += Convert.ToString(Fila.Cells("producto").Value.ToString()) + "   " + Convert.ToString(Fila.Cells("pcu").Value.ToString()) + "  " + Convert.ToString(Fila.Cells("cantidad").Value.ToString()) + "    " + Convert.ToString(Fila.Cells("total").Value.ToString()) + vbNewLine
                     ' Next
                 Next
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
         End If
+
+        txtDetalle.Text += "______________________________" + vbNewLine
+        txtDetalle.Text += "Subtotal: " + txtSubT.Text + vbNewLine
+        txtDetalle.Text += "IGV: " + txtIgv.Text + vbNewLine
+        txtDetalle.Text += "Total: " + txtTotal.Text + vbNewLine
 
         If conta = 1 Then
             MsgBox("compra registrada")
@@ -112,15 +126,15 @@ Public Class frmComprasEdicion
             id = iddocu
         End If
 
-        dgvDatos.Rows.Add(id, cboTipo.Text, txtCodigo.Text, txtDescripcion.Text, txtUnitarioC.Text, txtUnitarioV.Text, txtCantidad.Text, total)
+        dgvDatos.Rows.Add(id, txtNumeroF.Text, cboTipo.Text, txtCodigo.Text, txtDescripcion.Text, txtUnitarioC.Text, txtUnitarioV.Text, txtCantidad.Text, total)
 
         con = con + total
         subt = con / 1.18
         igv = con - subt
 
         If cboTipo.Text = "FACTURA" Then
-            txtSubT.Text = subt
-            txtIgv.Text = igv
+            txtSubT.Text = subt.ToString("N2")
+            txtIgv.Text = igv.ToString("N2")
         Else
             txtSubT.Text = 0
             txtIgv.Text = 0
@@ -134,6 +148,7 @@ Public Class frmComprasEdicion
         txtCantidad.Clear()
         txtUnitarioC.Clear()
         txtUnitarioV.Clear()
+        txtStock.Clear()
         txtCodigo.Focus()
     End Sub
 
@@ -167,7 +182,7 @@ Public Class frmComprasEdicion
         dgvDatos.Rows.Remove(dgvDatos.CurrentRow)
         Dim Total As Single
         For Each row As DataGridViewRow In Me.dgvDatos.Rows
-            Total += Val(row.Cells(7).Value)
+            Total += Val(row.Cells(8).Value)
         Next
         txtTotal.Text = Total.ToString
     End Sub
