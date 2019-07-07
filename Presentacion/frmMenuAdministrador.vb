@@ -36,12 +36,6 @@ Public Class frmMenuAdministrador
     End Sub
 
     Private Sub frmMenuAdministrador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MenuVertical.Width = 90
-        lblHora.Left = 1109
-        lblFecha.Left = 1075
-        btnCerrar.Left = 1239
-        btnMinimizar.Left = 1211
-
         lblNombre.Text = nombreusuario
         lblAdministrador.Text = tipousuario
     End Sub
@@ -79,5 +73,9 @@ Public Class frmMenuAdministrador
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         AbrirFomEnPanel(New frmComprasEdicion)
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        AbrirFomEnPanel(New frmVentasEdicion)
     End Sub
 End Class

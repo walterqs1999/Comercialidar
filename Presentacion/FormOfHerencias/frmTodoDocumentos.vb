@@ -76,6 +76,12 @@ Public Class frmTodoDocumentos
                 Caja.Text = ""
             End If
         Next
+
+        For Each txt As Control In Me.Controls
+            If TypeOf txt Is TextBox Then
+                txt.Text = ""
+            End If
+        Next
     End Sub
 
     Public Sub EstadoBotones(ByVal estado As Boolean)
@@ -156,17 +162,19 @@ Public Class frmTodoDocumentos
         EstadoBotones(True)
     End Sub
 
-    Private Sub btnVistaPrevia_Click(sender As Object, e As EventArgs) Handles btnVistaPrevia.Click
+    Private Sub pdt_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles pdt.PrintPage
+        Dim x, y As Integer
 
+        x = e.MarginBounds.Left
+        y = e.MarginBounds.Top
+        Dim myBrush As New SolidBrush(txtDetalle.ForeColor)
+        Dim myFont As Font = New Font("Zipper", 24, FontStyle.Bold)
+
+        e.Graphics.DrawString(txtDetalle.Text, myFont, myBrush, x, y)
     End Sub
 
-    'Private Sub pdt_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles pdt.PrintPage
-    '    Dim x, y As Integer
-
-    '    x = e.MarginBounds.Left
-    '    y = e.MarginBounds.Top
-    '    Dim Brush As New SolidBrush(txtDetalle.ForeColor)
-
-    '    e.Graphics.DrawString(txtDetalle.Font, Color.FromArgb(90, 0, 50, 255), Brush, x, y)
-    'End Sub
+    Private Sub btnVistaPrevia_Click(sender As Object, e As EventArgs) Handles btnVistaPrevia.Click
+        ppd.Document = pdt
+        ppd.ShowDialog()
+    End Sub
 End Class

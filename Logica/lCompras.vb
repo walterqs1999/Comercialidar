@@ -186,4 +186,28 @@ Public Class lCompras
         End Try
         Return resul
     End Function
+
+    Public Function actualizarStock(ByVal stock As Integer, ByVal id As Integer) As Boolean
+
+        con.Conectar()
+        Dim resul As Boolean = False
+
+        Try
+
+            enunc = New SqlCommand("UPDATE PRODUCTO SET  PRO_STOCK='" & stock & "' where PRO_COD='" & id & "'", con.strConex)
+            resp = enunc.ExecuteReader
+
+            If resp.Read Then
+                resul = True
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        Finally
+            con.Desconectar()
+        End Try
+
+        Return resul
+    End Function
+
 End Class

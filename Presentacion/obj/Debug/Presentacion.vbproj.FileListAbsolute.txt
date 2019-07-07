@@ -76,3 +76,4 @@ D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.Res
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.vbproj.GenerateResource.Cache
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmTodoDocumentos.resources
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmComprasEdicion.resources
+D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmVentasEdicion.resources

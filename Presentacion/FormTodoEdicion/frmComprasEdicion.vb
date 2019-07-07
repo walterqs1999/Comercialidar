@@ -20,67 +20,82 @@ Public Class frmComprasEdicion
         rpta = MessageBox.Show("Deseas guardar..?", "Registro Factura", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
 
         If rpta = vbYes Then
-            comLogi.CABCO_NUMDOC = txtNumeroF.Text
-            comLogi.CABCO_TIPODOC = cboTipo.Text
-            comLogi.PROV_RUC = txtRUCDNI.Text
-            comLogi.USU_DNI = dniusuario
-            comLogi.CABCO_TOTAL = txtTotal.Text
-            comLogi.CABCO_SUBT = txtSubT.Text
-            comLogi.CABCO_IGV = txtIgv.Text
-            comLogi.CABCO_FECHA = dtpFecha.Value
 
-            If comLogi.registrar_cabeceraC Then
-                conta = 1
+            If txtRUCDNI.Text <> "" Then
+                If dgvDatos.Rows.Count > 0 Then
+                    comLogi.CABCO_NUMDOC = txtNumeroF.Text
+                    comLogi.CABCO_TIPODOC = cboTipo.Text
+                    comLogi.PROV_RUC = txtRUCDNI.Text
+                    comLogi.USU_DNI = dniusuario
+                    comLogi.CABCO_TOTAL = txtTotal.Text
+                    comLogi.CABCO_SUBT = txtSubT.Text
+                    comLogi.CABCO_IGV = txtIgv.Text
+                    comLogi.CABCO_FECHA = dtpFecha.Value
+
+                    If comLogi.registrar_cabeceraC Then
+                        conta = 1
+                    End If
+
+                    txtDetalle.Text = "COMERCIAL IDAR - I.E.R.L" + vbNewLine
+                    txtDetalle.Text += " " + vbNewLine
+                    txtDetalle.Text += cboTipo.Text + " N° " + txtNumeroF.Text + "                   " + dtpFecha.Text + vbNewLine
+                    txtDetalle.Text += "Usuario: " + txtNombres.Text + vbNewLine
+                    txtDetalle.Text += "RUC/DNI: " + txtRUCDNI.Text + vbNewLine
+                    txtDetalle.Text += "____________________________________" + vbNewLine
+                    txtDetalle.Text += " " + vbNewLine
+
+                    Dim Fila As DataGridViewRow = New DataGridViewRow
+                    'Dim Fila1 = dgvDatos.RowCount
+                    Try
+                        For Each Fila In dgvDatos.Rows
+                            'For r = 0 To Fila
+
+                            'detarticulos = dgvDatos.Rows(Fila).Cells(0).Value.ToString()
+                            'detarticulos = dgvDatos.Rows(Fila).Cells[0].Value.ToString()
+
+                            comLogi.CABCO_ID = Convert.ToInt64(Fila.Cells("id").Value.ToString())
+                            'comLogi.CABCO_ID = Convert.ToInt64(dgvDatos.Rows(Fila1).Cells(0).Value.ToString())
+                            comLogi.DETCO_NUMDOC = Convert.ToInt64(Fila.Cells("numedoc").Value.ToString())
+                            'comLogi.DETCO_NUMDOC = Convert.ToInt64(dgvDatos.Rows(Fila1).Cells(1).Value.ToString())
+                            comLogi.DETCO_TIPODOC = Convert.ToString(Fila.Cells("tipo").Value.ToString())
+                            'comLogi.DETCO_TIPODOC = Convert.ToString(dgvDatos.Rows(Fila1).Cells(2).Value.ToString())
+                            comLogi.PRO_COD = Convert.ToInt64(Fila.Cells("codigo").Value.ToString())
+                            'comLogi.PRO_COD = Convert.ToInt64(dgvDatos.Rows(Fila1).Cells(3).Value.ToString())
+                            comLogi.DETCO_PCU = Convert.ToDecimal(Fila.Cells("pcu").Value.ToString())
+                            'comLogi.DETCO_PCU = Convert.ToDecimal(dgvDatos.Rows(Fila1).Cells(4).Value.ToString())
+                            comLogi.DETCO_PVU = Convert.ToDecimal(Fila.Cells("pvu").Value.ToString())
+                            'comLogi.DETCO_PCU = Convert.ToDecimal(dgvDatos.Rows(Fila1).Cells(5).Value.ToString())
+                            comLogi.DETCO_CANTIDAD = Convert.ToInt64(Fila.Cells("cantidad").Value.ToString())
+                            'comLogi.DETCO_CANTIDAD = Convert.ToInt64(dgvDatos.Rows(Fila1).Cells(6).Value.ToString())
+                            comLogi.DETCO_TOTALPRO = Convert.ToDecimal(Fila.Cells("total").Value.ToString())
+                            'comLogi.DETCO_TOTALPRO = Convert.ToDecimal(dgvDatos.Rows(Fila1).Cells(7).Value.ToString())
+
+                            comLogi.registrar_detalleC()
+
+                            comLogi.actualizarStock(Convert.ToInt64(Fila.Cells("newstock").Value.ToString()), Convert.ToInt64(Fila.Cells("codigo").Value.ToString()))
+
+                            txtDetalle.Text += Convert.ToString(Fila.Cells("producto").Value.ToString()) + "   -   " + Convert.ToString(Fila.Cells("pcu").Value.ToString()) + "   -   " + Convert.ToString(Fila.Cells("cantidad").Value.ToString()) + "    -   " + Convert.ToString(Fila.Cells("total").Value.ToString()) + vbNewLine
+                            ' Next
+                        Next
+                    Catch ex As Exception
+                        MsgBox(ex.Message)
+                    End Try
+
+                    txtDetalle.Text += "____________________________________" + vbNewLine
+                    txtDetalle.Text += " " + vbNewLine
+                    txtDetalle.Text += "Subtotal: S/. " + txtSubT.Text + vbNewLine
+                    txtDetalle.Text += "IGV: S/. " + txtIgv.Text + vbNewLine
+                    txtDetalle.Text += "Total: S/. " + txtTotal.Text + vbNewLine
+
+                    If conta = 1 Then
+                        MsgBox("compra registrada")
+                    End If
+                Else
+                    MsgBox("Debe agregar algunos productos")
+                End If
+            Else
+                MsgBox("Debe llenar casilla de datos")
             End If
-
-            txtDetalle.Text = "COMERCIAL IDAR" + vbNewLine
-            txtDetalle.Text += cboTipo.Text + " N°" + txtNumeroF.Text + "                " + dtpFecha.Text + vbNewLine
-            txtDetalle.Text += "Usuario: " + txtNombres.Text + vbNewLine
-            txtDetalle.Text += "RUC/DNI: " + txtRUCDNI.Text + vbNewLine
-            txtDetalle.Text += "______________________________" + vbNewLine
-
-            Dim Fila As DataGridViewRow = New DataGridViewRow
-            'Dim Fila1 = dgvDatos.RowCount
-            Try
-                For Each Fila In dgvDatos.Rows
-                    'For r = 0 To Fila
-
-                    'detarticulos = dgvDatos.Rows(Fila).Cells(0).Value.ToString()
-                    'detarticulos = dgvDatos.Rows(Fila).Cells[0].Value.ToString()
-
-                    comLogi.CABCO_ID = Convert.ToInt64(Fila.Cells("id").Value.ToString())
-                    'comLogi.CABCO_ID = Convert.ToInt64(dgvDatos.Rows(Fila1).Cells(0).Value.ToString())
-                    comLogi.DETCO_NUMDOC = Convert.ToInt64(Fila.Cells("numedoc").Value.ToString())
-                    comLogi.DETCO_TIPODOC = Convert.ToString(Fila.Cells("tipo").Value.ToString())
-                    'comLogi.DETCO_TIPODOC = Convert.ToString(dgvDatos.Rows(Fila1).Cells(1).Value.ToString())
-                    comLogi.PRO_COD = Convert.ToInt64(Fila.Cells("codigo").Value.ToString())
-                    'comLogi.PRO_COD = Convert.ToInt64(dgvDatos.Rows(Fila1).Cells(2).Value.ToString())
-                    comLogi.DETCO_PCU = Convert.ToDecimal(Fila.Cells("pcu").Value.ToString())
-                    'comLogi.DETCO_PCU = Convert.ToDecimal(dgvDatos.Rows(Fila1).Cells(3).Value.ToString())
-                    comLogi.DETCO_PVU = Convert.ToDecimal(Fila.Cells("pvu").Value.ToString())
-                    'comLogi.DETCO_PCU = Convert.ToDecimal(dgvDatos.Rows(Fila1).Cells(4).Value.ToString())
-                    comLogi.DETCO_CANTIDAD = Convert.ToInt64(Fila.Cells("cantidad").Value.ToString())
-                    'comLogi.DETCO_CANTIDAD = Convert.ToInt64(dgvDatos.Rows(Fila1).Cells(5).Value.ToString())
-                    comLogi.DETCO_TOTALPRO = Convert.ToDecimal(Fila.Cells("total").Value.ToString())
-                    'comLogi.DETCO_TOTALPRO = Convert.ToDecimal(dgvDatos.Rows(Fila1).Cells(6).Value.ToString())
-
-                    comLogi.registrar_detalleC()
-
-                    txtDetalle.Text += Convert.ToString(Fila.Cells("producto").Value.ToString()) + "   " + Convert.ToString(Fila.Cells("pcu").Value.ToString()) + "  " + Convert.ToString(Fila.Cells("cantidad").Value.ToString()) + "    " + Convert.ToString(Fila.Cells("total").Value.ToString()) + vbNewLine
-                    ' Next
-                Next
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            End Try
-        End If
-
-        txtDetalle.Text += "______________________________" + vbNewLine
-        txtDetalle.Text += "Subtotal: " + txtSubT.Text + vbNewLine
-        txtDetalle.Text += "IGV: " + txtIgv.Text + vbNewLine
-        txtDetalle.Text += "Total: " + txtTotal.Text + vbNewLine
-
-        If conta = 1 Then
-            MsgBox("compra registrada")
         End If
     End Sub
     Private Sub txtRUCDNI_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRUCDNI.KeyPress
@@ -119,14 +134,15 @@ Public Class frmComprasEdicion
         Dim id As Integer
 
         con = Val(txtTotal.Text)
-        total = txtUnitarioC.Text * txtCantidad.Text
-        'mdlStock = mdlStock + txtCantidad.Text
+        total = Val(txtUnitarioV.Text * txtCantidad.Text)
+
+        stockProducto = stockProducto + txtCantidad.Text
 
         If comLogi.iddocumento Then
             id = iddocu
         End If
 
-        dgvDatos.Rows.Add(id, txtNumeroF.Text, cboTipo.Text, txtCodigo.Text, txtDescripcion.Text, txtUnitarioC.Text, txtUnitarioV.Text, txtCantidad.Text, total)
+        dgvDatos.Rows.Add(id, txtNumeroF.Text, cboTipo.Text, txtCodigo.Text, txtDescripcion.Text, txtUnitarioC.Text, txtUnitarioV.Text, txtCantidad.Text, total, stockProducto)
 
         con = con + total
         subt = con / 1.18
@@ -142,7 +158,6 @@ Public Class frmComprasEdicion
 
         txtTotal.Text = con
 
-
         txtCodigo.Clear()
         txtDescripcion.Clear()
         txtCantidad.Clear()
@@ -150,6 +165,12 @@ Public Class frmComprasEdicion
         txtUnitarioV.Clear()
         txtStock.Clear()
         txtCodigo.Focus()
+
+        If dgvDatos.Rows.Count < 1 Then
+            btnEliminar.Enabled = False
+        Else
+            btnEliminar.Enabled = True
+        End If
     End Sub
 
     Private Sub frmComprasEdicion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -166,6 +187,12 @@ Public Class frmComprasEdicion
         End If
         cboTipo.SelectedIndex = 1
         dgvDatos.Rows.Clear()
+
+        If dgvDatos.Rows.Count < 1 Then
+            btnEliminar.Enabled = False
+        Else
+            btnEliminar.Enabled = True
+        End If
     End Sub
 
     Private Sub cboTipo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboTipo.SelectedIndexChanged
@@ -185,5 +212,11 @@ Public Class frmComprasEdicion
             Total += Val(row.Cells(8).Value)
         Next
         txtTotal.Text = Total.ToString
+
+        If dgvDatos.Rows.Count < 1 Then
+            btnEliminar.Enabled = False
+        Else
+            btnEliminar.Enabled = True
+        End If
     End Sub
 End Class

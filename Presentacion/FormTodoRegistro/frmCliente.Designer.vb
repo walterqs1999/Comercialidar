@@ -60,7 +60,7 @@ Partial Class frmCliente
         Me.dgvClientes.ReadOnly = True
         Me.dgvClientes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvClientes.Size = New System.Drawing.Size(729, 427)
+        Me.dgvClientes.Size = New System.Drawing.Size(729, 489)
         Me.dgvClientes.TabIndex = 18
         '
         'frmCliente

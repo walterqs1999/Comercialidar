@@ -53,6 +53,7 @@ Partial Class frmTodoDocumentos
         Me.btnVistaPrevia = New System.Windows.Forms.Button()
         Me.pdt = New System.Drawing.Printing.PrintDocument()
         Me.ppd = New System.Windows.Forms.PrintPreviewDialog()
+        Me.Label = New System.Windows.Forms.Label()
         Me.grbDetalle.SuspendLayout()
         Me.grbDatos.SuspendLayout()
         CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -320,7 +321,7 @@ Partial Class frmTodoDocumentos
         Me.txtDetalle.Location = New System.Drawing.Point(690, 57)
         Me.txtDetalle.Multiline = True
         Me.txtDetalle.Name = "txtDetalle"
-        Me.txtDetalle.Size = New System.Drawing.Size(333, 480)
+        Me.txtDetalle.Size = New System.Drawing.Size(371, 480)
         Me.txtDetalle.TabIndex = 100
         '
         'btnCerrar
@@ -357,11 +358,22 @@ Partial Class frmTodoDocumentos
         Me.ppd.Name = "ppd"
         Me.ppd.Visible = False
         '
+        'Label
+        '
+        Me.Label.AutoSize = True
+        Me.Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label.Location = New System.Drawing.Point(685, 14)
+        Me.Label.Name = "Label"
+        Me.Label.Size = New System.Drawing.Size(83, 25)
+        Me.Label.TabIndex = 103
+        Me.Label.Text = "Label2"
+        '
         'frmTodoDocumentos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1091, 644)
+        Me.Controls.Add(Me.Label)
         Me.Controls.Add(Me.btnVistaPrevia)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.txtDetalle)
@@ -422,4 +434,5 @@ Partial Class frmTodoDocumentos
     Public WithEvents btnVistaPrevia As Button
     Friend WithEvents pdt As Printing.PrintDocument
     Friend WithEvents ppd As PrintPreviewDialog
+    Public WithEvents Label As Label
 End Class

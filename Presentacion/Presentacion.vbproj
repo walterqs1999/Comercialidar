@@ -107,6 +107,12 @@
     <Compile Include="FormTodoEdicion\frmUsuarioEdicion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormTodoEdicion\frmVentasEdicion.Designer.vb">
+      <DependentUpon>frmVentasEdicion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTodoEdicion\frmVentasEdicion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormTodoRegistro\frmCliente.Designer.vb">
       <DependentUpon>frmCliente.vb</DependentUpon>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTodoEdicion\frmUsuarioEdicion.resx">
       <DependentUpon>frmUsuarioEdicion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTodoEdicion\frmVentasEdicion.resx">
+      <DependentUpon>frmVentasEdicion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTodoRegistro\frmCliente.resx">
       <DependentUpon>frmCliente.vb</DependentUpon>
