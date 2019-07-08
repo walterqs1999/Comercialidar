@@ -66,8 +66,12 @@ Public Class lCompras
             enunc = New SqlCommand("SELECT MAX(CABCO_ID) AS ID FROM CABECERA_COMPRA", con.strConex)
             resp = enunc.ExecuteReader
             If resp.Read Then
-                iddocu = resp.Item("ID")
-                iddocu = iddocu + 1
+                If IsDBNull(resp.Item("ID")) Then
+                    iddocu = 1
+                Else
+                    iddocu = resp.Item("ID")
+                    iddocu = iddocu + 1
+                End If
                 resul = True
             End If
         Catch ex As Exception

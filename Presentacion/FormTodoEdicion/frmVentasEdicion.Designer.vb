@@ -25,43 +25,52 @@ Partial Class frmVentasEdicion
         Me.txtNombres = New System.Windows.Forms.TextBox()
         Me.lblNombre = New System.Windows.Forms.Label()
         Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.txtUnitario = New System.Windows.Forms.TextBox()
+        Me.txtStock = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.txtDescripcion = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtPrecioVenta = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvDatos = New System.Windows.Forms.DataGridView()
+        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.numedoc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.pvu = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.newstock = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grbDetalle.SuspendLayout()
         Me.grbDatos.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtTotal
         '
-        Me.txtTotal.Location = New System.Drawing.Point(492, 526)
+        Me.txtTotal.Location = New System.Drawing.Point(492, 537)
         '
         'Label13
         '
-        Me.Label13.Location = New System.Drawing.Point(437, 530)
+        Me.Label13.Location = New System.Drawing.Point(437, 541)
         '
         'txtIgv
         '
-        Me.txtIgv.Location = New System.Drawing.Point(309, 526)
+        Me.txtIgv.Location = New System.Drawing.Point(309, 537)
         '
         'lblIgv
         '
-        Me.lblIgv.Location = New System.Drawing.Point(261, 530)
+        Me.lblIgv.Location = New System.Drawing.Point(261, 541)
         '
         'txtSubT
         '
-        Me.txtSubT.Location = New System.Drawing.Point(144, 526)
+        Me.txtSubT.Location = New System.Drawing.Point(144, 537)
         '
         'lblSubT
         '
-        Me.lblSubT.Location = New System.Drawing.Point(69, 530)
+        Me.lblSubT.Location = New System.Drawing.Point(69, 541)
         '
         'btnComprar
         '
@@ -85,10 +94,10 @@ Partial Class frmVentasEdicion
         '
         'grbDetalle
         '
-        Me.grbDetalle.Controls.Add(Me.TextBox1)
+        Me.grbDetalle.Controls.Add(Me.txtPrecioVenta)
         Me.grbDetalle.Controls.Add(Me.Label2)
         Me.grbDetalle.Controls.Add(Me.btnBuscar)
-        Me.grbDetalle.Controls.Add(Me.txtUnitario)
+        Me.grbDetalle.Controls.Add(Me.txtStock)
         Me.grbDetalle.Controls.Add(Me.Label17)
         Me.grbDetalle.Controls.Add(Me.txtCantidad)
         Me.grbDetalle.Controls.Add(Me.Label5)
@@ -103,10 +112,10 @@ Partial Class frmVentasEdicion
         Me.grbDetalle.Controls.SetChildIndex(Me.Label5, 0)
         Me.grbDetalle.Controls.SetChildIndex(Me.txtCantidad, 0)
         Me.grbDetalle.Controls.SetChildIndex(Me.Label17, 0)
-        Me.grbDetalle.Controls.SetChildIndex(Me.txtUnitario, 0)
+        Me.grbDetalle.Controls.SetChildIndex(Me.txtStock, 0)
         Me.grbDetalle.Controls.SetChildIndex(Me.btnBuscar, 0)
         Me.grbDetalle.Controls.SetChildIndex(Me.Label2, 0)
-        Me.grbDetalle.Controls.SetChildIndex(Me.TextBox1, 0)
+        Me.grbDetalle.Controls.SetChildIndex(Me.txtPrecioVenta, 0)
         '
         'Label15
         '
@@ -137,6 +146,12 @@ Partial Class frmVentasEdicion
         Me.grbDatos.Controls.SetChildIndex(Me.Label8, 0)
         Me.grbDatos.Controls.SetChildIndex(Me.txtDireccion, 0)
         Me.grbDatos.Controls.SetChildIndex(Me.lblRazon, 0)
+        '
+        'txtRUCDNI
+        '
+        '
+        'cboTipo
+        '
         '
         'btnAgregar
         '
@@ -202,12 +217,12 @@ Partial Class frmVentasEdicion
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
-        'txtUnitario
+        'txtStock
         '
-        Me.txtUnitario.Location = New System.Drawing.Point(255, 61)
-        Me.txtUnitario.Name = "txtUnitario"
-        Me.txtUnitario.Size = New System.Drawing.Size(72, 22)
-        Me.txtUnitario.TabIndex = 93
+        Me.txtStock.Location = New System.Drawing.Point(226, 63)
+        Me.txtStock.Name = "txtStock"
+        Me.txtStock.Size = New System.Drawing.Size(72, 22)
+        Me.txtStock.TabIndex = 93
         '
         'Label17
         '
@@ -254,12 +269,12 @@ Partial Class frmVentasEdicion
         Me.txtDescripcion.Size = New System.Drawing.Size(200, 22)
         Me.txtDescripcion.TabIndex = 89
         '
-        'TextBox1
+        'txtPrecioVenta
         '
-        Me.TextBox1.Location = New System.Drawing.Point(72, 60)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(72, 22)
-        Me.TextBox1.TabIndex = 96
+        Me.txtPrecioVenta.Location = New System.Drawing.Point(72, 60)
+        Me.txtPrecioVenta.Name = "txtPrecioVenta"
+        Me.txtPrecioVenta.Size = New System.Drawing.Size(72, 22)
+        Me.txtPrecioVenta.TabIndex = 96
         '
         'Label2
         '
@@ -271,19 +286,85 @@ Partial Class frmVentasEdicion
         Me.Label2.TabIndex = 95
         Me.Label2.Text = "P. Venta"
         '
-        'DataGridView1
+        'dgvDatos
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(52, 306)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(561, 214)
-        Me.DataGridView1.TabIndex = 104
+        Me.dgvDatos.AllowUserToAddRows = False
+        Me.dgvDatos.AllowUserToDeleteRows = False
+        Me.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvDatos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.numedoc, Me.tipo, Me.codigo, Me.producto, Me.pvu, Me.cantidad, Me.total, Me.newstock})
+        Me.dgvDatos.Location = New System.Drawing.Point(49, 306)
+        Me.dgvDatos.MultiSelect = False
+        Me.dgvDatos.Name = "dgvDatos"
+        Me.dgvDatos.ReadOnly = True
+        Me.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvDatos.Size = New System.Drawing.Size(564, 220)
+        Me.dgvDatos.TabIndex = 104
+        '
+        'id
+        '
+        Me.id.HeaderText = "id"
+        Me.id.Name = "id"
+        Me.id.ReadOnly = True
+        Me.id.Visible = False
+        '
+        'numedoc
+        '
+        Me.numedoc.HeaderText = "numedoc"
+        Me.numedoc.Name = "numedoc"
+        Me.numedoc.ReadOnly = True
+        Me.numedoc.Visible = False
+        '
+        'tipo
+        '
+        Me.tipo.HeaderText = "tipo"
+        Me.tipo.Name = "tipo"
+        Me.tipo.ReadOnly = True
+        Me.tipo.Visible = False
+        '
+        'codigo
+        '
+        Me.codigo.HeaderText = "codigo"
+        Me.codigo.Name = "codigo"
+        Me.codigo.ReadOnly = True
+        Me.codigo.Visible = False
+        '
+        'producto
+        '
+        Me.producto.HeaderText = "PRODUCTO"
+        Me.producto.Name = "producto"
+        Me.producto.ReadOnly = True
+        Me.producto.Width = 200
+        '
+        'pvu
+        '
+        Me.pvu.HeaderText = "PRECIO VENT. U."
+        Me.pvu.Name = "pvu"
+        Me.pvu.ReadOnly = True
+        '
+        'cantidad
+        '
+        Me.cantidad.HeaderText = "CANTIDAD"
+        Me.cantidad.Name = "cantidad"
+        Me.cantidad.ReadOnly = True
+        '
+        'total
+        '
+        Me.total.HeaderText = "TOTAL"
+        Me.total.Name = "total"
+        Me.total.ReadOnly = True
+        '
+        'newstock
+        '
+        Me.newstock.HeaderText = "newstock"
+        Me.newstock.Name = "newstock"
+        Me.newstock.ReadOnly = True
+        Me.newstock.Visible = False
         '
         'frmVentasEdicion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.ClientSize = New System.Drawing.Size(1091, 644)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvDatos)
         Me.Name = "frmVentasEdicion"
         Me.Controls.SetChildIndex(Me.grbDatos, 0)
         Me.Controls.SetChildIndex(Me.grbDetalle, 0)
@@ -301,12 +382,12 @@ Partial Class frmVentasEdicion
         Me.Controls.SetChildIndex(Me.txtTotal, 0)
         Me.Controls.SetChildIndex(Me.btnVistaPrevia, 0)
         Me.Controls.SetChildIndex(Me.Label, 0)
-        Me.Controls.SetChildIndex(Me.DataGridView1, 0)
+        Me.Controls.SetChildIndex(Me.dgvDatos, 0)
         Me.grbDetalle.ResumeLayout(False)
         Me.grbDetalle.PerformLayout()
         Me.grbDatos.ResumeLayout(False)
         Me.grbDatos.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -317,14 +398,23 @@ Partial Class frmVentasEdicion
     Friend WithEvents Label8 As Label
     Friend WithEvents txtNombres As TextBox
     Friend WithEvents lblNombre As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtPrecioVenta As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents btnBuscar As Button
-    Friend WithEvents txtUnitario As TextBox
+    Friend WithEvents txtStock As TextBox
     Friend WithEvents Label17 As Label
     Friend WithEvents txtCantidad As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents txtDescripcion As TextBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvDatos As DataGridView
+    Friend WithEvents id As DataGridViewTextBoxColumn
+    Friend WithEvents numedoc As DataGridViewTextBoxColumn
+    Friend WithEvents tipo As DataGridViewTextBoxColumn
+    Friend WithEvents codigo As DataGridViewTextBoxColumn
+    Friend WithEvents producto As DataGridViewTextBoxColumn
+    Friend WithEvents pvu As DataGridViewTextBoxColumn
+    Friend WithEvents cantidad As DataGridViewTextBoxColumn
+    Friend WithEvents total As DataGridViewTextBoxColumn
+    Friend WithEvents newstock As DataGridViewTextBoxColumn
 End Class

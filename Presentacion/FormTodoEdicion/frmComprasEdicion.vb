@@ -81,11 +81,17 @@ Public Class frmComprasEdicion
                         MsgBox(ex.Message)
                     End Try
 
-                    txtDetalle.Text += "____________________________________" + vbNewLine
-                    txtDetalle.Text += " " + vbNewLine
-                    txtDetalle.Text += "Subtotal: S/. " + txtSubT.Text + vbNewLine
-                    txtDetalle.Text += "IGV: S/. " + txtIgv.Text + vbNewLine
-                    txtDetalle.Text += "Total: S/. " + txtTotal.Text + vbNewLine
+                    If cboTipo.Text = "FACTURA" Then
+                        txtDetalle.Text += "____________________________________" + vbNewLine
+                        txtDetalle.Text += " " + vbNewLine
+                        txtDetalle.Text += "Subtotal: S/. " + txtSubT.Text + vbNewLine
+                        txtDetalle.Text += "IGV: S/. " + txtIgv.Text + vbNewLine
+                        txtDetalle.Text += "Total: S/. " + txtTotal.Text + vbNewLine
+                    Else
+                        txtDetalle.Text += "____________________________________" + vbNewLine
+                        txtDetalle.Text += " " + vbNewLine
+                        txtDetalle.Text += "Total: S/. " + txtTotal.Text + vbNewLine
+                    End If
 
                     If conta = 1 Then
                         MsgBox("compra registrada")
@@ -219,4 +225,5 @@ Public Class frmComprasEdicion
             btnEliminar.Enabled = True
         End If
     End Sub
+
 End Class
