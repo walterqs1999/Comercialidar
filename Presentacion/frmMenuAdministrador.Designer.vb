@@ -47,6 +47,7 @@ Partial Class frmMenuAdministrador
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.lblAdministrador = New System.Windows.Forms.Label()
         Me.lblNombre = New System.Windows.Forms.Label()
@@ -61,6 +62,7 @@ Partial Class frmMenuAdministrador
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel9.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -320,6 +322,7 @@ Partial Class frmMenuAdministrador
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.White
+        Me.Panel9.Controls.Add(Me.PictureBox5)
         Me.Panel9.Controls.Add(Me.PictureBox4)
         Me.Panel9.Controls.Add(Me.lblAdministrador)
         Me.Panel9.Controls.Add(Me.lblNombre)
@@ -331,10 +334,21 @@ Partial Class frmMenuAdministrador
         Me.Panel9.Size = New System.Drawing.Size(1136, 70)
         Me.Panel9.TabIndex = 3
         '
+        'PictureBox5
+        '
+        Me.PictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
+        Me.PictureBox5.Location = New System.Drawing.Point(14, 30)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(39, 30)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox5.TabIndex = 6
+        Me.PictureBox5.TabStop = False
+        '
         'PictureBox4
         '
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(39, 6)
+        Me.PictureBox4.Location = New System.Drawing.Point(75, 6)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(76, 57)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -345,7 +359,7 @@ Partial Class frmMenuAdministrador
         '
         Me.lblAdministrador.AutoSize = True
         Me.lblAdministrador.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAdministrador.Location = New System.Drawing.Point(141, 42)
+        Me.lblAdministrador.Location = New System.Drawing.Point(177, 42)
         Me.lblAdministrador.Name = "lblAdministrador"
         Me.lblAdministrador.Size = New System.Drawing.Size(49, 16)
         Me.lblAdministrador.TabIndex = 4
@@ -356,7 +370,7 @@ Partial Class frmMenuAdministrador
         Me.lblNombre.AutoSize = True
         Me.lblNombre.BackColor = System.Drawing.Color.White
         Me.lblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombre.Location = New System.Drawing.Point(141, 10)
+        Me.lblNombre.Location = New System.Drawing.Point(177, 10)
         Me.lblNombre.Name = "lblNombre"
         Me.lblNombre.Size = New System.Drawing.Size(72, 24)
         Me.lblNombre.TabIndex = 3
@@ -412,6 +426,7 @@ Partial Class frmMenuAdministrador
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel9.ResumeLayout(False)
         Me.Panel9.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -446,4 +461,5 @@ Partial Class frmMenuAdministrador
     Friend WithEvents lblHora As Label
     Friend WithEvents PanelContenedor As Panel
     Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PictureBox5 As PictureBox
 End Class

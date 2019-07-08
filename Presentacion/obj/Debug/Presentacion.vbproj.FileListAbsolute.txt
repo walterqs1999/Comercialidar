@@ -77,3 +77,4 @@ D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.vbp
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.exe
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.xml
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.pdb
+D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmConfiguracionUsuario.resources

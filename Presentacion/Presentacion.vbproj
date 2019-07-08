@@ -83,6 +83,12 @@
     <Compile Include="FormOfHerencias\frmTodoDocumentos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormOfIncio\frmConfiguracionUsuario.Designer.vb">
+      <DependentUpon>frmConfiguracionUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormOfIncio\frmConfiguracionUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormTodoEdicion\frmClienteEdicion.Designer.vb">
       <DependentUpon>frmClienteEdicion.vb</DependentUpon>
     </Compile>
@@ -131,10 +137,10 @@
     <Compile Include="FormTodoRegistro\frmUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.vb">
+    <Compile Include="FormOfIncio\frmLogin.Designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.vb">
+    <Compile Include="FormOfIncio\frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMenuAdministrador.Designer.vb">
@@ -149,17 +155,17 @@
     <Compile Include="frmMenuUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPresentacion.vb">
+    <Compile Include="FormOfIncio\frmPresentacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPresentacion.Designer.vb">
+    <Compile Include="FormOfIncio\frmPresentacion.Designer.vb">
       <DependentUpon>frmPresentacion.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRecuperar.Designer.vb">
+    <Compile Include="FormOfIncio\frmRecuperar.Designer.vb">
       <DependentUpon>frmRecuperar.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmRecuperar.vb">
+    <Compile Include="FormOfIncio\frmRecuperar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormOfHerencias\frmTodoEdicion.Designer.vb">
@@ -174,10 +180,10 @@
     <Compile Include="FormOfHerencias\frmTodoRegistro.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmWelcome.Designer.vb">
+    <Compile Include="FormOfIncio\frmWelcome.Designer.vb">
       <DependentUpon>frmWelcome.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmWelcome.vb">
+    <Compile Include="FormOfIncio\frmWelcome.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -199,6 +205,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FormOfHerencias\frmTodoDocumentos.resx">
       <DependentUpon>frmTodoDocumentos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOfIncio\frmConfiguracionUsuario.resx">
+      <DependentUpon>frmConfiguracionUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTodoEdicion\frmClienteEdicion.resx">
       <DependentUpon>frmClienteEdicion.vb</DependentUpon>
@@ -224,7 +233,7 @@
     <EmbeddedResource Include="FormTodoRegistro\frmUsuario.resx">
       <DependentUpon>frmUsuario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="FormOfIncio\frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuAdministrador.resx">
@@ -233,10 +242,10 @@
     <EmbeddedResource Include="frmMenuUsuario.resx">
       <DependentUpon>frmMenuUsuario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPresentacion.resx">
+    <EmbeddedResource Include="FormOfIncio\frmPresentacion.resx">
       <DependentUpon>frmPresentacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRecuperar.resx">
+    <EmbeddedResource Include="FormOfIncio\frmRecuperar.resx">
       <DependentUpon>frmRecuperar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormOfHerencias\frmTodoEdicion.resx">
@@ -245,7 +254,7 @@
     <EmbeddedResource Include="FormOfHerencias\frmTodoRegistro.resx">
       <DependentUpon>frmTodoRegistro.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmWelcome.resx">
+    <EmbeddedResource Include="FormOfIncio\frmWelcome.resx">
       <DependentUpon>frmWelcome.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">

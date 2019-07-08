@@ -286,6 +286,7 @@ Partial Class frmLogin
         Me.Controls.Add(Me.ShapeContainer2)
         Me.ForeColor = System.Drawing.Color.LightGray
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmLogin"
         Me.Opacity = 0.9R
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

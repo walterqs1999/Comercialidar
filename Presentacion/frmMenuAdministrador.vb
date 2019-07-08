@@ -78,4 +78,8 @@ Public Class frmMenuAdministrador
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         AbrirFomEnPanel(New frmVentasEdicion)
     End Sub
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        AbrirFomEnPanel(New frmConfiguracionUsuario)
+    End Sub
 End Class
