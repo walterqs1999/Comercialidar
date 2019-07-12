@@ -31,10 +31,11 @@ Public Class lUsuario
         Dim resul As String = ""
         Try
             con.Conectar()
-            enunc = New SqlCommand("SELECT USU_TIPO, USU_NOM, USU_USU, USU_CLAVE, USU_DNI FROM USUARIO WHERE USU_USU='" & nomUsu & "'", con.strConex)
+            enunc = New SqlCommand("SELECT USU_EMAIL, USU_TEL, USU_DIR, USU_TIPO, USU_NOM, USU_USU, USU_CLAVE, USU_DNI FROM USUARIO WHERE USU_USU='" & nomUsu & "'", con.strConex)
             resp = enunc.ExecuteReader
 
             If resp.Read Then
+
                 resul = resp.Item("USU_TIPO")
 
                 nombreusuario = resp.Item("USU_NOM")
@@ -42,6 +43,9 @@ Public Class lUsuario
                 usuariousuario = resp.Item("USU_USU")
                 claveusuario = resp.Item("USU_CLAVE")
                 dniusuario = resp.Item("USU_DNI")
+                direcusuario = resp.Item("USU_DIR")
+                teleusuario = resp.Item("USU_TEL")
+                emailusuario = resp.Item("USU_EMAIL")
             End If
             resp.Close()
         Catch ex As Exception
