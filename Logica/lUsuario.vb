@@ -1,7 +1,7 @@
 ﻿Imports System
-Imports System.Data
-Imports System.Data.SqlClient
 Imports System.IO
+Imports System.Data.SqlClient
+Imports System.Drawing
 
 Imports datos
 
@@ -24,8 +24,40 @@ Public Class lUsuario
     Public USU_PAS As String
     Public USU_TIPO As String
     Public USU_ESTA As String
-    'Public USU_IMAGEN As String
+    Public USU_IMAGEN As String
 
+    Public Function ObtenerImagen(ByRef imagen As Image) As Boolean
+        Dim resul As Boolean = False
+
+        Try
+            con.Conectar()
+            enunc = New SqlCommand("SELECT USU_IMAGEN FROM USUARIO WHERE USU_DNI = '" & dniusuario & "' ", con.strConex)
+
+            resp = enunc.ExecuteReader
+
+            Dim newimagen As Image = Nothing
+
+            If resp.Read Then
+
+                Dim imgData As Byte() = resp.Item("USU_IMAGEN")
+                Using ms As New MemoryStream(imgData, 0, imgData.Length)
+                    ms.Write(imgData, 0, imgData.Length)
+                    newimagen = Image.FromStream(ms, True)
+                End Using
+
+                imagen = newimagen
+                newimagen = Nothing
+
+                resul = True
+
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+
+        Return resul
+    End Function
 
     Public Function consultarTusu(ByVal nomUsu As String) As String
         Dim resul As String = ""
@@ -108,7 +140,7 @@ Public Class lUsuario
     Public Function registrar_usuario() As Boolean
         Try
             con.Conectar()
-            'Dim data As Byte() = System.IO.File.ReadAllBytes(USU_IMAGEN)
+            Dim data As Byte() = System.IO.File.ReadAllBytes(USU_IMAGEN)
 
             Dim comando = New SqlCommand("proc_InsertarUsuario")
             comando.CommandType = CommandType.StoredProcedure
@@ -122,7 +154,7 @@ Public Class lUsuario
             comando.Parameters.AddWithValue("@clave", USU_PAS)
             comando.Parameters.AddWithValue("@tipo", USU_TIPO)
             comando.Parameters.AddWithValue("@estado", USU_ESTA)
-            'comando.Parameters.AddWithValue("@imagen", data)
+            comando.Parameters.AddWithValue("@imagen", data)
 
             If comando.ExecuteNonQuery Then
                 Return True
@@ -141,6 +173,8 @@ Public Class lUsuario
     Public Function modificar_usuario() As Boolean
         Try
             con.Conectar()
+            Dim data As Byte() = System.IO.File.ReadAllBytes(USU_IMAGEN)
+
             Dim comando = New SqlCommand("proc_ModificarUsuario")
             comando.CommandType = CommandType.StoredProcedure
             comando.Connection = con.strConex
@@ -153,6 +187,7 @@ Public Class lUsuario
             comando.Parameters.AddWithValue("@clave", USU_PAS)
             comando.Parameters.AddWithValue("@tipo", USU_TIPO)
             comando.Parameters.AddWithValue("@estado", USU_ESTA)
+            comando.Parameters.AddWithValue("@imagen", data)
 
 
             If comando.ExecuteNonQuery Then

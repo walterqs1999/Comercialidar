@@ -35,16 +35,26 @@ Partial Class frmUsuarioEdicion
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.grbConfidencial = New System.Windows.Forms.GroupBox()
+        Me.txtRuta = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.ElegirImagen = New System.Windows.Forms.Button()
+        Me.dlgImagen = New System.Windows.Forms.OpenFileDialog()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.grbDatos.SuspendLayout()
         Me.grbConfidencial.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(307, 335)
+        Me.btnCancelar.Location = New System.Drawing.Point(312, 390)
         '
         'grbDatos
         '
+        Me.grbDatos.Controls.Add(Me.PictureBox1)
+        Me.grbDatos.Controls.Add(Me.ElegirImagen)
+        Me.grbDatos.Controls.Add(Me.txtRuta)
+        Me.grbDatos.Controls.Add(Me.Label9)
         Me.grbDatos.Controls.Add(Me.grbConfidencial)
         Me.grbDatos.Controls.Add(Me.cboTipo)
         Me.grbDatos.Controls.Add(Me.Label8)
@@ -56,7 +66,7 @@ Partial Class frmUsuarioEdicion
         Me.grbDatos.Controls.Add(Me.Label3)
         Me.grbDatos.Controls.Add(Me.txtNombre)
         Me.grbDatos.Controls.Add(Me.Label2)
-        Me.grbDatos.Size = New System.Drawing.Size(569, 301)
+        Me.grbDatos.Size = New System.Drawing.Size(569, 372)
         Me.grbDatos.Controls.SetChildIndex(Me.Label1, 0)
         Me.grbDatos.Controls.SetChildIndex(Me.txtId, 0)
         Me.grbDatos.Controls.SetChildIndex(Me.Label2, 0)
@@ -70,6 +80,10 @@ Partial Class frmUsuarioEdicion
         Me.grbDatos.Controls.SetChildIndex(Me.Label8, 0)
         Me.grbDatos.Controls.SetChildIndex(Me.cboTipo, 0)
         Me.grbDatos.Controls.SetChildIndex(Me.grbConfidencial, 0)
+        Me.grbDatos.Controls.SetChildIndex(Me.Label9, 0)
+        Me.grbDatos.Controls.SetChildIndex(Me.txtRuta, 0)
+        Me.grbDatos.Controls.SetChildIndex(Me.ElegirImagen, 0)
+        Me.grbDatos.Controls.SetChildIndex(Me.PictureBox1, 0)
         '
         'txtId
         '
@@ -82,15 +96,15 @@ Partial Class frmUsuarioEdicion
         '
         'btnGrabarb
         '
-        Me.btnGrabarb.Location = New System.Drawing.Point(139, 335)
+        Me.btnGrabarb.Location = New System.Drawing.Point(144, 390)
         '
         'btnModificarb
         '
-        Me.btnModificarb.Location = New System.Drawing.Point(139, 335)
+        Me.btnModificarb.Location = New System.Drawing.Point(144, 390)
         '
         'btnNuevob
         '
-        Me.btnNuevob.Location = New System.Drawing.Point(222, 377)
+        Me.btnNuevob.Location = New System.Drawing.Point(227, 432)
         '
         'btnGenerar
         '
@@ -223,17 +237,55 @@ Partial Class frmUsuarioEdicion
         Me.grbConfidencial.Controls.Add(Me.txtUsuario)
         Me.grbConfidencial.Controls.Add(Me.Label6)
         Me.grbConfidencial.Controls.Add(Me.txtClave)
-        Me.grbConfidencial.Location = New System.Drawing.Point(20, 177)
+        Me.grbConfidencial.Location = New System.Drawing.Point(34, 261)
         Me.grbConfidencial.Name = "grbConfidencial"
         Me.grbConfidencial.Size = New System.Drawing.Size(511, 94)
         Me.grbConfidencial.TabIndex = 95
         Me.grbConfidencial.TabStop = False
         Me.grbConfidencial.Text = "Confidencial"
         '
+        'txtRuta
+        '
+        Me.txtRuta.Location = New System.Drawing.Point(99, 150)
+        Me.txtRuta.Name = "txtRuta"
+        Me.txtRuta.Size = New System.Drawing.Size(322, 20)
+        Me.txtRuta.TabIndex = 97
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(16, 153)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(35, 13)
+        Me.Label9.TabIndex = 96
+        Me.Label9.Text = "URL :"
+        '
+        'ElegirImagen
+        '
+        Me.ElegirImagen.Location = New System.Drawing.Point(432, 150)
+        Me.ElegirImagen.Name = "ElegirImagen"
+        Me.ElegirImagen.Size = New System.Drawing.Size(116, 23)
+        Me.ElegirImagen.TabIndex = 95
+        Me.ElegirImagen.Text = "Elegir imagen "
+        Me.ElegirImagen.UseVisualStyleBackColor = True
+        '
+        'dlgImagen
+        '
+        Me.dlgImagen.FileName = "OpenFileDialog1"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(99, 185)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(135, 70)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 98
+        Me.PictureBox1.TabStop = False
+        '
         'frmUsuarioEdicion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.ClientSize = New System.Drawing.Size(594, 424)
+        Me.ClientSize = New System.Drawing.Size(594, 471)
         Me.Name = "frmUsuarioEdicion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = ".:. EDICION EN LA TABLA USUARIO .:."
@@ -241,6 +293,7 @@ Partial Class frmUsuarioEdicion
         Me.grbDatos.PerformLayout()
         Me.grbConfidencial.ResumeLayout(False)
         Me.grbConfidencial.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -261,4 +314,9 @@ Partial Class frmUsuarioEdicion
     Friend WithEvents Label3 As Label
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents ElegirImagen As Button
+    Friend WithEvents txtRuta As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents dlgImagen As OpenFileDialog
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

@@ -48,7 +48,7 @@ Partial Class frmMenuAdministrador
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.perfil = New System.Windows.Forms.PictureBox()
         Me.lblAdministrador = New System.Windows.Forms.Label()
         Me.lblNombre = New System.Windows.Forms.Label()
         Me.lblFecha = New System.Windows.Forms.Label()
@@ -63,7 +63,7 @@ Partial Class frmMenuAdministrador
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel9.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.perfil, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuVertical
@@ -94,7 +94,7 @@ Partial Class frmMenuAdministrador
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.Panel8.Location = New System.Drawing.Point(0, 513)
+        Me.Panel8.Location = New System.Drawing.Point(0, 610)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(6, 40)
         Me.Panel8.TabIndex = 10
@@ -102,7 +102,7 @@ Partial Class frmMenuAdministrador
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.Panel7.Location = New System.Drawing.Point(0, 442)
+        Me.Panel7.Location = New System.Drawing.Point(0, 531)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(6, 40)
         Me.Panel7.TabIndex = 10
@@ -110,7 +110,7 @@ Partial Class frmMenuAdministrador
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.Panel6.Location = New System.Drawing.Point(0, 375)
+        Me.Panel6.Location = New System.Drawing.Point(0, 450)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(6, 40)
         Me.Panel6.TabIndex = 10
@@ -118,7 +118,7 @@ Partial Class frmMenuAdministrador
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.Panel5.Location = New System.Drawing.Point(0, 304)
+        Me.Panel5.Location = New System.Drawing.Point(0, 363)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(6, 40)
         Me.Panel5.TabIndex = 10
@@ -126,7 +126,7 @@ Partial Class frmMenuAdministrador
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.Panel4.Location = New System.Drawing.Point(0, 236)
+        Me.Panel4.Location = New System.Drawing.Point(0, 267)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(6, 40)
         Me.Panel4.TabIndex = 10
@@ -134,7 +134,7 @@ Partial Class frmMenuAdministrador
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(0, 168)
+        Me.Panel3.Location = New System.Drawing.Point(0, 180)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(6, 40)
         Me.Panel3.TabIndex = 10
@@ -155,7 +155,7 @@ Partial Class frmMenuAdministrador
         Me.Button7.ForeColor = System.Drawing.Color.White
         Me.Button7.Image = CType(resources.GetObject("Button7.Image"), System.Drawing.Image)
         Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button7.Location = New System.Drawing.Point(0, 513)
+        Me.Button7.Location = New System.Drawing.Point(0, 610)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(250, 40)
         Me.Button7.TabIndex = 8
@@ -185,7 +185,7 @@ Partial Class frmMenuAdministrador
         Me.Button5.ForeColor = System.Drawing.Color.White
         Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
         Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(0, 442)
+        Me.Button5.Location = New System.Drawing.Point(0, 531)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(250, 40)
         Me.Button5.TabIndex = 6
@@ -200,7 +200,7 @@ Partial Class frmMenuAdministrador
         Me.Button4.ForeColor = System.Drawing.Color.White
         Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(0, 375)
+        Me.Button4.Location = New System.Drawing.Point(0, 450)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(250, 40)
         Me.Button4.TabIndex = 5
@@ -215,7 +215,7 @@ Partial Class frmMenuAdministrador
         Me.Button3.ForeColor = System.Drawing.Color.White
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(0, 236)
+        Me.Button3.Location = New System.Drawing.Point(0, 267)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(250, 40)
         Me.Button3.TabIndex = 4
@@ -230,7 +230,7 @@ Partial Class frmMenuAdministrador
         Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(0, 304)
+        Me.Button2.Location = New System.Drawing.Point(0, 363)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(250, 40)
         Me.Button2.TabIndex = 3
@@ -245,7 +245,7 @@ Partial Class frmMenuAdministrador
         Me.btnProducto.ForeColor = System.Drawing.Color.White
         Me.btnProducto.Image = CType(resources.GetObject("btnProducto.Image"), System.Drawing.Image)
         Me.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnProducto.Location = New System.Drawing.Point(0, 168)
+        Me.btnProducto.Location = New System.Drawing.Point(0, 180)
         Me.btnProducto.Name = "btnProducto"
         Me.btnProducto.Size = New System.Drawing.Size(250, 40)
         Me.btnProducto.TabIndex = 2
@@ -323,7 +323,7 @@ Partial Class frmMenuAdministrador
         '
         Me.Panel9.BackColor = System.Drawing.Color.White
         Me.Panel9.Controls.Add(Me.PictureBox5)
-        Me.Panel9.Controls.Add(Me.PictureBox4)
+        Me.Panel9.Controls.Add(Me.perfil)
         Me.Panel9.Controls.Add(Me.lblAdministrador)
         Me.Panel9.Controls.Add(Me.lblNombre)
         Me.Panel9.Controls.Add(Me.lblFecha)
@@ -345,15 +345,14 @@ Partial Class frmMenuAdministrador
         Me.PictureBox5.TabIndex = 6
         Me.PictureBox5.TabStop = False
         '
-        'PictureBox4
+        'perfil
         '
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(75, 6)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(76, 57)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 5
-        Me.PictureBox4.TabStop = False
+        Me.perfil.Location = New System.Drawing.Point(75, 6)
+        Me.perfil.Name = "perfil"
+        Me.perfil.Size = New System.Drawing.Size(76, 57)
+        Me.perfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.perfil.TabIndex = 5
+        Me.perfil.TabStop = False
         '
         'lblAdministrador
         '
@@ -427,7 +426,7 @@ Partial Class frmMenuAdministrador
         Me.Panel9.ResumeLayout(False)
         Me.Panel9.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.perfil, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -460,6 +459,6 @@ Partial Class frmMenuAdministrador
     Friend WithEvents lblFecha As Label
     Friend WithEvents lblHora As Label
     Friend WithEvents PanelContenedor As Panel
-    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents perfil As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
 End Class

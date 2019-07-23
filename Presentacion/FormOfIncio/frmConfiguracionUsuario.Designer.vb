@@ -25,8 +25,8 @@ Partial Class frmConfiguracionUsuario
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmConfiguracionUsuario))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnCerrar = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.perfil1 = New System.Windows.Forms.PictureBox()
+        Me.btnCambiarPerfil = New System.Windows.Forms.Button()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtDni = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -44,36 +44,37 @@ Partial Class frmConfiguracionUsuario
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtConfirmar = New System.Windows.Forms.TextBox()
         Me.grbDatosAcceso = New System.Windows.Forms.GroupBox()
+        Me.advertencia = New System.Windows.Forms.PictureBox()
+        Me.exito1 = New System.Windows.Forms.PictureBox()
+        Me.exito = New System.Windows.Forms.PictureBox()
+        Me.Advertencia2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.btnConfirmar = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtNuevaContraseña = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.txtNuevaContraseña = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.btnConfirmar = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.Advertencia2 = New System.Windows.Forms.PictureBox()
-        Me.exito = New System.Windows.Forms.PictureBox()
-        Me.exito1 = New System.Windows.Forms.PictureBox()
-        Me.advertencia = New System.Windows.Forms.PictureBox()
+        Me.dlgImagen = New System.Windows.Forms.OpenFileDialog()
         CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.perfil1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grbDatosAcceso.SuspendLayout()
+        CType(Me.advertencia, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.exito1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.exito, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Advertencia2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Advertencia2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.exito, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.exito1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.advertencia, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -96,28 +97,27 @@ Partial Class frmConfiguracionUsuario
         Me.btnCerrar.TabIndex = 102
         Me.btnCerrar.TabStop = False
         '
-        'PictureBox1
+        'perfil1
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(87, 156)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(172, 171)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 103
-        Me.PictureBox1.TabStop = False
+        Me.perfil1.Location = New System.Drawing.Point(87, 156)
+        Me.perfil1.Name = "perfil1"
+        Me.perfil1.Size = New System.Drawing.Size(172, 171)
+        Me.perfil1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.perfil1.TabIndex = 103
+        Me.perfil1.TabStop = False
         '
-        'Button1
+        'btnCambiarPerfil
         '
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Lavender
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button1.Location = New System.Drawing.Point(111, 360)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(116, 35)
-        Me.Button1.TabIndex = 104
-        Me.Button1.Text = "Cambiar Perfil"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnCambiarPerfil.FlatAppearance.BorderColor = System.Drawing.Color.Lavender
+        Me.btnCambiarPerfil.FlatAppearance.BorderSize = 0
+        Me.btnCambiarPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnCambiarPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnCambiarPerfil.Location = New System.Drawing.Point(111, 360)
+        Me.btnCambiarPerfil.Name = "btnCambiarPerfil"
+        Me.btnCambiarPerfil.Size = New System.Drawing.Size(116, 35)
+        Me.btnCambiarPerfil.TabIndex = 104
+        Me.btnCambiarPerfil.Text = "Cambiar Perfil"
+        Me.btnCambiarPerfil.UseVisualStyleBackColor = True
         '
         'txtNombre
         '
@@ -295,6 +295,101 @@ Partial Class frmConfiguracionUsuario
         Me.grbDatosAcceso.TabStop = False
         Me.grbDatosAcceso.Text = "Datos de Acceso"
         '
+        'advertencia
+        '
+        Me.advertencia.Image = CType(resources.GetObject("advertencia.Image"), System.Drawing.Image)
+        Me.advertencia.Location = New System.Drawing.Point(19, 314)
+        Me.advertencia.Name = "advertencia"
+        Me.advertencia.Size = New System.Drawing.Size(15, 15)
+        Me.advertencia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.advertencia.TabIndex = 134
+        Me.advertencia.TabStop = False
+        Me.advertencia.Visible = False
+        '
+        'exito1
+        '
+        Me.exito1.Image = CType(resources.GetObject("exito1.Image"), System.Drawing.Image)
+        Me.exito1.Location = New System.Drawing.Point(19, 314)
+        Me.exito1.Name = "exito1"
+        Me.exito1.Size = New System.Drawing.Size(15, 15)
+        Me.exito1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.exito1.TabIndex = 133
+        Me.exito1.TabStop = False
+        Me.exito1.Visible = False
+        '
+        'exito
+        '
+        Me.exito.Image = CType(resources.GetObject("exito.Image"), System.Drawing.Image)
+        Me.exito.Location = New System.Drawing.Point(19, 131)
+        Me.exito.Name = "exito"
+        Me.exito.Size = New System.Drawing.Size(15, 15)
+        Me.exito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.exito.TabIndex = 132
+        Me.exito.TabStop = False
+        Me.exito.Visible = False
+        '
+        'Advertencia2
+        '
+        Me.Advertencia2.Image = CType(resources.GetObject("Advertencia2.Image"), System.Drawing.Image)
+        Me.Advertencia2.Location = New System.Drawing.Point(19, 131)
+        Me.Advertencia2.Name = "Advertencia2"
+        Me.Advertencia2.Size = New System.Drawing.Size(15, 15)
+        Me.Advertencia2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Advertencia2.TabIndex = 131
+        Me.Advertencia2.TabStop = False
+        Me.Advertencia2.Visible = False
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
+        Me.PictureBox8.Location = New System.Drawing.Point(291, 125)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(28, 27)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox8.TabIndex = 130
+        Me.PictureBox8.TabStop = False
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
+        Me.PictureBox7.Location = New System.Drawing.Point(291, 55)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(28, 27)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox7.TabIndex = 129
+        Me.PictureBox7.TabStop = False
+        '
+        'btnConfirmar
+        '
+        Me.btnConfirmar.FlatAppearance.BorderColor = System.Drawing.Color.Lavender
+        Me.btnConfirmar.FlatAppearance.BorderSize = 0
+        Me.btnConfirmar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnConfirmar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnConfirmar.Location = New System.Drawing.Point(104, 170)
+        Me.btnConfirmar.Name = "btnConfirmar"
+        Me.btnConfirmar.Size = New System.Drawing.Size(116, 25)
+        Me.btnConfirmar.TabIndex = 124
+        Me.btnConfirmar.Text = "Confirmar"
+        Me.btnConfirmar.UseVisualStyleBackColor = True
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(40, 225)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(121, 13)
+        Me.Label10.TabIndex = 118
+        Me.Label10.Text = "NUEVA CONTRASEÑA"
+        '
+        'txtNuevaContraseña
+        '
+        Me.txtNuevaContraseña.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNuevaContraseña.Location = New System.Drawing.Point(40, 244)
+        Me.txtNuevaContraseña.Multiline = True
+        Me.txtNuevaContraseña.Name = "txtNuevaContraseña"
+        Me.txtNuevaContraseña.Size = New System.Drawing.Size(245, 28)
+        Me.txtNuevaContraseña.TabIndex = 117
+        '
         'Button2
         '
         Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Lavender
@@ -320,37 +415,6 @@ Partial Class frmConfiguracionUsuario
         Me.Button3.TabIndex = 123
         Me.Button3.Text = "Guardar Cambios"
         Me.Button3.UseVisualStyleBackColor = True
-        '
-        'txtNuevaContraseña
-        '
-        Me.txtNuevaContraseña.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNuevaContraseña.Location = New System.Drawing.Point(40, 244)
-        Me.txtNuevaContraseña.Multiline = True
-        Me.txtNuevaContraseña.Name = "txtNuevaContraseña"
-        Me.txtNuevaContraseña.Size = New System.Drawing.Size(245, 28)
-        Me.txtNuevaContraseña.TabIndex = 117
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(40, 225)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(121, 13)
-        Me.Label10.TabIndex = 118
-        Me.Label10.Text = "NUEVA CONTRASEÑA"
-        '
-        'btnConfirmar
-        '
-        Me.btnConfirmar.FlatAppearance.BorderColor = System.Drawing.Color.Lavender
-        Me.btnConfirmar.FlatAppearance.BorderSize = 0
-        Me.btnConfirmar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnConfirmar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnConfirmar.Location = New System.Drawing.Point(104, 170)
-        Me.btnConfirmar.Name = "btnConfirmar"
-        Me.btnConfirmar.Size = New System.Drawing.Size(116, 25)
-        Me.btnConfirmar.TabIndex = 124
-        Me.btnConfirmar.Text = "Confirmar"
-        Me.btnConfirmar.UseVisualStyleBackColor = True
         '
         'PictureBox2
         '
@@ -402,69 +466,9 @@ Partial Class frmConfiguracionUsuario
         Me.PictureBox6.TabIndex = 128
         Me.PictureBox6.TabStop = False
         '
-        'PictureBox7
+        'dlgImagen
         '
-        Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
-        Me.PictureBox7.Location = New System.Drawing.Point(291, 55)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(28, 27)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox7.TabIndex = 129
-        Me.PictureBox7.TabStop = False
-        '
-        'PictureBox8
-        '
-        Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
-        Me.PictureBox8.Location = New System.Drawing.Point(291, 125)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(28, 27)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox8.TabIndex = 130
-        Me.PictureBox8.TabStop = False
-        '
-        'Advertencia2
-        '
-        Me.Advertencia2.Image = CType(resources.GetObject("Advertencia2.Image"), System.Drawing.Image)
-        Me.Advertencia2.Location = New System.Drawing.Point(19, 131)
-        Me.Advertencia2.Name = "Advertencia2"
-        Me.Advertencia2.Size = New System.Drawing.Size(15, 15)
-        Me.Advertencia2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Advertencia2.TabIndex = 131
-        Me.Advertencia2.TabStop = False
-        Me.Advertencia2.Visible = False
-        '
-        'exito
-        '
-        Me.exito.Image = CType(resources.GetObject("exito.Image"), System.Drawing.Image)
-        Me.exito.Location = New System.Drawing.Point(19, 131)
-        Me.exito.Name = "exito"
-        Me.exito.Size = New System.Drawing.Size(15, 15)
-        Me.exito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.exito.TabIndex = 132
-        Me.exito.TabStop = False
-        Me.exito.Visible = False
-        '
-        'exito1
-        '
-        Me.exito1.Image = CType(resources.GetObject("exito1.Image"), System.Drawing.Image)
-        Me.exito1.Location = New System.Drawing.Point(19, 314)
-        Me.exito1.Name = "exito1"
-        Me.exito1.Size = New System.Drawing.Size(15, 15)
-        Me.exito1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.exito1.TabIndex = 133
-        Me.exito1.TabStop = False
-        Me.exito1.Visible = False
-        '
-        'advertencia
-        '
-        Me.advertencia.Image = CType(resources.GetObject("advertencia.Image"), System.Drawing.Image)
-        Me.advertencia.Location = New System.Drawing.Point(19, 314)
-        Me.advertencia.Name = "advertencia"
-        Me.advertencia.Size = New System.Drawing.Size(15, 15)
-        Me.advertencia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.advertencia.TabIndex = 134
-        Me.advertencia.TabStop = False
-        Me.advertencia.Visible = False
+        Me.dlgImagen.FileName = "OpenFileDialog1"
         '
         'frmConfiguracionUsuario
         '
@@ -489,28 +493,28 @@ Partial Class frmConfiguracionUsuario
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtDni)
         Me.Controls.Add(Me.txtNombre)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.btnCambiarPerfil)
+        Me.Controls.Add(Me.perfil1)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmConfiguracionUsuario"
         Me.Text = "frmConfiguracionUsuario"
         CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.perfil1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grbDatosAcceso.ResumeLayout(False)
         Me.grbDatosAcceso.PerformLayout()
+        CType(Me.advertencia, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.exito1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.exito, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Advertencia2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Advertencia2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.exito, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.exito1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.advertencia, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -518,8 +522,8 @@ Partial Class frmConfiguracionUsuario
 
     Friend WithEvents Label1 As Label
     Friend WithEvents btnCerrar As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents perfil1 As PictureBox
+    Friend WithEvents btnCambiarPerfil As Button
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents txtDni As TextBox
     Friend WithEvents Label2 As Label
@@ -553,4 +557,5 @@ Partial Class frmConfiguracionUsuario
     Friend WithEvents exito As PictureBox
     Friend WithEvents advertencia As PictureBox
     Friend WithEvents exito1 As PictureBox
+    Friend WithEvents dlgImagen As OpenFileDialog
 End Class

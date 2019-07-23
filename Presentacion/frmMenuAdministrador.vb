@@ -1,10 +1,12 @@
 ﻿Imports System.Runtime.InteropServices
 Imports System.Windows.Forms
+Imports Logica
 
 Imports Logica.mdlGeneralUsuario
 
 Public Class frmMenuAdministrador
 
+    Dim usuLogi As New Logica.lUsuario
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         If MenuVertical.Width = 250 Then
@@ -38,6 +40,8 @@ Public Class frmMenuAdministrador
     Private Sub frmMenuAdministrador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblNombre.Text = nombreusuario
         lblAdministrador.Text = tipousuario
+
+        usuLogi.ObtenerImagen(perfil.Image)
     End Sub
 
     Private Sub AbrirFomEnPanel(ByVal Formhijo As Object)

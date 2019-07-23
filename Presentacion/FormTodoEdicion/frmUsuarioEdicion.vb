@@ -110,6 +110,7 @@ Public Class frmUsuarioEdicion
         usuLogi.USU_PAS = generado
         usuLogi.USU_TIPO = cboTipo.Text
         usuLogi.USU_ESTA = "A"
+        usuLogi.USU_IMAGEN = txtRuta.Text
         Dim can As Integer
         Dim xcod As String
         xcod = txtId.Text
@@ -205,5 +206,17 @@ Public Class frmUsuarioEdicion
         Else
             MsgBox("No se Modifico el Usuario")
         End If
+    End Sub
+
+    Private Sub ElegirImagen_Click(sender As Object, e As EventArgs) Handles ElegirImagen.Click
+        Dim Result As DialogResult = dlgImagen.ShowDialog()
+        If Result = System.Windows.Forms.DialogResult.OK Then
+            txtRuta.Text = dlgImagen.FileName
+            PictureBox1.Load(txtRuta.Text)
+        End If
+    End Sub
+
+    Private Sub frmUsuarioEdicion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

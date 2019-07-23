@@ -62,4 +62,8 @@ Public Class frmMenuUsuario
         lblHora.Text = DateTime.Now.ToString("hh:mm:ss")
         lblFecha.Text = DateTime.Now.ToLongDateString()
     End Sub
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        AbrirFomEnPanel(New frmConfiguracionUsuario)
+    End Sub
 End Class

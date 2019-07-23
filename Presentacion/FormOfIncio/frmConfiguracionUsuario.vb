@@ -10,6 +10,7 @@ Public Class frmConfiguracionUsuario
 
     Dim usuLogi As New Logica.lUsuario
 
+    Dim ruta As String
     Function generarClave(ByVal cadena As String) As String
         Dim enc As New UTF8Encoding
         Dim data() As Byte = enc.GetBytes(cadena)
@@ -50,6 +51,7 @@ Public Class frmConfiguracionUsuario
         txtTelefono.Text = teleusuario
         txtEmail.Text = emailusuario
         txtUsuario.Text = usuariousuario
+        usuLogi.ObtenerImagen(perfil1.Image)
     End Sub
 
     Private Sub btnConfirmar_Click(sender As Object, e As EventArgs) Handles btnConfirmar.Click
@@ -132,10 +134,11 @@ Public Class frmConfiguracionUsuario
         usuLogi.USU_TEL = txtTelefono.Text
         usuLogi.USU_CORREO = txtEmail.Text
         usuLogi.USU_USU = txtUsuario.Text
-        If txtNuevaContraseña.Enabled = True Then
+        usuLogi.USU_IMAGEN = ruta
+        If txtContraseña.Enabled = True Then
             usuLogi.USU_PAS = generarClave(txtNuevaContraseña.Text)
         Else
-            usuLogi.USU_PAS = generarClave(txtContraseña.Text)
+            usuLogi.USU_PAS = claveusuario
         End If
         usuLogi.USU_TIPO = tipousuario
         usuLogi.USU_ESTA = "A"
@@ -153,6 +156,14 @@ Public Class frmConfiguracionUsuario
             txtConfirmar.Enabled = False
         Else
             MsgBox("No se Modifico el Usuario")
+        End If
+    End Sub
+
+    Private Sub btnCambiarPerfil_Click(sender As Object, e As EventArgs) Handles btnCambiarPerfil.Click
+        Dim Result As DialogResult = dlgImagen.ShowDialog()
+        If Result = System.Windows.Forms.DialogResult.OK Then
+            ruta = dlgImagen.FileName
+            perfil1.Load(ruta)
         End If
     End Sub
 End Class
