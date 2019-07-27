@@ -1,6 +1,6 @@
-﻿Imports System.Runtime.InteropServices
-Imports System.Windows.Forms
+﻿Imports System.Windows.Forms
 Imports Logica
+Imports System.Drawing.Drawing2D
 
 Imports Logica.mdlGeneralUsuario
 

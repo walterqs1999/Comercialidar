@@ -140,6 +140,7 @@ Public Class lUsuario
     Public Function registrar_usuario() As Boolean
         Try
             con.Conectar()
+
             Dim data As Byte() = System.IO.File.ReadAllBytes(USU_IMAGEN)
 
             Dim comando = New SqlCommand("proc_InsertarUsuario")
@@ -173,6 +174,7 @@ Public Class lUsuario
     Public Function modificar_usuario() As Boolean
         Try
             con.Conectar()
+
             Dim data As Byte() = System.IO.File.ReadAllBytes(USU_IMAGEN)
 
             Dim comando = New SqlCommand("proc_ModificarUsuario")

@@ -11,6 +11,7 @@ Public Class frmConfiguracionUsuario
     Dim usuLogi As New Logica.lUsuario
 
     Dim ruta As String
+
     Function generarClave(ByVal cadena As String) As String
         Dim enc As New UTF8Encoding
         Dim data() As Byte = enc.GetBytes(cadena)

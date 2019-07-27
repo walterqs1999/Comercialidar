@@ -336,7 +336,6 @@ Partial Class frmMenuAdministrador
         '
         'PictureBox5
         '
-        Me.PictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
         Me.PictureBox5.Location = New System.Drawing.Point(14, 30)
         Me.PictureBox5.Name = "PictureBox5"

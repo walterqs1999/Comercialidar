@@ -1,13 +1,16 @@
 ﻿Imports Logica.mdlGeneralUsuario
 
 Public Class frmWelcome
+
+    Dim usuLogi As New Logica.lUsuario
+
     'Dim conta As Integer = 0
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         If Me.Opacity < 1 Then
             Me.Opacity += 0.05
-            ProgressBar1.Value += 5
-            ProgressBar1.Text = ProgressBar1.Value.ToString()
-            If ProgressBar1.Value = 100 Then
+            CircularProgressBar1.Value += 5
+            CircularProgressBar1.Text = CircularProgressBar1.Value.ToString()
+            If CircularProgressBar1.Value = 100 Then
                 Timer1.Stop()
                 Timer2.Start()
             End If
@@ -29,10 +32,11 @@ Public Class frmWelcome
     Private Sub frmWelcome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lbUsername01.Text = nombreusuario
         Me.Opacity = 0.0
-        ProgressBar1.Value = 0
-        ProgressBar1.Minimum = 0
-        ProgressBar1.Maximum = 100
+        CircularProgressBar1.Value = 0
+        CircularProgressBar1.Minimum = 0
+        CircularProgressBar1.Maximum = 100
         Timer1.Start()
+        usuLogi.ObtenerImagen(perfil.Image)
     End Sub
 
 End Class

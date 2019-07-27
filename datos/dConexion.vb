@@ -11,7 +11,6 @@ Public Class dConexion
             'strConex.ConnectionString = "Data Source=(local);Initial Catalog=COMERCIAL_IDAR;Integrated Security=True"
             'strConex.ConnectionString = "Data Source=DESKTOP-1TFGD1S\SQLEXPRESS;Initial Catalog=COMERCIAL_IDAR;User ID=sa;Password=sqlserver"
 
-
             strConex.Open()
         Catch ex As Exception
             MsgBox(ex.ToString)
