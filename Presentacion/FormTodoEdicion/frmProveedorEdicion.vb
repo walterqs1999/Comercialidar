@@ -70,4 +70,5 @@ Public Class frmProveedorEdicion
             MsgBox("No se Modifico el Proveedor")
         End If
     End Sub
+
 End Class

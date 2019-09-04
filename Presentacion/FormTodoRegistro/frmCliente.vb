@@ -1,6 +1,4 @@
-﻿Imports datos
-Imports Logica
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
 
 Public Class frmCliente
 
@@ -38,6 +36,8 @@ Public Class frmCliente
         If dgvClientes.CurrentRow Is Nothing Then
             MsgBox("seleccione una fila")
         Else
+            fila = dgvClientes.CurrentCell.RowIndex
+
             frmClienteEdicion.txtId.Text = dgvClientes.Item(0, fila).Value
             frmClienteEdicion.txtNombre.Text = dgvClientes.Item(2, fila).Value
             frmClienteEdicion.txtDireccion.Text = dgvClientes.Item(3, fila).Value

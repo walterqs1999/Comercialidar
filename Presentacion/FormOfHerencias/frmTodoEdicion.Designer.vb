@@ -23,7 +23,6 @@ Partial Class frmTodoEdicion
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTodoEdicion))
-        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.grbDatos = New System.Windows.Forms.GroupBox()
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -32,17 +31,6 @@ Partial Class frmTodoEdicion
         Me.btnNuevob = New System.Windows.Forms.Button()
         Me.grbDatos.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'btnCancelar
-        '
-        Me.btnCancelar.Image = CType(resources.GetObject("btnCancelar.Image"), System.Drawing.Image)
-        Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(318, 242)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(150, 36)
-        Me.btnCancelar.TabIndex = 57
-        Me.btnCancelar.Text = "&Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = True
         '
         'grbDatos
         '
@@ -75,7 +63,7 @@ Partial Class frmTodoEdicion
         '
         Me.btnModificarb.Image = CType(resources.GetObject("btnModificarb.Image"), System.Drawing.Image)
         Me.btnModificarb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnModificarb.Location = New System.Drawing.Point(130, 242)
+        Me.btnModificarb.Location = New System.Drawing.Point(203, 242)
         Me.btnModificarb.Name = "btnModificarb"
         Me.btnModificarb.Size = New System.Drawing.Size(150, 36)
         Me.btnModificarb.TabIndex = 67
@@ -97,7 +85,7 @@ Partial Class frmTodoEdicion
         '
         Me.btnNuevob.Image = CType(resources.GetObject("btnNuevob.Image"), System.Drawing.Image)
         Me.btnNuevob.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNuevob.Location = New System.Drawing.Point(92, 242)
+        Me.btnNuevob.Location = New System.Drawing.Point(307, 242)
         Me.btnNuevob.Name = "btnNuevob"
         Me.btnNuevob.Size = New System.Drawing.Size(150, 36)
         Me.btnNuevob.TabIndex = 64
@@ -112,16 +100,15 @@ Partial Class frmTodoEdicion
         Me.Controls.Add(Me.btnModificarb)
         Me.Controls.Add(Me.btnGrabarb)
         Me.Controls.Add(Me.btnNuevob)
-        Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.grbDatos)
         Me.Name = "frmTodoEdicion"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmTodoEdicion"
         Me.grbDatos.ResumeLayout(False)
         Me.grbDatos.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-    Public WithEvents btnCancelar As Button
     Public WithEvents grbDatos As GroupBox
     Public WithEvents txtId As TextBox
     Public WithEvents Label1 As Label

@@ -40,7 +40,7 @@ Public Class frmUsuario
     Private Sub btnREliminar_Click(sender As Object, e As EventArgs) Handles btnREliminar.Click
         fila = dgvUsuarios.CurrentCell.RowIndex
         logica.USU_NOM = dgvUsuarios.Item(1, fila).Value
-        If MessageBox.Show("Desea eliminar " & logica.USU_NOM & "?", "Confirmacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = 1 Then
+        If MessageBox.Show("Desea eliminar a " & logica.USU_NOM & "?", "Confirmacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = 1 Then
             logica.USU_DNI = dgvUsuarios.Item(0, fila).Value
             If logica.eliminar_usuario Then
                 MsgBox("usuario eliminado")

@@ -63,9 +63,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dCategorias.vb" />
     <Compile Include="dCompra.vb" />
     <Compile Include="dCliente.vb" />
     <Compile Include="dConexion.vb" />
+    <Compile Include="dProductos.vb" />
     <Compile Include="dProveedor.vb" />
     <Compile Include="dUsuario.vb" />
     <Compile Include="dVenta.vb" />

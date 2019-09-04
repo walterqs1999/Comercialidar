@@ -4,7 +4,7 @@ Imports Presentacion.frmTodoEdicion
 Public Class frmTodoRegistro
     Public rpta As Integer
 
-    Dim frmtodoedicion As New frmTodoEdicion
+    'Dim frmtodoedicion As New frmTodoEdicion
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         rpta = MessageBox.Show("¿Desea Salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -28,10 +28,5 @@ Public Class frmTodoRegistro
 
     Public Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnRModificar.Click
         valor = 2
-        frmtodoedicion.txtId.Enabled = False
-    End Sub
-
-    Public Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnREliminar.Click
-        valor = 3
     End Sub
 End Class

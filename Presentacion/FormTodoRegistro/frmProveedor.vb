@@ -40,6 +40,8 @@ Public Class frmProveedor
         If dgvProveedor.CurrentRow Is Nothing Then
             MsgBox("seleccione una fila")
         Else
+            fila = dgvProveedor.CurrentCell.RowIndex
+
             frmProveedorEdicion.txtId.Text = dgvProveedor.Item(0, fila).Value
             frmProveedorEdicion.txtEmpresa.Text = dgvProveedor.Item(2, fila).Value
             frmProveedorEdicion.txtPersonaC.Text = dgvProveedor.Item(3, fila).Value

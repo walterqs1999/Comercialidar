@@ -28,10 +28,6 @@ Partial Class frmClienteEdicion
         Me.grbDatos.SuspendLayout()
         Me.SuspendLayout()
         '
-        'btnCancelar
-        '
-        Me.btnCancelar.Location = New System.Drawing.Point(307, 177)
-        '
         'grbDatos
         '
         Me.grbDatos.Controls.Add(Me.txtTelefono)
@@ -62,11 +58,11 @@ Partial Class frmClienteEdicion
         '
         'btnModificarb
         '
-        Me.btnModificarb.Location = New System.Drawing.Point(125, 177)
+        Me.btnModificarb.Location = New System.Drawing.Point(204, 177)
         '
         'btnNuevob
         '
-        Me.btnNuevob.Location = New System.Drawing.Point(213, 219)
+        Me.btnNuevob.Location = New System.Drawing.Point(308, 177)
         '
         'txtTelefono
         '
@@ -119,7 +115,7 @@ Partial Class frmClienteEdicion
         'frmClienteEdicion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.ClientSize = New System.Drawing.Size(594, 265)
+        Me.ClientSize = New System.Drawing.Size(594, 240)
         Me.Name = "frmClienteEdicion"
         Me.Text = ".:. EDICION DE LA TABLA CLIENTES .:."
         Me.grbDatos.ResumeLayout(False)

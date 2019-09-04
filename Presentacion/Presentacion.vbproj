@@ -98,6 +98,12 @@
     <Compile Include="FormOfIncio\frmConfiguracionUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormTodoEdicion\frmCategoriaEdicion.Designer.vb">
+      <DependentUpon>frmCategoriaEdicion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTodoEdicion\frmCategoriaEdicion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormTodoEdicion\frmClienteEdicion.Designer.vb">
       <DependentUpon>frmClienteEdicion.vb</DependentUpon>
     </Compile>
@@ -108,6 +114,12 @@
       <DependentUpon>frmComprasEdicion.vb</DependentUpon>
     </Compile>
     <Compile Include="FormTodoEdicion\frmComprasEdicion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTodoEdicion\frmProductosEdicion.Designer.vb">
+      <DependentUpon>frmProductosEdicion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTodoEdicion\frmProductosEdicion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTodoEdicion\frmProveedorEdicion.Designer.vb">
@@ -128,10 +140,22 @@
     <Compile Include="FormTodoEdicion\frmVentasEdicion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormTodoRegistro\frmCategorias.Designer.vb">
+      <DependentUpon>frmCategorias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTodoRegistro\frmCategorias.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormTodoRegistro\frmCliente.Designer.vb">
       <DependentUpon>frmCliente.vb</DependentUpon>
     </Compile>
     <Compile Include="FormTodoRegistro\frmCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTodoRegistro\frmProductos.Designer.vb">
+      <DependentUpon>frmProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTodoRegistro\frmProductos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTodoRegistro\frmProveedor.Designer.vb">
@@ -218,11 +242,17 @@
     <EmbeddedResource Include="FormOfIncio\frmConfiguracionUsuario.resx">
       <DependentUpon>frmConfiguracionUsuario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTodoEdicion\frmCategoriaEdicion.resx">
+      <DependentUpon>frmCategoriaEdicion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTodoEdicion\frmClienteEdicion.resx">
       <DependentUpon>frmClienteEdicion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTodoEdicion\frmComprasEdicion.resx">
       <DependentUpon>frmComprasEdicion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTodoEdicion\frmProductosEdicion.resx">
+      <DependentUpon>frmProductosEdicion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTodoEdicion\frmProveedorEdicion.resx">
       <DependentUpon>frmProveedorEdicion.vb</DependentUpon>
@@ -233,8 +263,14 @@
     <EmbeddedResource Include="FormTodoEdicion\frmVentasEdicion.resx">
       <DependentUpon>frmVentasEdicion.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTodoRegistro\frmCategorias.resx">
+      <DependentUpon>frmCategorias.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTodoRegistro\frmCliente.resx">
       <DependentUpon>frmCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTodoRegistro\frmProductos.resx">
+      <DependentUpon>frmProductos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTodoRegistro\frmProveedor.resx">
       <DependentUpon>frmProveedor.vb</DependentUpon>

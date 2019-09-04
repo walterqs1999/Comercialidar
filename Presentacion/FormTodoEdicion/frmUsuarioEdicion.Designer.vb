@@ -45,10 +45,6 @@ Partial Class frmUsuarioEdicion
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'btnCancelar
-        '
-        Me.btnCancelar.Location = New System.Drawing.Point(312, 390)
-        '
         'grbDatos
         '
         Me.grbDatos.Controls.Add(Me.PictureBox1)
@@ -287,7 +283,6 @@ Partial Class frmUsuarioEdicion
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.ClientSize = New System.Drawing.Size(594, 471)
         Me.Name = "frmUsuarioEdicion"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = ".:. EDICION EN LA TABLA USUARIO .:."
         Me.grbDatos.ResumeLayout(False)
         Me.grbDatos.PerformLayout()

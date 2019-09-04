@@ -46,9 +46,11 @@ D:\Proyectos visual studio\Comercialidar\Presentacion\bin\Debug\Presentacion.exe
 D:\Proyectos visual studio\Comercialidar\Presentacion\bin\Debug\Presentacion.exe
 D:\Proyectos visual studio\Comercialidar\Presentacion\bin\Debug\Presentacion.pdb
 D:\Proyectos visual studio\Comercialidar\Presentacion\bin\Debug\Presentacion.xml
+D:\Proyectos visual studio\Comercialidar\Presentacion\bin\Debug\CircularProgressBar.dll
 D:\Proyectos visual studio\Comercialidar\Presentacion\bin\Debug\datos.dll
 D:\Proyectos visual studio\Comercialidar\Presentacion\bin\Debug\Logica.dll
 D:\Proyectos visual studio\Comercialidar\Presentacion\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+D:\Proyectos visual studio\Comercialidar\Presentacion\bin\Debug\WinFormAnimation.dll
 D:\Proyectos visual studio\Comercialidar\Presentacion\bin\Debug\datos.pdb
 D:\Proyectos visual studio\Comercialidar\Presentacion\bin\Debug\datos.xml
 D:\Proyectos visual studio\Comercialidar\Presentacion\bin\Debug\Logica.pdb
@@ -56,12 +58,15 @@ D:\Proyectos visual studio\Comercialidar\Presentacion\bin\Debug\Logica.xml
 D:\Proyectos visual studio\Comercialidar\Presentacion\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.vbprojResolveAssemblyReference.cache
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmTodoDocumentos.resources
+D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmConfiguracionUsuario.resources
+D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmCategoriaEdicion.resources
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmClienteEdicion.resources
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmComprasEdicion.resources
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmProveedorEdicion.resources
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmUsuarioEdicion.resources
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmVentasEdicion.resources
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmCliente.resources
+D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmProductos.resources
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmProveedor.resources
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmUsuario.resources
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmLogin.resources
@@ -77,6 +82,5 @@ D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.vbp
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.exe
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.xml
 D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.pdb
-D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmConfiguracionUsuario.resources
-D:\Proyectos visual studio\Comercialidar\Presentacion\bin\Debug\CircularProgressBar.dll
-D:\Proyectos visual studio\Comercialidar\Presentacion\bin\Debug\WinFormAnimation.dll
+D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmCategorias.resources
+D:\Proyectos visual studio\Comercialidar\Presentacion\obj\Debug\Presentacion.frmProductosEdicion.resources

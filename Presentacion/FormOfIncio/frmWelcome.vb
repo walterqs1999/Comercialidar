@@ -9,7 +9,7 @@ Public Class frmWelcome
         If Me.Opacity < 1 Then
             Me.Opacity += 0.05
             CircularProgressBar1.Value += 5
-            CircularProgressBar1.Text = CircularProgressBar1.Value.ToString()
+            CircularProgressBar1.Text = CircularProgressBar1.Value.ToString() + "%"
             If CircularProgressBar1.Value = 100 Then
                 Timer1.Stop()
                 Timer2.Start()

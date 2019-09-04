@@ -215,8 +215,4 @@ Public Class frmUsuarioEdicion
             PictureBox1.Load(txtRuta.Text)
         End If
     End Sub
-
-    Private Sub frmUsuarioEdicion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

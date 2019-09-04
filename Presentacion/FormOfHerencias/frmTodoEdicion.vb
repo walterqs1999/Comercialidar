@@ -45,26 +45,31 @@ Public Class frmTodoEdicion
         Next
     End Sub
 
-    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
-        rpta = MessageBox.Show("¿Desea Cancelar la Operación?", "Registro Clientes", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-        If rpta = vbYes Then
-            EstadoTextos(False)
-            LimpiarTextoGrupo()
-        End If
-    End Sub
+    'Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+    '    rpta = MessageBox.Show("¿Desea Cancelar la Operación?", "Registro Clientes", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+    '    If rpta = vbYes Then
+    '        EstadoTextos(False)
+    '        LimpiarTextoGrupo()
+    '    End If
+    'End Sub
 
     Private Sub frmBaseRegistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         If valor = 1 Then
+            EstadoTextos(True)
+            LimpiarTextoGrupo()
+            txtId.Enabled = True
+            txtId.Focus()
             btnNuevob.Visible = True
             btnGrabarb.Visible = True
             btnModificarb.Visible = False
             valor = 0
         End If
         If valor = 2 Then
+            EstadoTextos(True)
             btnModificarb.Visible = True
             btnNuevob.Visible = False
             btnGrabarb.Visible = False
+            txtId.Enabled = False
             valor = 0
         End If
     End Sub
@@ -78,12 +83,17 @@ Public Class frmTodoEdicion
 
     Private Sub btnModificarb_Click(sender As Object, e As EventArgs)
         operaciones = "M"
-        EstadoTextos(True)
         txtId.Enabled = False
     End Sub
 
     Private Sub btnNuevob_Click_1(sender As Object, e As EventArgs) Handles btnNuevob.Click
         LimpiarTextoGrupo()
         EstadoTextos(True)
+        valor2 = 1
+    End Sub
+
+    Private Sub btnModificarb_Click_1(sender As Object, e As EventArgs) Handles btnModificarb.Click
+        valor2 = 2
+
     End Sub
 End Class

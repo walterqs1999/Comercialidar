@@ -47,6 +47,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -65,13 +66,17 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="lCategorias.vb" />
     <Compile Include="lCliente.vb" />
     <Compile Include="lCompras.vb" />
+    <Compile Include="lProducto.vb" />
     <Compile Include="lProveedor.vb" />
     <Compile Include="lUsuario.vb" />
     <Compile Include="lVentas.vb" />
+    <Compile Include="ModulesOfFrom\mdlCategorias.vb" />
     <Compile Include="ModulesOfFrom\mdlCompras.vb" />
     <Compile Include="ModulesOfFrom\mdlGeneralUsuario.vb" />
+    <Compile Include="ModulesOfFrom\mdlProductos.vb" />
     <Compile Include="ModulesOfFrom\mdlVentas.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

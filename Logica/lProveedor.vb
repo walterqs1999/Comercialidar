@@ -44,6 +44,7 @@ Public Class lProveedor
             con.Desconectar()
         Catch ex As Exception
             Return False
+            con.Desconectar()
         End Try
     End Function
 

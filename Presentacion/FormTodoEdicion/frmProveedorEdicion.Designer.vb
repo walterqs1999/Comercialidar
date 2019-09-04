@@ -32,10 +32,6 @@ Partial Class frmProveedorEdicion
         Me.grbDatos.SuspendLayout()
         Me.SuspendLayout()
         '
-        'btnCancelar
-        '
-        Me.btnCancelar.Location = New System.Drawing.Point(325, 249)
-        '
         'grbDatos
         '
         Me.grbDatos.Controls.Add(Me.txtReferencia)
@@ -70,15 +66,15 @@ Partial Class frmProveedorEdicion
         '
         'btnGrabarb
         '
-        Me.btnGrabarb.Location = New System.Drawing.Point(115, 249)
+        Me.btnGrabarb.Location = New System.Drawing.Point(124, 242)
         '
         'btnModificarb
         '
-        Me.btnModificarb.Location = New System.Drawing.Point(137, 249)
+        Me.btnModificarb.Location = New System.Drawing.Point(202, 242)
         '
         'btnNuevob
         '
-        Me.btnNuevob.Location = New System.Drawing.Point(216, 291)
+        Me.btnNuevob.Location = New System.Drawing.Point(326, 242)
         '
         'txtReferencia
         '

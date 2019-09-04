@@ -47,12 +47,12 @@ Partial Class frmWelcome
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(574, 70)
+        Me.Panel1.Size = New System.Drawing.Size(574, 77)
         Me.Panel1.TabIndex = 0
         '
         'perfil
         '
-        Me.perfil.Location = New System.Drawing.Point(437, 0)
+        Me.perfil.Location = New System.Drawing.Point(437, 4)
         Me.perfil.Name = "perfil"
         Me.perfil.Size = New System.Drawing.Size(76, 70)
         Me.perfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -117,19 +117,19 @@ Partial Class frmWelcome
         Me.CircularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner
         Me.CircularProgressBar1.AnimationSpeed = 500
         Me.CircularProgressBar1.BackColor = System.Drawing.Color.Transparent
-        Me.CircularProgressBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CircularProgressBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CircularProgressBar1.ForeColor = System.Drawing.Color.DodgerBlue
         Me.CircularProgressBar1.InnerColor = System.Drawing.Color.White
         Me.CircularProgressBar1.InnerMargin = 5
         Me.CircularProgressBar1.InnerWidth = -1
-        Me.CircularProgressBar1.Location = New System.Drawing.Point(197, 183)
+        Me.CircularProgressBar1.Location = New System.Drawing.Point(184, 183)
         Me.CircularProgressBar1.MarqueeAnimationSpeed = 2000
         Me.CircularProgressBar1.Name = "CircularProgressBar1"
         Me.CircularProgressBar1.OuterColor = System.Drawing.Color.Gray
         Me.CircularProgressBar1.OuterMargin = -25
         Me.CircularProgressBar1.OuterWidth = 26
         Me.CircularProgressBar1.ProgressColor = System.Drawing.SystemColors.MenuHighlight
-        Me.CircularProgressBar1.ProgressWidth = 10
+        Me.CircularProgressBar1.ProgressWidth = 15
         Me.CircularProgressBar1.RightToLeftLayout = True
         Me.CircularProgressBar1.SecondaryFont = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CircularProgressBar1.Size = New System.Drawing.Size(179, 173)

@@ -10,4 +10,5 @@
     Public imagenusuario As Byte
 
     Public valor As Integer = 0
+    Public valor2 As Integer = 0
 End Module
