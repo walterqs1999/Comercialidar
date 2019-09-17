@@ -81,9 +81,11 @@ Public Class frmLogin
     End Sub
 
     Private Sub btnMostrar_Click(sender As Object, e As EventArgs) Handles btnMostrar.Click
-        btnMostrar.Visible = False
-        txtContraseña.UseSystemPasswordChar = False
-        btnOcultar.Visible = True
+        If lblContraseña.Visible = True Then
+            btnMostrar.Visible = False
+            txtContraseña.UseSystemPasswordChar = False
+            btnOcultar.Visible = True
+        End If
     End Sub
 
     Private Sub btnOcultar_Click(sender As Object, e As EventArgs) Handles btnOcultar.Click

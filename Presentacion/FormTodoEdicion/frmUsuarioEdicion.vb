@@ -1,10 +1,4 @@
-﻿Option Strict On
-
-Imports System
-Imports System.Data
-Imports System.Data.SqlClient
-
-'Imports System.Runtime.InteropServices
+﻿Imports System.Data.SqlClient
 Imports System.Text
 Imports System.Security.Cryptography
 
@@ -13,17 +7,13 @@ Imports Logica
 Imports datos
 Public Class frmUsuarioEdicion
 
-    Dim usuLogi As New Logica.lUsuario
-    Dim usuDato As New datos.dUsuario
-    Dim con As New datos.dConexion
+    Dim usuLogi As New lUsuario
+    Dim usuDato As New dUsuario
+    Dim con As New dConexion
 
     Dim Rpta As Integer
 
     Dim generado As String
-
-    'Public Sub cargar_datagrid()
-    'dgvUsuarios.DataSource = logica.listar_Usuario.Tables("Usuario")
-    'End Sub
 
     Function generarClave(ByVal cadena As String) As String
         Dim enc As New UTF8Encoding
@@ -44,61 +34,12 @@ Public Class frmUsuarioEdicion
             If (result(i) < 16) Then
                 sb.Append("0")
             End If
-
             sb.Append(result(i).ToString("x"))
         Next
-
-
         'Devolvemos la cadena con el hash en mayúsculas para que quede más chuli :)
         generarClave = sb.ToString()
 
     End Function
-
-    Private Sub btnGenerar_Click(sender As Object, e As EventArgs) Handles btnGenerar.Click
-        Dim usu, pass, nom, dni As String
-        nom = txtNombre.Text
-        dni = txtId.Text
-        pass = "123456"
-        generado = generarClave(pass)
-        nom = Mid(nom, 1, 4)
-        dni = Mid(dni, 1, 4)
-        usu = nom & dni
-        txtUsuario.Text = LCase(usu)
-        txtClave.Text = pass
-        If txtNombre.Text = "" Or txtId.Text = "" Then
-            MsgBox("Debe llenar los campos requeridos, Nombres y DNI")
-            txtClave.Clear()
-            txtUsuario.Clear()
-            txtNombre.Focus()
-        Else
-        End If
-
-        Try
-            Dim can As Integer
-            Dim xUsu As String
-            usu = txtUsuario.Text
-
-            con.Conectar()
-
-            StrSql = "SELECT * FROM USUARIO WHERE USU_USU='" & usu & "'"
-            oCommand = New SqlCommand(StrSql, con.strConex)
-            oDataAdapter = New SqlDataAdapter(oCommand)
-            oDataSet = New DataSet
-            oDataAdapter.Fill(oDataSet)
-            can = oDataSet.Tables(0).Rows.Count
-
-            If can > 0 Then
-                xUsu = (oDataSet.Tables(0).Rows(0)("USU_USU").ToString())
-                If xUsu = txtUsuario.Text = True Then
-                    MsgBox("Ya hay un usuario igual, se tomará el N° de DNI como alternativa")
-                    txtUsuario.Text = txtId.Text
-                    con.Desconectar()
-                End If
-            End If
-        Catch ex As Exception
-            MsgBox(ex.ToString)
-        End Try
-    End Sub
 
     Private Sub btnGrabarb_Click(sender As Object, e As EventArgs) Handles btnGrabarb.Click
         usuLogi.USU_DNI = txtId.Text
@@ -114,8 +55,6 @@ Public Class frmUsuarioEdicion
         Dim can As Integer
         Dim xcod As String
         xcod = txtId.Text
-
-        'con.Conectar()
 
         StrSql = "SELECT * FROM USUARIO WHERE USU_DNI ='" & xcod & "'"
         oCommand = New SqlCommand(StrSql, con.strConex)
@@ -138,15 +77,18 @@ Public Class frmUsuarioEdicion
             MsgBox("Escribe el DNI")
             txtId.Focus()
         Else
-
-            If txtUsuario.Text = "" Or txtClave.Text = "" Then
-                MsgBox("Debe Generar al Usuario antes de Registrar")
-            ElseIf usuLogi.registrar_usuario Then
-                MsgBox("Usuario Registrado")
-                EstadoTextos(False)
-                con.Desconectar()
+            If Len(txtId.Text) < 8 Then
+                MsgBox("Debe escribir como minimo 8 caracteres")
             Else
-                MsgBox("No se Registró Usuario")
+                If txtUsuario.Text = "" Or txtClave.Text = "" Then
+                    MsgBox("Debe Generar al Usuario antes de Registrar")
+                ElseIf usuLogi.registrar_usuario Then
+                    MsgBox("Usuario Registrado")
+                    EstadoTextos(False)
+                    con.Desconectar()
+                Else
+                    MsgBox("No se Registró Usuario")
+                End If
             End If
         End If
         txtClave.Enabled = False
@@ -191,20 +133,39 @@ Public Class frmUsuarioEdicion
     End Sub
 
     Private Sub btnModificarb_Click(sender As Object, e As EventArgs) Handles btnModificarb.Click
-        usuLogi.USU_DNI = txtId.Text
-        usuLogi.USU_NOM = txtNombre.Text
-        usuLogi.USU_DIR = txtDireccion.Text
-        usuLogi.USU_TEL = txtTelefono.Text
-        usuLogi.USU_CORREO = txtEmail.Text
-        usuLogi.USU_USU = txtUsuario.Text
-        usuLogi.USU_PAS = txtClave.Text
-        usuLogi.USU_TIPO = cboTipo.Text
-        usuLogi.USU_ESTA = "A"
+        If txtRuta.Text <> "" Then
+            usuLogi.USU_DNI = txtId.Text
+            usuLogi.USU_NOM = txtNombre.Text
+            usuLogi.USU_DIR = txtDireccion.Text
+            usuLogi.USU_TEL = txtTelefono.Text
+            usuLogi.USU_CORREO = txtEmail.Text
+            usuLogi.USU_USU = txtUsuario.Text
+            usuLogi.USU_PAS = txtClave.Text
+            usuLogi.USU_TIPO = cboTipo.Text
+            usuLogi.USU_ESTA = "A"
+            usuLogi.USU_IMAGEN = txtRuta.Text
 
-        If usuLogi.modificar_usuario Then
-            MsgBox("Usuario Modificado, No habra alteracion en el usuario y la clave, Seguiran siendo los mismos")
+            If usuLogi.modificar_usuario Then
+                MsgBox("Usuario Modificado, No habra alteracion en el usuario y la clave, Seguiran siendo los mismos")
+            Else
+                MsgBox("No se Modifico el Usuario")
+            End If
         Else
-            MsgBox("No se Modifico el Usuario")
+            usuLogi.USU_DNI = txtId.Text
+            usuLogi.USU_NOM = txtNombre.Text
+            usuLogi.USU_DIR = txtDireccion.Text
+            usuLogi.USU_TEL = txtTelefono.Text
+            usuLogi.USU_CORREO = txtEmail.Text
+            usuLogi.USU_USU = txtUsuario.Text
+            usuLogi.USU_PAS = txtClave.Text
+            usuLogi.USU_TIPO = cboTipo.Text
+            usuLogi.USU_ESTA = "A"
+
+            If usuLogi.modificar_usuariob Then
+                MsgBox("Usuario Modificado, No habra alteracion en el usuario y la clave, Seguiran siendo los mismos")
+            Else
+                MsgBox("No se Modifico el Usuario")
+            End If
         End If
     End Sub
 
@@ -214,5 +175,51 @@ Public Class frmUsuarioEdicion
             txtRuta.Text = dlgImagen.FileName
             PictureBox1.Load(txtRuta.Text)
         End If
+    End Sub
+
+    Private Sub btnGenerar_Click_1(sender As Object, e As EventArgs) Handles btnGenerar.Click
+        Dim usu, pass, nom, dni As String
+        nom = txtNombre.Text
+        dni = txtId.Text
+        pass = "123456"
+        generado = generarClave(pass)
+        nom = Mid(nom, 1, 4)
+        dni = Mid(dni, 1, 4)
+        usu = nom & dni
+        txtUsuario.Text = LCase(usu)
+        txtClave.Text = pass
+        If txtNombre.Text = "" Or txtId.Text = "" Then
+            MsgBox("Debe llenar los campos requeridos, Nombres y DNI")
+            txtClave.Clear()
+            txtUsuario.Clear()
+            txtNombre.Focus()
+        Else
+        End If
+
+        Try
+            Dim can As Integer
+            Dim xUsu As String
+            usu = txtUsuario.Text
+
+            con.Conectar()
+
+            StrSql = "SELECT * FROM USUARIO WHERE USU_USU='" & usu & "'"
+            oCommand = New SqlCommand(StrSql, con.strConex)
+            oDataAdapter = New SqlDataAdapter(oCommand)
+            oDataSet = New DataSet
+            oDataAdapter.Fill(oDataSet)
+            can = oDataSet.Tables(0).Rows.Count
+
+            If can > 0 Then
+                xUsu = (oDataSet.Tables(0).Rows(0)("USU_USU").ToString())
+                If xUsu = txtUsuario.Text = True Then
+                    MsgBox("Ya hay un usuario igual, se tomará el N° de DNI como alternativa")
+                    txtUsuario.Text = txtId.Text
+                    con.Desconectar()
+                End If
+            End If
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
     End Sub
 End Class

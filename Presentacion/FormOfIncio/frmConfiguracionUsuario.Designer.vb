@@ -22,6 +22,7 @@ Partial Class frmConfiguracionUsuario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmConfiguracionUsuario))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnCerrar = New System.Windows.Forms.PictureBox()
@@ -54,13 +55,14 @@ Partial Class frmConfiguracionUsuario
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtNuevaContraseña = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnGuardarCambios = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.dlgImagen = New System.Windows.Forms.OpenFileDialog()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.perfil1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grbDatosAcceso.SuspendLayout()
@@ -252,6 +254,7 @@ Partial Class frmConfiguracionUsuario
         Me.txtContraseña.Size = New System.Drawing.Size(245, 28)
         Me.txtContraseña.TabIndex = 117
         Me.txtContraseña.Text = "Escriba contraseña actual"
+        Me.ToolTip1.SetToolTip(Me.txtContraseña, "Escribe contraseña actual y luego preciona confirmar")
         '
         'Label9
         '
@@ -290,7 +293,7 @@ Partial Class frmConfiguracionUsuario
         Me.grbDatosAcceso.Controls.Add(Me.txtContraseña)
         Me.grbDatosAcceso.Location = New System.Drawing.Point(721, 156)
         Me.grbDatosAcceso.Name = "grbDatosAcceso"
-        Me.grbDatosAcceso.Size = New System.Drawing.Size(363, 225)
+        Me.grbDatosAcceso.Size = New System.Drawing.Size(363, 215)
         Me.grbDatosAcceso.TabIndex = 121
         Me.grbDatosAcceso.TabStop = False
         Me.grbDatosAcceso.Text = "Datos de Acceso"
@@ -403,18 +406,18 @@ Partial Class frmConfiguracionUsuario
         Me.Button2.Text = "Cancelar"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnGuardarCambios
         '
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Lavender
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button3.Location = New System.Drawing.Point(721, 563)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(116, 35)
-        Me.Button3.TabIndex = 123
-        Me.Button3.Text = "Guardar Cambios"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnGuardarCambios.FlatAppearance.BorderColor = System.Drawing.Color.Lavender
+        Me.btnGuardarCambios.FlatAppearance.BorderSize = 0
+        Me.btnGuardarCambios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnGuardarCambios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnGuardarCambios.Location = New System.Drawing.Point(721, 563)
+        Me.btnGuardarCambios.Name = "btnGuardarCambios"
+        Me.btnGuardarCambios.Size = New System.Drawing.Size(116, 35)
+        Me.btnGuardarCambios.TabIndex = 123
+        Me.btnGuardarCambios.Text = "Guardar Cambios"
+        Me.btnGuardarCambios.UseVisualStyleBackColor = True
         '
         'PictureBox2
         '
@@ -470,6 +473,14 @@ Partial Class frmConfiguracionUsuario
         '
         Me.dlgImagen.FileName = "OpenFileDialog1"
         '
+        'ToolTip1
+        '
+        Me.ToolTip1.AutomaticDelay = 100
+        Me.ToolTip1.AutoPopDelay = 5000
+        Me.ToolTip1.InitialDelay = 100
+        Me.ToolTip1.IsBalloon = True
+        Me.ToolTip1.ReshowDelay = 20
+        '
         'frmConfiguracionUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -480,7 +491,7 @@ Partial Class frmConfiguracionUsuario
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.btnGuardarCambios)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.grbDatosAcceso)
         Me.Controls.Add(Me.Label6)
@@ -500,6 +511,7 @@ Partial Class frmConfiguracionUsuario
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmConfiguracionUsuario"
         Me.Text = "frmConfiguracionUsuario"
+        Me.TopMost = True
         CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.perfil1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grbDatosAcceso.ResumeLayout(False)
@@ -542,7 +554,7 @@ Partial Class frmConfiguracionUsuario
     Friend WithEvents txtConfirmar As TextBox
     Friend WithEvents grbDatosAcceso As GroupBox
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnGuardarCambios As Button
     Friend WithEvents Label10 As Label
     Friend WithEvents txtNuevaContraseña As TextBox
     Friend WithEvents btnConfirmar As Button
@@ -558,4 +570,5 @@ Partial Class frmConfiguracionUsuario
     Friend WithEvents advertencia As PictureBox
     Friend WithEvents exito1 As PictureBox
     Friend WithEvents dlgImagen As OpenFileDialog
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

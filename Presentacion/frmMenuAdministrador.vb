@@ -63,26 +63,6 @@ Public Class frmMenuAdministrador
         lblFecha.Text = DateTime.Now.ToLongDateString()
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        AbrirFomEnPanel(New frmUsuario)
-    End Sub
-
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        AbrirFomEnPanel(New frmCliente)
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        AbrirFomEnPanel(New frmProveedor)
-    End Sub
-
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        AbrirFomEnPanel(New frmComprasEdicion)
-    End Sub
-
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        AbrirFomEnPanel(New frmVentasEdicion)
-    End Sub
-
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
         AbrirFomEnPanel(New frmConfiguracionUsuario)
     End Sub
@@ -91,7 +71,27 @@ Public Class frmMenuAdministrador
         AbrirFomEnPanel(New frmProductos)
     End Sub
 
-    Public Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub btnUsuario_Click(sender As Object, e As EventArgs) Handles btnUsuario.Click
+        AbrirFomEnPanel(New frmUsuario)
+    End Sub
+
+    Private Sub btnClientes_Click(sender As Object, e As EventArgs) Handles btnClientes.Click
+        AbrirFomEnPanel(New frmCliente)
+    End Sub
+
+    Private Sub btnProveedor_Click(sender As Object, e As EventArgs) Handles btnProveedor.Click
+        AbrirFomEnPanel(New frmProveedor)
+    End Sub
+
+    Private Sub btnCategorias_Click(sender As Object, e As EventArgs) Handles btnCategorias.Click
         AbrirFomEnPanel(New frmCategorias)
+    End Sub
+
+    Private Sub btnCompras_Click(sender As Object, e As EventArgs) Handles btnCompras.Click
+        AbrirFomEnPanel(New frmComprasEdicion)
+    End Sub
+
+    Private Sub btnVentas_Click(sender As Object, e As EventArgs) Handles btnVentas.Click
+        AbrirFomEnPanel(New frmVentasEdicion)
     End Sub
 End Class

@@ -17,7 +17,7 @@ Public Class frmProveedorEdicion
         proLogi.PROV_RUC = txtId.Text
         proLogi.USU_DNI = dniusuario
         proLogi.PROV_NOM = txtEmpresa.Text
-        proLogi.PROV_PERCARGO = txtEmpresa.Text
+        proLogi.PROV_PERCARGO = txtPersonaC.Text
         proLogi.PROV_DIREC = txtDireccion.Text
         proLogi.PROV_TEL = txtTelefono.Text
         proLogi.PROV_REFE = txtReferencia.Text
@@ -58,7 +58,7 @@ Public Class frmProveedorEdicion
         proLogi.PROV_RUC = txtId.Text
         proLogi.USU_DNI = dniusuario
         proLogi.PROV_NOM = txtEmpresa.Text
-        proLogi.PROV_PERCARGO = txtEmpresa.Text
+        proLogi.PROV_PERCARGO = txtPersonaC.Text
         proLogi.PROV_DIREC = txtDireccion.Text
         proLogi.PROV_TEL = txtTelefono.Text
         proLogi.PROV_REFE = txtReferencia.Text

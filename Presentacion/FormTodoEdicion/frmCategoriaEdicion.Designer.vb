@@ -42,15 +42,15 @@ Partial Class frmCategoriaEdicion
         '
         'btnGrabarb
         '
-        Me.btnGrabarb.Location = New System.Drawing.Point(291, 153)
+        Me.btnGrabarb.Location = New System.Drawing.Point(91, 146)
         '
         'btnModificarb
         '
-        Me.btnModificarb.Location = New System.Drawing.Point(192, 153)
+        Me.btnModificarb.Location = New System.Drawing.Point(204, 146)
         '
         'btnNuevob
         '
-        Me.btnNuevob.Location = New System.Drawing.Point(99, 153)
+        Me.btnNuevob.Location = New System.Drawing.Point(298, 146)
         '
         'txtNombre
         '

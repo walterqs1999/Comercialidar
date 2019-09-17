@@ -8,8 +8,6 @@ Public Class frmCategoriaEdicion
     Dim usuDato As New dUsuario
     Dim con As New dConexion
 
-    Dim categorias As New frmCategorias
-
     Private Sub frmCategoriaEdicion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtId.Enabled = False
     End Sub
@@ -31,7 +29,6 @@ Public Class frmCategoriaEdicion
     End Sub
 
     Private Sub btnModificarb_Click(sender As Object, e As EventArgs) Handles btnModificarb.Click
-
         codigo = txtId.Text
         catLogi.CAT_NOM = txtNombre.Text
         catLogi.USU_DNI = dniusuario

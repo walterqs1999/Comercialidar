@@ -25,7 +25,7 @@ Public Class lProveedor
     Public Function listar_proveedores() As DataSet
         Dim objDat As New DataSet
         con.Conectar()
-        Dim comando As New SqlDataAdapter("SELECT PROV_RUC AS 'RUC PROVEEDOR', USU_DNI AS 'DNI USUARIO', PROV_NOM AS 'NOMBRE EMPRESA', PROV_PERCARGO AS 'PERSONA ACARGO', PROV_DIREC AS DIRECCION, PROV_TEL AS TELEFONO, PROV_REFE AS REFERENCIA FROM PROVEEDORES", con.strConex)
+        Dim comando As New SqlDataAdapter("SELECT * FROM vistaMostrarProveedor WHERE PROV_ESTA = 'A'", con.strConex)
         'Dim comando As New SqlDataAdapter("select * from Usuarios", Con.strConex)
         comando.Fill(objDat, "Proveedores")
         con.Desconectar()

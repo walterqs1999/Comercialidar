@@ -4,6 +4,7 @@ Imports Logica.mdlProductos
 
 Public Class frmProductosEdicion
 
+    Dim producto As New frmProductos
     Dim proLogi As New lProducto
     Dim usuDato As New dUsuario
     Dim con As New dConexion
@@ -17,6 +18,7 @@ Public Class frmProductosEdicion
         If valorPro = 2 Then
             cboCategoria.SelectedIndex = index
         End If
+        txtId.Enabled = False
     End Sub
 
     Private Sub btnGrabarb_Click(sender As Object, e As EventArgs) Handles btnGrabarb.Click
@@ -25,13 +27,14 @@ Public Class frmProductosEdicion
         proLogi.PRO_NOM = txtNombre.Text
         proLogi.PRO_PCU = txtPrecioC.Text
         proLogi.PRO_PVU = txtPrecioV.Text
-        proLogi.PRO_STOCK = txtStock.Text
+        proLogi.PRO_STOCK = Val(txtStock.Text)
         proLogi.PRO_ESTA = "A"
 
         If proLogi.registrar_producto Then
             MsgBox("Producto registrado")
             EstadoTextos(False)
-            con.Desconectar()
+            producto.dgvProductos.DataSource = proLogi.listar_productos.Tables("productos")
+            Me.Close()
         Else
             MsgBox("No se Registró Producto")
         End If

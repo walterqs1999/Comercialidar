@@ -89,11 +89,5 @@ Public Class frmTodoEdicion
     Private Sub btnNuevob_Click_1(sender As Object, e As EventArgs) Handles btnNuevob.Click
         LimpiarTextoGrupo()
         EstadoTextos(True)
-        valor2 = 1
-    End Sub
-
-    Private Sub btnModificarb_Click_1(sender As Object, e As EventArgs) Handles btnModificarb.Click
-        valor2 = 2
-
     End Sub
 End Class

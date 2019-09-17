@@ -224,4 +224,8 @@ Public Class frmVentasEdicion
             End If
         End If
     End Sub
+
+    Private Sub grbDatos_Enter(sender As Object, e As EventArgs) Handles grbDatos.Enter
+
+    End Sub
 End Class

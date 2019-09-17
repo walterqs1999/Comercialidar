@@ -10,16 +10,19 @@ Public Class frmCliente
 
     Private Sub frmCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dgvClientes.DataSource = logica.listar_clientes.Tables("Clientes")
-        dgvClientes.Columns(1).Width = 110
-        dgvClientes.Columns(2).Width = 200
-        dgvClientes.Columns(3).Width = 175
+        dgvClientes.Columns(0).Width = 200
+        dgvClientes.Columns(1).Width = 180
+        dgvClientes.Columns(2).Width = 100
+
+        dgvClientes.Columns(5).Visible = False
+        dgvClientes.Columns(6).Visible = False
     End Sub
 
     Private Sub btnREliminar_Click(sender As Object, e As EventArgs) Handles btnREliminar.Click
         fila = dgvClientes.CurrentCell.RowIndex
-        logica.CLI_NOM = dgvClientes.Item(2, fila).Value
+        logica.CLI_NOM = dgvClientes.Item(1, fila).Value
         If MessageBox.Show("Desea eliminar a " & logica.CLI_NOM & "?", "Confirmacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = 1 Then
-            logica.CLI_DNI = dgvClientes.Item(0, fila).Value
+            logica.CLI_DNI = dgvClientes.Item(2, fila).Value
             If logica.eliminar_cliente Then
                 MsgBox("cliente eliminado")
             Else
@@ -38,8 +41,8 @@ Public Class frmCliente
         Else
             fila = dgvClientes.CurrentCell.RowIndex
 
-            frmClienteEdicion.txtId.Text = dgvClientes.Item(0, fila).Value
-            frmClienteEdicion.txtNombre.Text = dgvClientes.Item(2, fila).Value
+            frmClienteEdicion.txtId.Text = dgvClientes.Item(2, fila).Value
+            frmClienteEdicion.txtNombre.Text = dgvClientes.Item(1, fila).Value
             frmClienteEdicion.txtDireccion.Text = dgvClientes.Item(3, fila).Value
             frmClienteEdicion.txtTelefono.Text = dgvClientes.Item(4, fila).Value
             frmClienteEdicion.txtId.Enabled = False

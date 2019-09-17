@@ -29,7 +29,7 @@ Public Class lProducto
     Public Function listar_productos() As DataSet
         Dim objDat As New DataSet
         con.Conectar()
-        Dim comando As New SqlDataAdapter("SELECT * FROM vistaMostarProductos", con.strConex)
+        Dim comando As New SqlDataAdapter("SELECT * FROM vistaMostarProductos WHERE PRO_ESTA = 'A'", con.strConex)
         'Dim comando As New SqlDataAdapter("select * from Usuarios", Con.strConex)
         comando.Fill(objDat, "productos")
         con.Desconectar()

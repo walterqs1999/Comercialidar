@@ -15,7 +15,7 @@ Public Class lCategorias
     Public Function listar_categorias() As DataSet
         Dim objDat As New DataSet
         con.Conectar()
-        Dim comando As New SqlDataAdapter("SELECT CAT_COD AS 'CODIGO CATEGORIA', CAT_NOM AS 'NOMBRE CATEGORIA', USU_DNI AS 'DNI USUARIO' FROM CATEGORIAS", con.strConex)
+        Dim comando As New SqlDataAdapter("SELECT * FROM vistaMostrarCategoria WHERE CAT_ESTA = 'A'", con.strConex)
         'Dim comando As New SqlDataAdapter("select * from Usuarios", Con.strConex)
         comando.Fill(objDat, "Categorias")
         con.Desconectar()

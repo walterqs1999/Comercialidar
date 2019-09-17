@@ -19,7 +19,7 @@ Public Class lCliente
     Public Function listar_clientes() As DataSet
         Dim objDat As New DataSet
         con.Conectar()
-        Dim comando As New SqlDataAdapter("SELECT CLI_DNI AS 'DIN CLIENTE', USU_DNI AS 'DNI USUARIO', CLI_NOM AS 'NOMBRE CLIENTE', CLI_DIR AS DIRECCION, CLI_TEL AS TELEFONO FROM CLIENTE", con.strConex)
+        Dim comando As New SqlDataAdapter("SELECT * FROM vistaMostrarCliente WHERE CLI_ESTA = 'A'", con.strConex)
         'Dim comando As New SqlDataAdapter("select * from Usuarios", Con.strConex)
         comando.Fill(objDat, "Clientes")
         con.Desconectar()

@@ -15,3 +15,4 @@ D:\Proyectos visual studio\Comercialidar\datos\obj\Debug\Datos.vbproj.GenerateRe
 D:\Proyectos visual studio\Comercialidar\datos\obj\Debug\datos.dll
 D:\Proyectos visual studio\Comercialidar\datos\obj\Debug\datos.xml
 D:\Proyectos visual studio\Comercialidar\datos\obj\Debug\datos.pdb
+D:\Proyectos visual studio\Comercialidar\datos\obj\Debug\Datos.vbprojResolveAssemblyReference.cache
