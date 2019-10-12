@@ -1,10 +1,11 @@
 ﻿Imports System.Data.SqlClient
+Imports Logica
 Imports Logica.mdlProductos
 
 Public Class frmProductos
 
     Dim fila As Integer
-    Dim logica As New Logica.lProducto
+    Dim logica As New lProducto
     Private oconexion As SqlConnection
     Private odataAdapter As SqlDataAdapter
     Private odataset As DataSet
@@ -58,7 +59,7 @@ Public Class frmProductos
             producto.txtPrecioC.Text = dgvProductos.Item(4, fila).Value
             producto.txtPrecioV.Text = dgvProductos.Item(5, fila).Value
             producto.txtStock.Text = dgvProductos.Item(6, fila).Value
-
+            producto.txtStock.Enabled = False
             producto.ShowDialog()
         End If
     End Sub

@@ -1,23 +1,30 @@
-﻿Imports System
-Imports System.Data
-Imports System.Data.SqlClient
-
-Imports Logica
+﻿Imports Logica
 Imports datos
 
 Public Class frmVentasEdicion
 
-    Dim venLogi As New Logica.lVentas
-    Dim comLogi As New Logica.lCompras
-    Dim usuDato As New datos.dVenta
-    Dim con As New datos.dConexion
+    Dim venLogi As New lVentas
+    Dim comLogi As New lCompras
+    Dim usuDato As New dVenta
+    Dim con As New dConexion
 
     Dim detarticulos As String
     Dim rpta As Integer
     Dim r As Integer
 
+    Public Sub SumarData()
+        Dim Total As Single
+        For Each row As DataGridViewRow In Me.dgvDatos.Rows
+            Total += Val(row.Cells(7).Value)
+        Next
+        txtTotal.Text = Total.ToString("N2")
+        txtSubT.Text = (Total / 1.18).ToString("N2")
+        txtIgv.Text = (Val(txtTotal.Text) - Val(txtSubT.Text)).ToString("N2")
+    End Sub
+
     Private Sub frmVentasEdicion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cboTipo.SelectedIndex = 0
+        btnBuscarProducto.Enabled = False
     End Sub
 
     Private Sub txtRUCDNI_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRUCDNI.KeyPress
@@ -51,35 +58,34 @@ Public Class frmVentasEdicion
         End If
     End Sub
 
-    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        Dim total, igv, subt As Decimal
-        Dim con As Double
-        Dim id As Integer
-
-        con = Val(txtTotal.Text)
-        total = Val(txtPrecioVenta.Text * txtCantidad.Text)
-
+    Public Sub Agregar()
         stockProducto = stockProducto - txtCantidad.Text
+        dgvDatos.Rows.Add(iddocc, txtNumeroF.Text, cboTipo.Text, txtCodigo.Text, txtDescripcion.Text, txtPrecioVenta.Text, txtCantidad.Text, Val(txtPrecioVenta.Text * txtCantidad.Text).ToString("N2"), stockProducto)
+        SumarData()
+    End Sub
 
-        If venLogi.iddocumento Then
-            id = iddocc
-        End If
+    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+        Dim estado As Integer = 0
+        Dim cantFila As Integer = dgvDatos.Rows.Count
+        venLogi.iddocumento()
 
-        dgvDatos.Rows.Add(id, txtNumeroF.Text, cboTipo.Text, txtCodigo.Text, txtDescripcion.Text, txtPrecioVenta.Text, txtCantidad.Text, total, stockProducto)
-
-        con = con + total
-        subt = con / 1.18
-        igv = con - subt
-
-        If cboTipo.Text = "FACTURA" Then
-            txtSubT.Text = subt.ToString("N2")
-            txtIgv.Text = igv.ToString("N2")
+        If cantFila < 1 Then
+            Agregar()
         Else
-            txtSubT.Text = 0
-            txtIgv.Text = 0
+            For i = 0 To cantFila - 1
+                If txtCodigo.Text = dgvDatos.Rows(i).Cells(3).Value Then
+                    If MessageBox.Show("Producto ya existe, desea replazarlo", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = vbYes Then
+                        dgvDatos.Rows.Remove(dgvDatos.Rows(i))
+                        Agregar()
+                        estado = 1
+                        Exit For
+                    End If
+                End If
+            Next
+            If estado = 0 Then
+                Agregar()
+            End If
         End If
-
-        txtTotal.Text = con
 
         txtCodigo.Clear()
         txtDescripcion.Clear()
@@ -96,19 +102,15 @@ Public Class frmVentasEdicion
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        dgvDatos.Rows.Remove(dgvDatos.CurrentRow)
-        Dim Total As Single
-        For Each row As DataGridViewRow In Me.dgvDatos.Rows
-            Total += Val(row.Cells(7).Value)
-        Next
-
-        txtTotal.Text = Total.ToString
 
         If dgvDatos.Rows.Count < 1 Then
             btnEliminar.Enabled = False
         Else
             btnEliminar.Enabled = True
         End If
+        dgvDatos.Rows.Remove(dgvDatos.CurrentRow)
+        SumarData()
+
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
@@ -125,6 +127,7 @@ Public Class frmVentasEdicion
         If venLogi.numerodocumento(cboTipo.Text) Then
             txtNumeroF.Text = numdocc
         End If
+        btnBuscarProducto.Enabled = True
         cboTipo.SelectedIndex = 0
         dgvDatos.Rows.Clear()
 
@@ -161,7 +164,8 @@ Public Class frmVentasEdicion
                     txtDetalle.Text = "COMERCIAL IDAR - I.E.R.L" + vbNewLine
                     txtDetalle.Text += " " + vbNewLine
                     txtDetalle.Text += cboTipo.Text + " N° " + txtNumeroF.Text + "                   " + dtpFecha.Text + vbNewLine
-                    txtDetalle.Text += "Usuario: " + txtNombres.Text + vbNewLine
+                    txtDetalle.Text += "Usuario: " + nombreusuario + vbNewLine
+                    txtDetalle.Text += "Cliente: " + txtNombres.Text + vbNewLine
                     txtDetalle.Text += "RUC/DNI: " + txtRUCDNI.Text + vbNewLine
                     txtDetalle.Text += "____________________________________" + vbNewLine
                     txtDetalle.Text += " " + vbNewLine
@@ -225,7 +229,12 @@ Public Class frmVentasEdicion
         End If
     End Sub
 
-    Private Sub grbDatos_Enter(sender As Object, e As EventArgs) Handles grbDatos.Enter
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscarProducto.Click
+        Dim buscar As New frmBusquedaProductos
+        buscar.ShowDialog()
+    End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        frmBusquedaProductos.Refresh()
     End Sub
 End Class

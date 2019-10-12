@@ -25,7 +25,6 @@ Partial Class frmWelcome
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmWelcome))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.perfil = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.lbWelcome = New System.Windows.Forms.Label()
@@ -33,9 +32,10 @@ Partial Class frmWelcome
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.CircularProgressBar1 = New CircularProgressBar.CircularProgressBar()
+        Me.perfil = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.perfil, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.perfil, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -49,15 +49,6 @@ Partial Class frmWelcome
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(574, 77)
         Me.Panel1.TabIndex = 0
-        '
-        'perfil
-        '
-        Me.perfil.Location = New System.Drawing.Point(437, 4)
-        Me.perfil.Name = "perfil"
-        Me.perfil.Size = New System.Drawing.Size(76, 70)
-        Me.perfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.perfil.TabIndex = 6
-        Me.perfil.TabStop = False
         '
         'Label1
         '
@@ -115,40 +106,49 @@ Partial Class frmWelcome
         'CircularProgressBar1
         '
         Me.CircularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner
-        Me.CircularProgressBar1.AnimationSpeed = 500
+        Me.CircularProgressBar1.AnimationSpeed = 0
         Me.CircularProgressBar1.BackColor = System.Drawing.Color.Transparent
         Me.CircularProgressBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CircularProgressBar1.ForeColor = System.Drawing.Color.DodgerBlue
         Me.CircularProgressBar1.InnerColor = System.Drawing.Color.White
         Me.CircularProgressBar1.InnerMargin = 5
-        Me.CircularProgressBar1.InnerWidth = -1
-        Me.CircularProgressBar1.Location = New System.Drawing.Point(184, 183)
+        Me.CircularProgressBar1.InnerWidth = -2
+        Me.CircularProgressBar1.Location = New System.Drawing.Point(188, 183)
         Me.CircularProgressBar1.MarqueeAnimationSpeed = 2000
         Me.CircularProgressBar1.Name = "CircularProgressBar1"
-        Me.CircularProgressBar1.OuterColor = System.Drawing.Color.Gray
+        Me.CircularProgressBar1.OuterColor = System.Drawing.Color.DimGray
         Me.CircularProgressBar1.OuterMargin = -25
         Me.CircularProgressBar1.OuterWidth = 26
         Me.CircularProgressBar1.ProgressColor = System.Drawing.SystemColors.MenuHighlight
         Me.CircularProgressBar1.ProgressWidth = 15
-        Me.CircularProgressBar1.RightToLeftLayout = True
         Me.CircularProgressBar1.SecondaryFont = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CircularProgressBar1.Size = New System.Drawing.Size(179, 173)
         Me.CircularProgressBar1.StartAngle = 270
         Me.CircularProgressBar1.Step = 30
         Me.CircularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.CircularProgressBar1.SubscriptMargin = New System.Windows.Forms.Padding(10, -35, 0, 0)
+        Me.CircularProgressBar1.SubscriptMargin = New System.Windows.Forms.Padding(10, 35, 0, 0)
         Me.CircularProgressBar1.SubscriptText = ""
-        Me.CircularProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.CircularProgressBar1.SuperscriptColor = System.Drawing.Color.White
         Me.CircularProgressBar1.SuperscriptMargin = New System.Windows.Forms.Padding(10, 35, 0, 0)
         Me.CircularProgressBar1.SuperscriptText = ""
         Me.CircularProgressBar1.TabIndex = 5
         Me.CircularProgressBar1.TextMargin = New System.Windows.Forms.Padding(0)
         Me.CircularProgressBar1.Value = 68
         '
+        'perfil
+        '
+        Me.perfil.Location = New System.Drawing.Point(430, 3)
+        Me.perfil.Name = "perfil"
+        Me.perfil.Size = New System.Drawing.Size(81, 70)
+        Me.perfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.perfil.TabIndex = 7
+        Me.perfil.TabStop = False
+        '
         'frmWelcome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoValidate = System.Windows.Forms.AutoValidate.Disable
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(66, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(574, 368)
         Me.Controls.Add(Me.CircularProgressBar1)
@@ -161,8 +161,8 @@ Partial Class frmWelcome
         Me.Text = "frmWelcome"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.perfil, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.perfil, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -175,6 +175,6 @@ Partial Class frmWelcome
     Friend WithEvents lbUsername01 As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
-    Friend WithEvents perfil As PictureBox
     Friend WithEvents CircularProgressBar1 As CircularProgressBar.CircularProgressBar
+    Friend WithEvents perfil As PictureBox
 End Class

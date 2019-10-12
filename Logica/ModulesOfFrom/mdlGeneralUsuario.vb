@@ -11,4 +11,6 @@
     Public valor As Integer = 0
 
     Public general As Integer = 0
+
+    Public tipo As Integer
 End Module

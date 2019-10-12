@@ -1,6 +1,4 @@
-﻿Imports System.Runtime.InteropServices
-Imports System
-Imports System.Text
+﻿Imports System.Text
 Imports System.Security.Cryptography
 
 Imports datos
@@ -9,8 +7,8 @@ Imports Logica
 Public Class frmLogin
 
     Dim cont As Integer = 0
-    Dim usu As New Logica.lUsuario
-    Dim co1 As New datos.dConexion
+    Dim usu As New lUsuario
+    Dim co1 As New dConexion
 
     Function generarClave(ByVal cadena As String) As String
         Dim enc As New UTF8Encoding
@@ -98,6 +96,10 @@ Public Class frmLogin
 
         Dim clave As String
 
+        Dim administrador As New frmMenuAdministrador
+        Dim usuario As New frmMenuUsuario
+        Dim welcome As New frmWelcome
+
         If txtUsuario.Text = "USUARIO" Then
             Advertencia1.Visible = True
 
@@ -113,15 +115,12 @@ Public Class frmLogin
                 Dim passs As String = usu.pass(txtUsuario.Text)
                 If passs.Equals(clave) = True Then
                     Me.Visible = False
-                    Dim frmmenuadministrador As New frmMenuAdministrador
-                    Dim frmmenuusario As New frmMenuUsuario
                     If usu.consultarTusu(txtUsuario.Text) = "Administrador" Then
-                        frmWelcome.ShowDialog()
-                        frmmenuadministrador.ShowDialog()
+                        tipo = 1
                     Else
-                        frmWelcome.ShowDialog()
-                        frmmenuusario.ShowDialog()
+                        tipo = 2
                     End If
+                    welcome.Show()
                 Else
                     MsgBox("Clave Incorrecta")
                     cont = cont + 1

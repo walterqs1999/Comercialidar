@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmVentasEdicion
     Inherits Presentacion.frmTodoDocumentos
 
     'Form invalida a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         If disposing AndAlso components IsNot Nothing Then
             components.Dispose()
@@ -17,14 +17,14 @@ Partial Class frmVentasEdicion
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblRazon = New System.Windows.Forms.Label()
         Me.txtDireccion = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtNombres = New System.Windows.Forms.TextBox()
         Me.lblNombre = New System.Windows.Forms.Label()
-        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.btnBuscarProducto = New System.Windows.Forms.Button()
         Me.txtStock = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
@@ -43,6 +43,7 @@ Partial Class frmVentasEdicion
         Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.newstock = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.grbDetalle.SuspendLayout()
         Me.grbDatos.SuspendLayout()
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -96,24 +97,24 @@ Partial Class frmVentasEdicion
         '
         Me.grbDetalle.Controls.Add(Me.txtPrecioVenta)
         Me.grbDetalle.Controls.Add(Me.Label2)
-        Me.grbDetalle.Controls.Add(Me.btnBuscar)
+        Me.grbDetalle.Controls.Add(Me.btnBuscarProducto)
         Me.grbDetalle.Controls.Add(Me.txtStock)
         Me.grbDetalle.Controls.Add(Me.Label17)
         Me.grbDetalle.Controls.Add(Me.txtCantidad)
         Me.grbDetalle.Controls.Add(Me.Label5)
         Me.grbDetalle.Controls.Add(Me.Label16)
         Me.grbDetalle.Controls.Add(Me.txtDescripcion)
-        Me.grbDetalle.Location = New System.Drawing.Point(52, 169)
+        Me.grbDetalle.Location = New System.Drawing.Point(51, 169)
         Me.grbDetalle.Size = New System.Drawing.Size(561, 101)
+        Me.grbDetalle.Controls.SetChildIndex(Me.txtDescripcion, 0)
         Me.grbDetalle.Controls.SetChildIndex(Me.txtCodigo, 0)
         Me.grbDetalle.Controls.SetChildIndex(Me.Label15, 0)
-        Me.grbDetalle.Controls.SetChildIndex(Me.txtDescripcion, 0)
         Me.grbDetalle.Controls.SetChildIndex(Me.Label16, 0)
         Me.grbDetalle.Controls.SetChildIndex(Me.Label5, 0)
         Me.grbDetalle.Controls.SetChildIndex(Me.txtCantidad, 0)
         Me.grbDetalle.Controls.SetChildIndex(Me.Label17, 0)
         Me.grbDetalle.Controls.SetChildIndex(Me.txtStock, 0)
-        Me.grbDetalle.Controls.SetChildIndex(Me.btnBuscar, 0)
+        Me.grbDetalle.Controls.SetChildIndex(Me.btnBuscarProducto, 0)
         Me.grbDetalle.Controls.SetChildIndex(Me.Label2, 0)
         Me.grbDetalle.Controls.SetChildIndex(Me.txtPrecioVenta, 0)
         '
@@ -208,14 +209,14 @@ Partial Class frmVentasEdicion
         Me.lblNombre.TabIndex = 95
         Me.lblNombre.Text = "Nombre:"
         '
-        'btnBuscar
+        'btnBuscarProducto
         '
-        Me.btnBuscar.Location = New System.Drawing.Point(501, 23)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(53, 23)
-        Me.btnBuscar.TabIndex = 94
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
+        Me.btnBuscarProducto.Location = New System.Drawing.Point(493, 21)
+        Me.btnBuscarProducto.Name = "btnBuscarProducto"
+        Me.btnBuscarProducto.Size = New System.Drawing.Size(53, 23)
+        Me.btnBuscarProducto.TabIndex = 94
+        Me.btnBuscarProducto.Text = "Buscar"
+        Me.btnBuscarProducto.UseVisualStyleBackColor = True
         '
         'txtStock
         '
@@ -255,7 +256,7 @@ Partial Class frmVentasEdicion
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Cambria", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
-        Me.Label16.Location = New System.Drawing.Point(207, 29)
+        Me.Label16.Location = New System.Drawing.Point(209, 25)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(72, 14)
         Me.Label16.TabIndex = 88
@@ -264,7 +265,7 @@ Partial Class frmVentasEdicion
         'txtDescripcion
         '
         Me.txtDescripcion.Enabled = False
-        Me.txtDescripcion.Location = New System.Drawing.Point(279, 23)
+        Me.txtDescripcion.Location = New System.Drawing.Point(287, 23)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(200, 22)
         Me.txtDescripcion.TabIndex = 89
@@ -360,10 +361,20 @@ Partial Class frmVentasEdicion
         Me.newstock.ReadOnly = True
         Me.newstock.Visible = False
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(618, 226)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(53, 23)
+        Me.Button1.TabIndex = 97
+        Me.Button1.Text = "Buscar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmVentasEdicion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.ClientSize = New System.Drawing.Size(1091, 644)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dgvDatos)
         Me.Name = "frmVentasEdicion"
         Me.Controls.SetChildIndex(Me.grbDatos, 0)
@@ -383,6 +394,7 @@ Partial Class frmVentasEdicion
         Me.Controls.SetChildIndex(Me.btnVistaPrevia, 0)
         Me.Controls.SetChildIndex(Me.Label, 0)
         Me.Controls.SetChildIndex(Me.dgvDatos, 0)
+        Me.Controls.SetChildIndex(Me.Button1, 0)
         Me.grbDetalle.ResumeLayout(False)
         Me.grbDetalle.PerformLayout()
         Me.grbDatos.ResumeLayout(False)
@@ -400,7 +412,7 @@ Partial Class frmVentasEdicion
     Friend WithEvents lblNombre As Label
     Friend WithEvents txtPrecioVenta As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents btnBuscar As Button
+    Friend WithEvents btnBuscarProducto As Button
     Friend WithEvents txtStock As TextBox
     Friend WithEvents Label17 As Label
     Friend WithEvents txtCantidad As TextBox
@@ -417,4 +429,5 @@ Partial Class frmVentasEdicion
     Friend WithEvents cantidad As DataGridViewTextBoxColumn
     Friend WithEvents total As DataGridViewTextBoxColumn
     Friend WithEvents newstock As DataGridViewTextBoxColumn
+    Friend WithEvents Button1 As Button
 End Class

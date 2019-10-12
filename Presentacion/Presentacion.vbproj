@@ -86,6 +86,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormOfHerencias\frmTodoBusqueda.Designer.vb">
+      <DependentUpon>frmTodoBusqueda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormOfHerencias\frmTodoBusqueda.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormOfHerencias\frmTodoDocumentos.Designer.vb">
       <DependentUpon>frmTodoDocumentos.vb</DependentUpon>
     </Compile>
@@ -96,6 +102,18 @@
       <DependentUpon>frmConfiguracionUsuario.vb</DependentUpon>
     </Compile>
     <Compile Include="FormOfIncio\frmConfiguracionUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTodoEdicion\FormBuscar\frmBuscarProducto.Designer.vb">
+      <DependentUpon>frmBuscarProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTodoEdicion\FormBuscar\frmBuscarProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTodoEdicion\FormBuscar\frmBusquedaProductos.Designer.vb">
+      <DependentUpon>frmBusquedaProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTodoEdicion\FormBuscar\frmBusquedaProductos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTodoEdicion\frmCategoriaEdicion.Designer.vb">
@@ -236,11 +254,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormOfHerencias\frmTodoBusqueda.resx">
+      <DependentUpon>frmTodoBusqueda.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormOfHerencias\frmTodoDocumentos.resx">
       <DependentUpon>frmTodoDocumentos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormOfIncio\frmConfiguracionUsuario.resx">
       <DependentUpon>frmConfiguracionUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTodoEdicion\FormBuscar\frmBuscarProducto.resx">
+      <DependentUpon>frmBuscarProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTodoEdicion\FormBuscar\frmBusquedaProductos.resx">
+      <DependentUpon>frmBusquedaProductos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTodoEdicion\frmCategoriaEdicion.resx">
       <DependentUpon>frmCategoriaEdicion.vb</DependentUpon>
@@ -342,6 +369,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
